@@ -112,7 +112,7 @@
                           text
                           v-bind="attrs"
                           v-on="on"
-                          @click="open()"
+                          @click="open(), goToPricing()"
                           style="font-size: 0.9em"
                         >
                           ABOUT LAD
@@ -131,9 +131,9 @@
                             <a
                               class="black--text mt-n4"
                               style="text-decoration: none"
-                              :href="item.link"
-                              >{{ item.title }}</a
-                            ></v-list-item-title
+                              @click="goToPricing(), openabout(item.number)"
+                              >{{ item.title }}
+                            </a></v-list-item-title
                           >
                         </v-list-item>
                       </v-list>
@@ -170,7 +170,7 @@
                       </v-list>
                     </v-menu>
                   </v-col>
-                  <v-col cols="12" xs="12" sm="6" md="3">
+                  <v-col cols="12" xs="12" sm="6" md="2">
                     <v-menu open-on-hover bottom offset-y>
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn
@@ -235,7 +235,8 @@
                       </v-list>
                     </v-menu>
                   </v-col>
-                  <v-col cols="12" xs="12" sm="6" md="3">
+
+                  <v-col cols="12" xs="12" sm="6" md="2">
                     <v-menu open-on-hover bottom offset-y>
                       <template v-slot:activator="{ on, attrs }">
                         <v-btn
@@ -244,6 +245,7 @@
                           v-bind="attrs"
                           v-on="on"
                           style="font-size: 0.9em"
+                          @click="open1()"
                         >
                           LINK
                         </v-btn>
@@ -260,7 +262,7 @@
                   <v-col cols="12" xs="12" sm="12" md="5" xl="10">
                     <router-link
                       style="text-decoration: none"
-                      :to="{ path: '/link' }"
+                      :to="{ path: '/home' }"
                     >
                       <v-toolbar color="transparent " flat>
                         <v-img
@@ -364,19 +366,20 @@ export default {
           title: "ABOUT LAD",
           link: "/about",
           items: [
-            { title: "History", link: "/about/History" },
-            { title: "Organization", link: "/about/Organization" },
-            { title: "Board", link: "/about/Board" },
-            { title: "Committees", link: "/about/Committees" },
-            { title: "Membership", link: "/about/Membership" },
+            { title: "History", link: "/about", number: "1000" },
+            { title: "Organization", link: "/about", number: "2000" },
+            { title: "Board", link: "/about", number: "3000" },
+            { title: "Committees", link: "/about", number: "4000" },
+            { title: "Membership", link: "/about", number: "5000" },
           ],
         },
         {
           title: "DAMS IN LAOS",
           items: [
-            { title: "Difiniation of dams", link: "/dams/Difiniation" },
+            { title: "Definition of dams", link: "/dams/Difiniation" },
             { title: "List of dams in Laos", link: "/dams/List" },
             { title: "Map of Dams", link: "/dams/Map" },
+            { title: "Dam Safety", link: "/dams/safety" },
           ],
         },
         {
@@ -391,24 +394,35 @@ export default {
         {
           title: "PUBLICATION",
           items: [
-            { title: "Lao electricity Law", link: "/publication/Conference" },
-            { title: "Dam safety guideline", link: "/publication/Conference" },
-            { title: "Conference procedding", link: "/publication/Conference" },
+            {
+              title: "Law and Regulation",
+              link: "/publication/LaoElectricity",
+            },
+            { title: "Dam safety guideline", link: "/publication/guideline" },
+            {
+              title: "Conference procedding",
+              link: "/publication/Conference ",
+            },
           ],
+        },
+        {
+          title: "LINK",
+          items: [{ title: "LINK", link: "/Link" }],
         },
       ],
 
       about: [
-        { title: "History", link: "/about/History" },
-        { title: "Organization", link: "/about/Organization" },
-        { title: "Board", link: "/about/Board" },
-        { title: "Committees", link: "/about/Committees" },
-        { title: "Membership", link: "/about/Membership" },
+        { title: "History", link: "/about", number: "History" },
+        { title: "Organization", link: "/about", number: "Organization" },
+        { title: "Board", link: "/about", number: "Board" },
+        { title: "Committees", link: "/about", number: "Committees" },
+        { title: "Membership", link: "/about", number: "Membership" },
       ],
       dams: [
-        { title: "Difiniation of dams", link: "/dams/Difiniation" },
+        { title: "Definition of dams", link: "/dams/Difiniation" },
         { title: "List of dams in Laos", link: "/dams/List" },
         { title: "Map of Dams", link: "/dams/Map" },
+        { title: "Dam Safety", link: "/dams/safety" },
       ],
       news: [
         { title: "Newsletters", link: "/news/Newsletters" },
@@ -417,10 +431,11 @@ export default {
         { title: "Archives", link: "/news/Archives" },
       ],
       publication: [
-        { title: "Lao electricity Law", link: "/publication/Conference" },
-        { title: "Dam safety guideline", link: "/publication/Conference" },
-        { title: "Conference procedding", link: "/publication/Conference" },
+        { title: "Law and Regulation", link: "/publication/LaoElectricity" },
+        { title: "Dam safety guideline", link: "/publication/guideline" },
+        { title: "Conference procedding", link: "/publication/Conference " },
       ],
+
       languages: [
         { title: "EN", link: "#" },
         { title: "LA", link: "#" },
@@ -433,7 +448,23 @@ export default {
   mounted() {},
   methods: {
     open() {
+      window.scrollTo(0, 0);
+    },
+    goToPricing() {
       this.$router.push("/about");
+    },
+    openabout(item) {
+      
+      console.log(item);
+
+      window.location.href = "#" + item;
+
+         
+     
+    },
+
+    open1() {
+      this.$router.push("/link");
     },
   },
 };

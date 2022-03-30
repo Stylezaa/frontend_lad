@@ -2,7 +2,7 @@
   <div>
     <v-container class="py-0">
       <v-row justify="center" align="center">
-           <v-col cols="12" xs="12" sm="12" md="10">
+        <v-col cols="12" xs="12" sm="12" md="10">
           <template>
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="mx-auto my-4 text-center">
@@ -37,7 +37,7 @@
     <div class="nor py-12">
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-      <v-col cols="10" >
+          <v-col cols="10">
             <v-layout row wrap>
               <v-card flat class="mx-auto nor">
                 <v-row>
@@ -100,11 +100,11 @@
         </v-row>
       </v-container>
     </div>
-
+    <!-- 
     <div>
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-           <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="10">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-card-title><h3>PRESS RELESES</h3></v-card-title>
@@ -127,12 +127,12 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
+    </div> -->
 
     <div class="nor">
       <v-container>
         <v-row justify="center" align="center">
-           <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="10">
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
               <v-carousel
                 height="140"
@@ -151,19 +151,17 @@
                     >
                       <v-row class="flex-nowrap" style="height: 100%">
                         <template v-for="(n, i) in columns">
-                          <template v-if="+index < slider.length">
-                            <v-col cols="12" xs="4" sm="4" md="4" :key="i">
-                              <a
-                                height="350"
-                                class="black--text mt-n4"
-                                style="text-decoration: none"
-                                :href="item.link"
-                              >
-                                <v-img class="imgs1" :src="slider[+index + i]">
-                                </v-img>
-                              </a>
-                            </v-col>
-                          </template>
+                          <v-col cols="12" xs="4" sm="4" md="4" :key="i">
+                            <a
+                              height="350"
+                              class="black--text mt-n4"
+                              style="text-decoration: none"
+                              :href="item.link"
+                            >
+                              <v-img class="imgs1" :src="slider[+index + i]">
+                              </v-img>
+                            </a>
+                          </v-col>
                         </template>
                       </v-row>
                     </v-carousel-item>
@@ -197,15 +195,15 @@ export default {
 
       items1: [
         {
-          src: require("../assets/images/image 10.png"),
+          src: require("../assets/images/s2.png"),
           title: "NEWS",
         },
         {
-          src: require("../assets/images/image 11.png"),
+          src: require("../assets/images/s1.png"),
           title: "EVENTS",
         },
         {
-          src: require("../assets/images/image 11.png"),
+          src: require("../assets/images/s3.png"),
           title: "PUBLICATIONS",
         },
       ],
@@ -234,28 +232,24 @@ export default {
       ],
       slider: [
         {
-          src: require("../assets/images/Group 10.png"),
-          link: "/Archives",
+          src: require("../assets/images/Links/CDA-ACB.png"),
+          link: "https://cda.ca/international/icold",
         },
         {
-          src: require("../assets/images/Group 11.png"),
-          link: "/Archives",
+          src: require("../assets/images/Links/CHINCOLD-PT.png"),
+          link: "http://www.chincold-smart.com/en/index",
         },
         {
-          src: require("../assets/images/Group 12.png"),
-          link: "/Archives",
+          src: require("../assets/images/Links/jcold-PT.png"),
+          link: "http://jcold.or.jp/e/",
         },
         {
-          src: require("../assets/images/Group 12.png"),
-          link: "/Archives",
+          src: require("../assets/images/Links/ICOLD-PT.png"),
+          link: "https://www.icold-cigb.org/",
         },
         {
-          src: require("../assets/images/Group 12.png"),
-          link: "/Archives",
-        },
-        {
-          src: require("../assets/images/Group 12.png"),
-          link: "/Archives",
+          src: require("../assets/images/Links/logo.png"),
+          link: "https://www.swissdams.ch/en",
         },
       ],
     };

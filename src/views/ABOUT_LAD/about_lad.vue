@@ -1,17 +1,31 @@
 <template>
   <div grid-list-md>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" id="History"   >
       <v-col cols="12" xs="12" sm="12" md="10">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
-              >Home > About Lad > History</v-card-title
-            >
-            <v-card-title class="mt-n7"><h3>LAD HISTORY</h3></v-card-title>
+              >Home > About Lad >
+            </v-card-title>
+            <v-card-title class="mt-n7"><h3>HISTORY</h3></v-card-title>
             <v-divider class="mx-4"></v-divider>
 
             <v-row class="bb">
-              <v-img :src="require('../../assets/images/Mask.png')">
+
+                      <v-card-title class="textt" style="font-size: 0.8em">
+                <p>
+                          Lao Association Dam (LAD) is a non-profit association under Laos law. It invites organisations, companies and individuals involved in the design, construction, operation, maintenance, monitoring and safety assessment of dams to become members.
+
+       Laos applied to join the International Committee on Large Dams on 30 November 2020 as 104th member country.
+
+                </p>
+              </v-card-title>
+
+              <v-img
+                :src="require('../../assets/images/Mask.png')"
+                max-height="500"
+                contain
+              >
                 <template v-slot:placeholder>
                   <v-row class="fill-height ma-0" align="center">
                     <v-progress-circular
@@ -24,8 +38,8 @@
             </v-row>
             <div v-for="(item, index) in press" :key="index">
               <v-card-text style="font-size: 0.8em" class="text-center">
-                {{ item.header }}</v-card-text
-              >
+                LAO ASSOCIATION ON DAMS
+              </v-card-text>
               <v-card-title style="font-size: 1.2em" class="primary--text">
                 <h4>
                   {{ item.header }}
@@ -73,7 +87,7 @@
       </v-col>
     </v-row>
 
-    <div class="bg_about">
+    <div class="bg_about" id="Organization" >
       <v-container grid-list-md>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="10">
@@ -104,18 +118,18 @@
       </v-container>
     </div>
 
-    <v-row justify="center" align="center">
-      <v-col cols="12" xs="12" sm="12" md="12">
+    <v-row   justify="center" align="center" id="Board">  
+      <v-col  cols="12" xs="12" sm="12" md="12">
         <v-col cols="12" xs="12" sm="12" md="12">
-          <v-card flat>
-            <v-card-text style="font-size: 1.5em" class="text-center"
-              ><h3 class="primary--text">BOARD of LAD</h3></v-card-text
+          <v-card  flat>
+            <v-card-text  style="font-size: 1.5em" class="text-center"
+              ><h3 class="primary--text" >BOARD of LAD</h3></v-card-text
             >
 
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">BOARD</h4></v-card-text
+              ><h4  class="textgray--text">BOARD</h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -140,10 +154,10 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><p>{{ item.title }}</p>
+                        ><h3>{{ item.title }}</h3>
                       </v-card-text>
                       <v-card-text class="text-center white--text">
-                        <p>{{ item.name }}</p></v-card-text
+                        <h3>{{ item.name }}</h3></v-card-text
                       >
                     </v-card>
                   </v-flex>
@@ -179,7 +193,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><p>{{ item.name }}</p>
+                        ><h3>{{ item.name }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -215,7 +229,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><p>{{ item.name }}</p>
+                        ><h3>{{ item.name }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -248,7 +262,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><p>{{ item.name }}</p>
+                        ><h3>{{ item.name }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -281,7 +295,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><p>{{ item.name }}</p>
+                        ><h3>{{ item.name }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -293,7 +307,7 @@
       </v-col>
     </v-row>
 
-    <div class="bg_about">
+    <div class="bg_about" id="Committees"> 
       <v-container grid-list-md>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="10">
@@ -309,7 +323,7 @@
     </div>
 
     <div>
-      <v-container grid-list-md>
+      <v-container grid-list-md id="Membership">
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="10">
             <v-col cols="12" xs="12" sm="12" md="12">
@@ -346,6 +360,49 @@
               <v-card flat>
                 <v-card-title><h4>Document</h4></v-card-title>
                 <v-divider class="mx-4 black"></v-divider>
+
+                <v-flex
+                  v-for="(item, index) in items"
+                  :key="index"
+                  :src="item.src"
+                >
+                  <v-card flat class="max-w-sm rounded shadow-lg">
+                    <div>
+                      <v-row>
+                        <v-col cols="5" xs="5" sm="3" md="2">
+                          <v-img
+                            aspect-ratio="1"
+                            class="grey lighten-2 magin10"
+                            :src="item.src"
+                          >
+                          </v-img>
+                        </v-col>
+                        <v-col cols="7" xs="7" sm="9" md="10">
+                          <h4 style="font-size: 1.2em">
+                            {{ item.title }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.date }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.Type }}
+                          </h4>
+                          <h4>
+                            <v-btn
+                              color="primary"
+                              class="ma-6"
+                              href="https://drive.google.com/file/d/1S7OYvDIM6yFgzjKAtWOZfkXKV-l4H_Od/view?usp=sharing"
+                              target="_blank"
+                              >Preview</v-btn
+                            >
+                          </h4>
+                        </v-col>
+                      </v-row>
+                    </div>
+                    <v-divider></v-divider>
+                  </v-card>
+                  <br />
+                </v-flex>
               </v-card>
             </v-col>
           </v-col>
@@ -365,9 +422,7 @@ export default {
           header: "Committee Objectives",
 
           title:
-            "  The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication.",
-        },
-      ],
+            "    The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. " }, ],
       press1: [
         {
           header: "Establishment of the Lao Dam Association",
@@ -378,15 +433,16 @@ export default {
 
       Board: [
         {
-          src: require("../../assets/images/BOARD of LAD/Vice President1.png"),
-          title: "Vice President",
-          name: "Assoc. Prof. Dr. Khampaseuth THEPVONGSA",
-        },
-        {
           src: require("../../assets/images/BOARD of LAD/President.png"),
           title: "President",
           name: "Viraphonh VIRAVONG",
         },
+        {
+          src: require("../../assets/images/BOARD of LAD/Vice President1.png"),
+          title: "Vice President",
+          name: "Assoc. Prof. Dr. Khampaseuth THEPVONGSA",
+        },
+
         {
           src: require("../../assets/images/BOARD of LAD/Vice President.png"),
           title: "Vice President",
@@ -449,10 +505,23 @@ export default {
           name: "Dr. Dousith PHOMMACHANH",
         },
       ],
+
+      items: [
+        {
+          src: require("../../assets/images/Image 1.png"),
+          title: "Charter of the Lao Association on Dams",
+          date: "Nov 09, 2021",
+          Type: ".PDF",
+        },
+      ],
     };
   },
   computed: {},
   methods: {},
+  mounted() {
+  this.navDrawerContent = 
+   this.$refs['myNavDrawer'].$el.querySelector('div.v-navigation-drawer__content');
+}
 };
 </script>
 
@@ -462,5 +531,29 @@ export default {
 }
 .textt {
   white-space: pre-line;
+}
+
+.imgs22 {
+  width: 90%;
+  height: 90%;
+  transition: width 1s, height 1s;
+}
+.imgs22:hover {
+  width: 100%;
+  height: 100%;
+  transform: scale(1.5);
+}
+.v-card--reveal1 {
+  opacity: 1;
+  margin-top: 0px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-radius: 5px;
+}
+.v-card--reveal1:hover {
+  opacity: 5;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  transition: padding-top, cubic-bezier(0, 0.52, 1, 1) 1s;
 }
 </style>

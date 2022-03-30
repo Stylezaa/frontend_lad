@@ -1,20 +1,19 @@
 <template>
   <v-container grid-list-md>
     <v-row justify="center" align="center">
-        <v-col cols="12" xs="12" sm="12" md="10">
+      <v-col cols="12" xs="12" sm="12" md="10">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
-              >Home > Dams in Laos > Definition of dams</v-card-title
+              >Home > Dams in Laos > Definition of Dams</v-card-title
             >
-            <v-card-title class="mt-n7"><h3>DEFINITINN OF DAMS</h3></v-card-title>
+            <v-card-title class="mt-n7"
+              ><h3>DEFINITION OF DAMS</h3></v-card-title
+            >
             <v-divider class="mx-4"></v-divider>
 
-            <v-row class="bb">
-           
-            </v-row>
+            <v-row class="bb"> </v-row>
             <div v-for="(item, index) in press" :key="index">
-          
               <v-card-title style="font-size: 1.2em" class="primary--text">
                 <h4>
                   {{ item.header }}
@@ -22,14 +21,19 @@
               >
 
               <v-card-title style="font-size: 0.8em">
-                {{ item.title }}</v-card-title
-              >
-              <v-card-title class="mt-n3" style="font-size: 0.8em">
-                {{ item.title1 }}</v-card-title
-              >
-
-              <v-card-title class="mt-n3" style="font-size: 0.8em">
-                {{ item.title2 }}</v-card-title
+                <p>
+                  Dam is a barrier that impounds water or underground streams.
+                  Reservoirs creates by dams not only suppress floods but also
+                  provide water for activates such as irrigation, human
+                  consumption, industrial use, aquaculture and navigability.
+                  Hydropower is often used in conjunction with dams to generate
+                  electricity. A dam can also be used to collect water or for
+                  storage of water which can be evenly distributed between
+                  locations. Dams generally serve the primary purpose of
+                  retaining water, while other structures such as floodgates of
+                  levees (also known as dikes) are used to manage or prevent
+                  water flow into specific land region
+                </p></v-card-title
               >
             </div>
           </v-card>

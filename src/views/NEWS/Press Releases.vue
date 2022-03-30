@@ -1,14 +1,12 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col >
+      <v-col>
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Press Releases</v-card-title
           >
-          <v-card-title class="mt-n7"
-            ><h3>PRESS RELEASES</h3></v-card-title
-          >
+          <v-card-title class="mt-n7"><h3>PRESS RELEASES</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>
@@ -17,13 +15,6 @@
                 <v-row>
                   <v-col cols="12" xs="12" sm="12" md="12" xl="12">
                     <v-card outlined>
-                      <v-tabs>
-                        <v-tab>Latest</v-tab>
-                        <v-tab>Lao electricity Law</v-tab>
-                        <v-tab>Dam safety guideline</v-tab>
-                        <v-tab>Conference proceeding</v-tab>
-                      </v-tabs>
-
                       <br />
                       <v-flex
                         v-for="(item, index) in items"
@@ -61,7 +52,7 @@
                                   <v-btn
                                     color="primary"
                                     class="ma-6"
-                                    @click="createPDF"
+                                    href="../web/viewer.html?file=../assets/pdf/pdf-sample.pdf"
                                     >Download</v-btn
                                   >
                                 </h4>
@@ -70,11 +61,17 @@
                           </div>
                           <v-divider></v-divider>
                         </v-card>
+
                         <br />
                       </v-flex>
-                      <div class="text-center">
-                        <v-pagination v-model="page" :length="6"></v-pagination>
-                      </div>
+                      <v-card flat height="500">
+                        <div
+                          class="text-center primary--text"
+                          style="font-size: 2em"
+                        >
+                          No information!
+                        </div>
+                      </v-card>
                     </v-card>
                   </v-col>
                 </v-row>
@@ -96,38 +93,7 @@ export default {
     return {
       page: 1,
 
-      items: [
-        {
-          src: require("../../assets/images/Image 1.png"),
-          title: "021 Next Content Fair to be held from",
-          date: "Nov 09, 2021",
-          Type: "Noted",
-        },
-        {
-          src: require("../../assets/images/Image 1.png"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-          Type: "Noted",
-        },
-        {
-          src: require("../../assets/images/Image 1.png"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-          Type: "Noted",
-        },
-        {
-          src: require("../../assets/images/Image 1.png"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-          Type: "Noted",
-        },
-        {
-          src: require("../../assets/images/Image 1.png"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-          Type: "Noted",
-        },
-      ],
+      items: [],
       datapdf: "",
       datapdf1: "../../assets/pdf/test.pdf",
     };

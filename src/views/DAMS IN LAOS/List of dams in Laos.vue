@@ -12,12 +12,8 @@
             >
             <v-divider class="mx-4"></v-divider>
 
-            <v-row class="bb"> </v-row>
-            <div v-for="(item, index) in press" :key="index">
-              <v-card-title class="mt-n3" style="font-size: 0.8em">
-                {{ item.title1 }}</v-card-title
-              >
-            </div>
+          
+        
           </v-card>
         </v-col>
       </v-col>

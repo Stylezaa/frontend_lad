@@ -7,15 +7,12 @@ import about from "../views/404.vue";
 
 
 import About from "../views/ABOUT_LAD/about_lad.vue";
-import History from "../views/ABOUT_LAD/History.vue";
-import Board from "../views/ABOUT_LAD/Board.vue";
-import Committees from "../views/ABOUT_LAD/Committees .vue";
-import Membership from "../views/ABOUT_LAD/Membership .vue";
-import Organization from "../views/ABOUT_LAD/Organization.vue";
+
 
 import Difination from "../views/DAMS IN LAOS/Difination of dams.vue";
 import List from "../views/DAMS IN LAOS/List of dams in Laos.vue";
 import Maps from "../views/DAMS IN LAOS/Map of Dams.vue";
+import safety from "../views/DAMS IN LAOS/Dam safety.vue";
 
 
 import Newsletters from "../views/NEWS/Newsletters.vue";
@@ -25,12 +22,16 @@ import Archives from "../views/NEWS/Archives.vue";
 
 
 
+import Link from "../views/LINK/link.vue";
+
 
 
 import Conference from "../views/PUBLICATION/Conference.vue";
+import guideline from "../views/PUBLICATION/Dam safety guideline .vue";
+import Lao from "../views/PUBLICATION/Lao electricity Law .vue";
 
 
-import Link from "../views/LINK/link.vue";
+
 
 Vue.use(VueRouter);
 
@@ -50,35 +51,9 @@ const routes = [
     name: "About",
     component: About
   },
-  {
-    path: "/about/History",
-    name: "history",
-    component: History
-  },
-  {
-    path: "/about/Board",
-    name: "Board",
-    component: Board
-  },
-  {
-    path: "/about/Committees",
-    name: "Committees",
-    component: Committees
-  },
-  {
-    path: "/about/Membership",
-    name: "Membership",
-    component: Membership
-  },
-
-
-  {
-    path: "/about/Organization",
-    name: "Organization",
-    component: Organization
-  },
-
+  
 /// DAMS IN LAOS
+
 
 {
   path: "/dams/Difiniation",
@@ -96,7 +71,11 @@ const routes = [
   component: Maps
 },
 
-
+{
+  path: "/dams/safety",
+  name: "safety",
+  component: safety
+},
 
 
 
@@ -135,6 +114,25 @@ const routes = [
     path: "/publication/Conference",
     name: "Conference",
     component: Conference
+  },
+  {
+    path: "/publication/guideline",
+    name: "guideline",
+    component: guideline
+  },
+  {
+    path: "/publication/LaoElectricity",
+    name: "Lao",
+    component: Lao
+  },
+
+
+// LINK
+
+  {
+    path: "/Link/",
+    name: "Link",
+    component: Link
   },
 
 

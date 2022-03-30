@@ -156,11 +156,7 @@
                             </v-row>
                           </div>
 
-                          <v-img
-                            :src="item.src"
-                            max-width="900"
-                            max-height="500"
-                          >
+                          <v-img :src="item.src">
                             <template v-slot:placeholder>
                               <v-row class="fill-height ma-0" align="center">
                                 <v-progress-circular
@@ -174,31 +170,326 @@
                       </v-row>
 
                       <div>
-                        <v-card-title style="font-size: 0.8em">
-                          {{ item.start }}</v-card-title
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="black--text"
                         >
-                        <v-card-title style="font-size: 0.8em">
-                          {{ item.text }}</v-card-title
-                        >
-                        <v-card-title style="font-size: 0.8em">
-                          {{ item.title }}</v-card-title
-                        >
-                        <v-card-title style="font-size: 0.8em">
-                          {{ item.title1 }}</v-card-title
-                        >
-                        <v-card-title class="mt-n3" style="font-size: 0.8em">
-                          {{ item.title2 }}</v-card-title
+                          <h4>
+                            Update LAD Activities as of 28 February 2022
+                          </h4></v-card-title
                         >
 
-                        <v-card-title class="mt-n3" style="font-size: 0.8em">
-                          {{ item.title3 }}</v-card-title
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
                         >
-                        <v-card-title class="mt-n3" style="font-size: 0.8em">
-                          {{ item.text1 }}</v-card-title
+                          <h4>1. Establishment of the Lao Dam</h4></v-card-title
                         >
-                        <v-card-title class="mt-n3" style="font-size: 0.8em">
-                          {{ item.title4 }}</v-card-title
+                        <v-card-title style="font-size: 0.8em">
+                          • Association:
+                          <br />• Opening LAD Inaugural Assembly 13 November
+                          2020 <br />• On 14/01/2021 the first extra ordinary
+                          board meeting. <br />• Decision of Minister of Energy
+                          and Mines No.0111/MEM, dated 29 January 2021 regarding
+                          formation of LAD. <br />• Decision of Minister of
+                          Energy and Mines No.0110/MEM, dated 29 January 2021
+                          regarding approval of LAD’s charter. <br />• Decision
+                          of Minister of Energy and Mines No.0112/MEM, dated 29
+                          January 2021 regarding approval of LAD’s board
+                          members. <br />• LAD’ charter was signed by President
+                          on 30 January 2021. <br />• President officially
+                          appointed Director of LAD as per Decision No.
+                          003/LAD.P, dated February 2021. <br />• LAD has been
+                          duly registered as per registration No. 23/DSD, dated
+                          11 February 2021</v-card-title
                         >
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items3.slice(0, 3)"
+                            :key="index"
+                            class="pa-2"
+                          >
+                            <v-card
+                              class="max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>2. Holding ICOLD membership</h4></v-card-title
+                        >
+
+                        <v-card-title style="font-size: 0.8em">
+                          LAD (Lao PDR) has been elected member of ICOLD at the
+                          ICOLD General Assembly on 30 November 2020 as 104th
+                          member country.</v-card-title
+                        >
+
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items4.slice(0, 1)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>3. LAD Members</h4></v-card-title
+                        >
+
+                        <v-card-title style="font-size: 0.8em">
+                          LAD (Lao PDR) has been elected member of ICOLD at the
+                          ICOLD General Assembly on 30 November 2020 as 104th
+                          member country.</v-card-title
+                        >
+                        <v-img
+                          :src="
+                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.26.35.png')
+                          "
+                          max-height="300"
+                          contain
+                        >
+                          <template v-slot:placeholder>
+                            <v-row class="fill-height ma-0" align="center">
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items5.slice(0, 4)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>4. Activities</h4></v-card-title
+                        >
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items6.slice(0, 3)"
+                            :key="index"
+                            class="pa-2"
+                          >
+                            <v-card
+                              flat
+                              class="max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                        <v-card-title style="font-size: 0.8em">
+                          - Notice No.7/LAD.P, dated 4 March 2021 regarding
+                          invitation to all IPPs, Contractors, Consultants and
+                          Material Suppliers to apply for LAD membership.
+                          <br />- Request for support 1) Donsahong Power Co.
+                          Ltd., 2) Sino Hydro Construction, 3) Vientiane
+                          Automation and Resolution Engineering Co.Ltd. 4)
+                          Chaleun Sekong Group Co. Ltd., 5) Bothong Inter Sole
+                          Co. Ltd, 6) Xayabouri Power Co. Ltd. <br />- First
+                          ordinary board meeting 2021 held on 26 July 2021.
+                          <br />- Request for approval of LAD Logo by relevant
+                          government sector. <br />- Countercry visit to Minster
+                          of Energy and Mines held on 12 August 2021. •Soft
+                          opening of LAD Office held on 9 Sept. 2021 <br />-
+                          Request Minister of Energy and Mines to consider
+                          issuing legislation related to “LAD membership for
+                          senior / executive officers of any dam owners is
+                          required” <br />- LAD held second ordinary board
+                          meeting on 11/11/2021. <br />- The President of Lao
+                          Association on Dams issued a decision to appoint Mr.
+                          Manoloth Soukhanouvong as the Deputy Director of the
+                          LAD, No. 25/25/ສຂລ.ປທ, dated 27/12/2021. <br />- On 16
+                          February 2022 LAD board member attended a meeting
+                          organized by Ministry of Energy and Mines for dialog
+                          between Helvetas and development partners concerning
+                          the dam safety program in Lao PDR. <br />- On 17
+                          February 2022 LAD board member attended a consultation
+                          meeting on draft dam safety Law held at National
+                          Convention Hall. <br />- LAD plans to hold an annual
+                          meeting 2021 and the first ordinary board meeting for
+                          2022 on 27 April 2022.
+                        </v-card-title>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>• International relations:</h4></v-card-title
+                        >
+
+                        <v-card-title style="font-size: 0.8em">
+                          <br />- Replied letter from VNCOLD wrote to
+                          congratulate on the occasion the formation of LAD.
+                          <br />- Having a good relation with CHINCOLD. <br />-
+                          First seminar held on 7 October 2021. Each party
+                          presented one theme on each seminar. <br />- LAD held
+                          second ordinary board meeting for 2021 on 11 November
+                          2021. <br />- Participated in a joint seminar with
+                          SWISSCOD on 11/11/2021 Error! Filename not specified.
+                          <br />- Join the Webinar with World Bank on 26/11/2021
+                          <br />- Co-operation with ICOLD: <br /><br />
+
+                          <br />COLD has provided password for all LAD member to
+                          be able to access to ICOLD documents. <br />-
+                          Medeiros. Sent a condolences letter to ICOLD of the
+                          death of late vice president Medeiros. <br />- ICOLD
+                          fees 2021 was fully paid on 31 August 2021. <br />- As
+                          being member of ICOLD, LAD has c0mmunicated with ICOLD
+                          regularly as ICOLD has sent circular letters/notices
+                          regarding Bulletins, Meetings, Seminars etc. <br />-
+                          Joined online seminar with IRCOLD on 19 October 2021.
+                          <br />- Virtual ICOLD General Assembly 2021 held on 19
+                          October 2021. ✓in the afternoon of 17 and 20 January
+                          2022 joined meetings with HELVETAS, who will operate
+                          the DSTIA (Dam Safety Technical and Institutional
+                          Assistance in Lao PDR) Project from Switzerland, to
+                          discuss the possibilities that project would be able
+                          to assist LAD in giving advice on the LAD strategy,
+                          support LAD to attend ICOLD General Assemblies and
+                          Technical Meetings and translation of important
+                          technical document into Lao to disseminate to all LAD
+                          members.
+                        </v-card-title>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>5. Income / Expenditures :</h4></v-card-title
+                        >
+
+                        <v-img
+                          :src="
+                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.28.59.png')
+                          "
+                          max-height="500"
+                          contain
+                        >
+                          <template v-slot:placeholder>
+                            <v-row class="fill-height ma-0" align="center">
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>6. Sponsors:</h4></v-card-title
+                        >
+
+                        <v-card-title style="font-size: 0.8em">
+                          <br />
+                          • Xayabouri Power Company Limited donated 100 mil
+                          kips. <br />• Donsahong Power Company Limited donated
+                          60 mil kips. <br />• Vientiane Automation and
+                          Resolution Engineering Co. Limited donated 50 million
+                          kips. <br />• Chaleun Sekong Group Co Ltd. donated 50
+                          million Kips. <br />• Bothong Inter Sole Co. Ltd.
+                          donated 30 million kips. <br />• Mr. Viraphanh
+                          Nandavong, Board member contribute working
+                          place/office for LAD and the necessary facilities.
+                          <br />• Mr. Sychath Boutsakitirath, Director of LAD
+                          contributed to the formation of LAD in form of labor
+                          force and expenditures in relation to the formation of
+                          LAD, while running LAD he volunteers not to receive
+                          salaries for his position as Director. <br />•
+                          Associate Prof. Dr. Khampaseuth Thepvongsa, Vice
+                          President of LAD wishes to contribute to the
+                          development of LAD concerning Website and IT.
+                        </v-card-title>
+
+                        <v-img
+                          :src="
+                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.29.39.png')
+                          "
+                          max-height="300"
+                          contain
+                        >
+                          <template v-slot:placeholder>
+                            <v-row class="fill-height ma-0" align="center">
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items7.slice(0, 4)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
                       </div>
                       <v-card-title
                         style="font-size: 1.2em"
@@ -347,8 +638,8 @@ export default {
           file: "General",
           date: "Nov09,2021",
           user: "Taiy Dueo",
-          src: require("../../assets/images/Rectangle 19.png"),
-          header: "Establishment of The Lao Dam Association",
+          src: require("../../assets/images/Newsletters/Screenshot.png"),
+          header: "LAD Inaugural Assembly held on 13 November 2020",
           start: "Excellencies, Leaders of the Party and the State,",
           text: "-       Dear Fellow Compatriots, Soldiers, Police and all Lao People,",
 
@@ -368,30 +659,11 @@ export default {
       ],
       items: [
         {
-          src: require("../../assets/images/Laos dam failure.jpg"),
-          title: "021 Next Content Fair to be held from",
+          src: require("../../assets/images/Newsletters/Screenshot.png"),
+          title: "LAD Inaugural Assembly held on 13 November 2020",
           date: "Nov 09, 2021",
         },
-        {
-          src: require("../../assets/images/Laos dam failure.jpg"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-        },
-        {
-          src: require("../../assets/images/Laos dam failure.jpg"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-        },
-        {
-          src: require("../../assets/images/Laos dam failure.jpg"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-        },
-        {
-          src: require("../../assets/images/Laos dam failure.jpg"),
-          title: "021 Next Content Fair to be held from ",
-          date: "Nov 09, 2021",
-        },
+     
       ],
       icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
       items2: [
@@ -419,6 +691,61 @@ export default {
           src: require("../../assets/images/Rectangle 7.png"),
           title: "ICOLD/Holding ICOLD membership",
           title2: "ICOLD/Holding ICOLD membership.",
+        },
+      ],
+
+      items3: [
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.09.17.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.09.26.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.09.37.png"),
+        },
+      ],
+      items4: [
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.26.27.png"),
+        },
+      ],
+      items5: [
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.26.53.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.27.01.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.27.30.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.27.21.png"),
+        },
+      ],
+      items6: [
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.28.17.png"),
+        },
+
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.28.34.png"),
+        },
+      ],
+      items7: [
+        {
+          src: require("../../assets/images/Newsletters/DSPC_Tran.png"),
+        },
+
+        {
+          src: require("../../assets/images/Newsletters/CS Energy logo-Trans.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/logo-XPCL-Trans-01.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.29.24.png"),
         },
       ],
     };

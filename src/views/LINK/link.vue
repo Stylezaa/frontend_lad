@@ -24,7 +24,7 @@
               <table>
                 <tr>
                   <td>
-                    <img src="../../assets/images/LINK/logo-cigb.png" alt="" />
+                    <img src="../../assets/images/Links/logo-cigb.png" alt="" />
                   </td>
                   <td>
                     <a href="https://www.icold-cigb.org/" target="_blank"
@@ -34,7 +34,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <img src="../../assets/images/LINK/jcold.png" alt="" />
+                    <img src="../../assets/images/Links/jcold.png" alt="" />
                   </td>
                   <td>
                     <a href="http://jcold.or.jp/e/" target="_blank"
@@ -45,7 +45,7 @@
                 <tr>
                   <td>
                     <img
-                      src="../../assets/images/LINK/CDA-ACB.png"
+                      src="../../assets/images/Links/CDA-ACB.png"
                       alt=""
                       style="overflow-x: auto"
                     />
@@ -58,7 +58,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <img src="../../assets/images/LINK/CHINCOLD.png" alt="" />
+                    <img src="../../assets/images/Links/CHINCOLD.png" alt="" />
                   </td>
                   <td>
                     <a
@@ -70,7 +70,7 @@
                 </tr>
                 <tr>
                   <td>
-                    <img src="../../assets/images/LINK/logo.png" alt="" />
+                    <img src="../../assets/images/Links/logo.png" alt="" />
                   </td>
                   <td>
                     <a href="https://www.swissdams.ch/en" target="_blank"
