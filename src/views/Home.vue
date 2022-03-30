@@ -1,0 +1,387 @@
+<template>
+  <div>
+    <v-container class="py-0">
+      <v-row justify="center" align="center">
+           <v-col cols="12" xs="12" sm="12" md="10">
+          <template>
+            <v-col cols="12" xs="12" sm="12" md="12">
+              <v-card flat class="mx-auto my-4 text-center">
+                <v-carousel
+                  height="350"
+                  hide-delimiter-background
+                  reverse-transition="fade-transition"
+                  transition="fade-transition"
+                  cycle
+                  delimiter-icon="mdi-minus"
+                  show-arrows-on-hover
+                  continuous
+                >
+                  <!-- v-center-item1 -->
+                  <v-carousel-item
+                    v-for="(item, i) in items"
+                    :key="i"
+                    :src="item.src"
+                    reverse-transition="fade-transition"
+                    transition="fade-transition"
+                    show-arrows-on-hover
+                    class="mx-auto"
+                  ></v-carousel-item>
+                </v-carousel>
+              </v-card>
+            </v-col>
+          </template>
+        </v-col>
+      </v-row>
+    </v-container>
+
+    <div class="nor py-12">
+      <v-container grid-list-md>
+        <v-row justify="center" align="center">
+      <v-col cols="10" >
+            <v-layout row wrap>
+              <v-card flat class="mx-auto nor">
+                <v-row>
+                  <v-flex sm4 md3 lg4 xl4 v-for="(item, i) in items1" :key="i">
+                    <v-hover v-slot="{ hover }">
+                      <v-card flat class="mx-auto" color="grey lighten-4">
+                        <v-img class="imgs" :src="item.src" max-width="500px">
+                          <v-card-text class="white--text text-center">
+                            <v-overlay
+                              v-if="!hover"
+                              absolute
+                              z-index="0"
+                              class="v-card--reveal"
+                            >
+                              <v-btn
+                                height="30"
+                                width="30"
+                                color="primary "
+                                class="test"
+                              >
+                                <v-card-text>
+                                  <v-icon
+                                    class="white--text"
+                                    aria-hidden="true"
+                                  >
+                                    mdi-chevron-right
+                                  </v-icon>
+                                </v-card-text></v-btn
+                              >
+
+                              <br /><b>{{ item.title }}</b>
+                            </v-overlay>
+                            <v-overlay
+                              v-if="hover"
+                              absolute
+                              z-index="0"
+                              class="text-center v-card--reveal"
+                            >
+                              <v-btn height="30" width="30" color="primary">
+                                <v-card-text>
+                                  <v-icon
+                                    class="white--text"
+                                    aria-hidden="true"
+                                  >
+                                    mdi-chevron-right
+                                  </v-icon>
+                                </v-card-text></v-btn
+                              >
+                              <br />{{ item.title }}
+                            </v-overlay>
+                          </v-card-text>
+                        </v-img>
+                      </v-card>
+                    </v-hover>
+                  </v-flex>
+                </v-row>
+              </v-card>
+            </v-layout>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
+    <div>
+      <v-container grid-list-md>
+        <v-row justify="center" align="center">
+           <v-col cols="12" xs="12" sm="12" md="10">
+            <v-col cols="12" xs="12" sm="12" md="12">
+              <v-card flat>
+                <v-card-title><h3>PRESS RELESES</h3></v-card-title>
+                <div v-for="(item, index) in press" :key="index">
+                  <v-divider class="mx-4"></v-divider>
+                  <v-card-title style="font-size: 1.2em" class="primary--text">
+                    <h4>
+                      {{ item.header }}
+                    </h4></v-card-title
+                  >
+                  <v-card-title class="mt-n7" style="font-size: 1em">
+                    {{ item.date }}</v-card-title
+                  >
+                  <v-card-title class="mt-n7" style="font-size: 1em">
+                    {{ item.title }}</v-card-title
+                  >
+                </div>
+              </v-card>
+            </v-col>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
+    <div class="nor">
+      <v-container>
+        <v-row justify="center" align="center">
+           <v-col cols="12" xs="12" sm="12" md="10">
+            <v-col cols="12" xs="12" sm="12" md="12" xl="12">
+              <v-carousel
+                height="140"
+                hide-delimiter-background
+                delimiter-icon="mdi-minus"
+                reverse-transition="fade-transition"
+                transition="fade-transition"
+                cycle
+              >
+                <v-card class="white v-center-item" height="100">
+                  <template v-for="(item, index) in slider">
+                    <v-carousel-item
+                      style="width: 100%"
+                      v-if="(index + 1) % columns === 1 || columns === 1"
+                      :key="index"
+                    >
+                      <v-row class="flex-nowrap" style="height: 100%">
+                        <template v-for="(n, i) in columns">
+                          <template v-if="+index < slider.length">
+                            <v-col cols="12" xs="4" sm="4" md="4" :key="i">
+                              <a
+                                height="350"
+                                class="black--text mt-n4"
+                                style="text-decoration: none"
+                                :href="item.link"
+                              >
+                                <v-img class="imgs1" :src="slider[+index + i]">
+                                </v-img>
+                              </a>
+                            </v-col>
+                          </template>
+                        </template>
+                      </v-row>
+                    </v-carousel-item>
+                  </template>
+                </v-card>
+              </v-carousel>
+            </v-col>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "home",
+  data() {
+    return {
+      items: [
+        {
+          src: require("../assets/images/image9.png"),
+        },
+        {
+          src: require("../assets/images/Laos-to-Inspect-Hydropower-Dams.jpg"),
+        },
+        {
+          src: require("../assets/images/Laos dam failure.jpg"),
+        },
+      ],
+
+      items1: [
+        {
+          src: require("../assets/images/image 10.png"),
+          title: "NEWS",
+        },
+        {
+          src: require("../assets/images/image 11.png"),
+          title: "EVENTS",
+        },
+        {
+          src: require("../assets/images/image 11.png"),
+          title: "PUBLICATIONS",
+        },
+      ],
+      press: [
+        {
+          header:
+            "021 Next Content Fair to be held from November 11 to13 in Busan",
+          date: "Nov 09, 2021",
+          title:
+            "The NOTICE of  Extending tthe implementation of the Measures on Containment, Prevention, and Comprehensive Response to the COVID-19 Pandemic from 4 - 18 August 2021.",
+        },
+        {
+          header:
+            "021 Next Content Fair to be held from November 11 to13 in Busan",
+          date: "Nov 09, 2021",
+          title:
+            "The NOTICE of  Extending tthe implementation of the Measures on Containment, Prevention, and Comprehensive Response to the COVID-19 Pandemic from 4 - 18 August 2021.",
+        },
+        {
+          header:
+            "021 Next Content Fair to be held from November 11 to13 in Busan",
+          date: "Nov 09, 2021",
+          title:
+            "The NOTICE of  Extending tthe implementation of the Measures on Containment, Prevention, and Comprehensive Response to the COVID-19 Pandemic from 4 - 18 August 2021.",
+        },
+      ],
+      slider: [
+        {
+          src: require("../assets/images/Group 10.png"),
+          link: "/Archives",
+        },
+        {
+          src: require("../assets/images/Group 11.png"),
+          link: "/Archives",
+        },
+        {
+          src: require("../assets/images/Group 12.png"),
+          link: "/Archives",
+        },
+        {
+          src: require("../assets/images/Group 12.png"),
+          link: "/Archives",
+        },
+        {
+          src: require("../assets/images/Group 12.png"),
+          link: "/Archives",
+        },
+        {
+          src: require("../assets/images/Group 12.png"),
+          link: "/Archives",
+        },
+      ],
+    };
+  },
+  computed: {
+    columns() {
+      if (this.$vuetify.breakpoint.xl) {
+        return 3;
+      }
+
+      if (this.$vuetify.breakpoint.lg) {
+        return 3;
+      }
+
+      if (this.$vuetify.breakpoint.md) {
+        return 3;
+      }
+
+      if (this.$vuetify.breakpoint.sm) {
+        return 3;
+      }
+
+      return 1;
+    },
+  },
+  methods: {},
+};
+</script>
+
+<style>
+.test {
+  margin-top: 60%;
+}
+.v-card--reveal {
+  opacity: 1;
+  font-size: 12px;
+  padding-top: 50px;
+
+  border-radius: 5px;
+  color: #fff;
+}
+.v-card--reveal:hover {
+  opacity: 1;
+  padding-top: 0px;
+  transition: padding-top cubic-bezier(0, 0.52, 1, 1) 1s;
+}
+.imgs {
+  width: 95%;
+  height: 95%;
+
+  transition: width 1s, height 1s;
+}
+
+.imgs:hover {
+  width: 100%;
+  height: 100%;
+}
+.imgs1 {
+  width: 95%;
+  height: 65%;
+  display: flex;
+  transition: width 1s, height 1s;
+}
+
+.imgs1:hover {
+  display: flex;
+  width: 100%;
+  height: 70%;
+}
+
+@media only screen and (min-width: 600px) {
+  /* For desktop: */
+  .pangding {
+    padding-left: 0;
+    padding-right: 0px;
+  }
+  .pangding1 {
+    padding-left: 7px;
+  }
+  .v-center-item {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 5px;
+
+    align-items: center;
+    justify-content: center;
+  }
+  .v-center-item1 {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-top: 5px;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media only screen and (min-width: 1401px) {
+  /* For desktop: */
+
+  .pangding {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+  .pangding1 {
+    padding-left: 300px;
+  }
+
+  .v-center-item {
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-left: 60px;
+    margin-right: 60px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .v-center-item1 {
+    margin-right: 60px;
+
+    align-items: center;
+    justify-content: center;
+  }
+}
+</style>
