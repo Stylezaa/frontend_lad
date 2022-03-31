@@ -1,7 +1,7 @@
 <template>
   <div>
     <v-card class="overflow-hidden white pandinger" flat>
-      <v-app-bar height="max-anto" class="white" app>
+      <v-app-bar height="mx-auto" class="white custom_h" app>
         <v-card flat class="white white--text" width="100%">
           <v-row align="center" justify="center">
             <v-card
@@ -12,11 +12,11 @@
             >
               <v-card-text class="white--text text-center" flat>
                 <v-row align="center" justify="center">
-                  <v-col cols="12" xs="12" sm="12" md="6">
+                  <v-col cols="12" xs="12" sm="12" md="6" xl="5">
                     <span class="white--text"><b>OFFICIAL WEBSITE</b></span>
                   </v-col>
 
-                  <v-col cols="12" xs="12" sm="12" md="5">
+                  <v-col cols="12" xs="12" sm="12" md="5" xl="5">
                     <v-row align="center" justify="center">
                       <v-btn dark text style="font-size: 1em" class="pa-2"
                         >CONTACT</v-btn
@@ -40,7 +40,7 @@
 
                         <v-list>
                           <v-list-item
-                            v-for="(item, index) in languages"
+                            v-for="(item, index) in langs"
                             :key="index"
                           >
                             <v-list-item-title>
@@ -65,7 +65,7 @@
               xs="12"
               sm="12"
               md="8"
-              xl="10"
+              xl="8"
               class="hidden-sm-and-down"
             >
               <router-link
@@ -253,8 +253,9 @@
                     </v-menu>
                   </v-col>
                 </v-toolbar-items>
+
                 <v-app-bar-nav-icon
-                  class="hidden-md-and-up"
+                  class="hidden-md-and-up sssssss"
                   @click.stop="drawer = !drawer"
                 />
 
@@ -266,6 +267,7 @@
                     >
                       <v-toolbar color="transparent " flat>
                         <v-img
+                        
                           c
                           :src="require('../../assets/images/lads_logo.png')"
                           max-height="40"
@@ -282,15 +284,11 @@
                           </template>
                         </v-img>
 
-                        <v-card-text
-                          class="white--text pt-6"
-                          sm10
-                          md10
-                          lg10
-                          xl10
-                        >
-                          <h2 style="font-size: 0.9em">ສະມາຄົມເຂື່ອນລາວ</h2>
-                          <h4 style="font-size: 0.8em">
+                        <v-card-text class="white--text pt-6" sm10 md10>
+                          <h2  style="font-size: 0.9em">
+                            ສະມາຄົມເຂື່ອນລາວ
+                          </h2>
+                          <h4 style="font-size: 0.6em">
                             LAO ASSOCIATION ON DAMS
                           </h4>
                         </v-card-text>
@@ -330,6 +328,8 @@
                         ></v-list-item-title>
                       </v-list-item-content>
                     </template>
+
+                    
 
                     <v-list-item v-for="child in item.items" :key="child.title">
                       <v-list-item-content>
@@ -398,9 +398,9 @@ export default {
               title: "Law and Regulation",
               link: "/publication/LaoElectricity",
             },
-            { title: "Dam safety guideline", link: "/publication/guideline" },
+            { title: "Guideline", link: "/publication/guideline" },
             {
-              title: "Conference procedding",
+              title: "Conference Procedding",
               link: "/publication/Conference ",
             },
           ],
@@ -432,14 +432,11 @@ export default {
       ],
       publication: [
         { title: "Law and Regulation", link: "/publication/LaoElectricity" },
-        { title: "Dam safety guideline", link: "/publication/guideline" },
-        { title: "Conference procedding", link: "/publication/Conference " },
+        { title: "Guideline", link: "/publication/guideline" },
+        { title: "Conference Procedding", link: "/publication/Conference " },
       ],
 
-      languages: [
-        { title: "EN", link: "#" },
-        { title: "LA", link: "#" },
-      ],
+      langs: [{ title: "English" }, { title: "Laos" }],
       expand: false,
       drawer: false,
     };
@@ -454,13 +451,9 @@ export default {
       this.$router.push("/about");
     },
     openabout(item) {
-      
       console.log(item);
 
       window.location.href = "#" + item;
-
-         
-     
     },
 
     open1() {
@@ -477,11 +470,28 @@ export default {
     height: 50px;
   }
 }
+
+@media only screen and (max-width: 968px){
+ /* .custom_h {
+    height: 100% !important;
+    padding: 0 20px;
+ } */
+
+ .custom_h > .v-toolbar__content {
+    height: 100% !important;
+    display: flex;
+    align-items: center;
+    padding: 12px !important;
+ }
+}
 @media only screen and (min-width: 1401px) {
   /* For desktop: */
 
   .pandinger {
     height: 160px;
   }
+}
+.v-toolbar__content {
+  padding: 0 !important;
 }
 </style>

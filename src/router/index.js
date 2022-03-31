@@ -22,7 +22,7 @@ import Archives from "../views/NEWS/Archives.vue";
 
 
 
-import Link from "../views/LINK/link.vue";
+import Link from "../views/Link/link.vue";
 
 
 
@@ -153,13 +153,7 @@ const routes = [
 
   },
 
-  //LINK
-
-  {
-    path: "/link",
-    name: "Link",
-    component: Link
-  },
+  
 ];
 
 const router = new VueRouter({

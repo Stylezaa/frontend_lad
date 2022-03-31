@@ -1,7 +1,7 @@
 <template>
   <div grid-list-md>
-    <v-row justify="center" align="center" id="History"   >
-      <v-col cols="12" xs="12" sm="12" md="10">
+    <v-row justify="center" align="center" id="History">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
@@ -11,13 +11,14 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-row class="bb">
-
-                      <v-card-title class="textt" style="font-size: 0.8em">
+              <v-card-title class="textt" style="font-size: 0.8em">
                 <p>
-                          Lao Association Dam (LAD) is a non-profit association under Laos law. It invites organisations, companies and individuals involved in the design, construction, operation, maintenance, monitoring and safety assessment of dams to become members.
-
-       Laos applied to join the International Committee on Large Dams on 30 November 2020 as 104th member country.
-
+                  Lao Association Dam (LAD) is a non-profit association under
+                  Laos law. It invites organisations, companies and individuals
+                  involved in the design, construction, operation, maintenance,
+                  monitoring and safety assessment of dams to become members.
+                  Laos applied to join the International Committee on Large Dams
+                  on 30 November 2020 as 104th member country.
                 </p>
               </v-card-title>
 
@@ -87,10 +88,10 @@
       </v-col>
     </v-row>
 
-    <div class="bg_about" id="Organization" >
+    <div class="bg_about" id="Organization">
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
                 <v-card-title><h4>Organisation of LAD</h4></v-card-title>
@@ -118,18 +119,18 @@
       </v-container>
     </div>
 
-    <v-row   justify="center" align="center" id="Board">  
-      <v-col  cols="12" xs="12" sm="12" md="12">
+    <v-row justify="center" align="center" id="Board">
+      <v-col cols="12" xs="12" sm="12" md="12">
         <v-col cols="12" xs="12" sm="12" md="12">
-          <v-card  flat>
-            <v-card-text  style="font-size: 1.5em" class="text-center"
-              ><h3 class="primary--text" >BOARD of LAD</h3></v-card-text
+          <v-card flat>
+            <v-card-text style="font-size: 1.5em" class="text-center"
+              ><h3 class="primary--text">BOARD of LAD</h3></v-card-text
             >
 
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4  class="textgray--text">BOARD</h4></v-card-text
+              ><h4 class="textgray--text">BOARD</h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -141,7 +142,40 @@
                     sm6
                     lg4
                     xl4
-                    v-for="(item, index) in Board"
+                    v-for="(item, index) in Board.slice(0, 1)"
+                    :key="index"
+                    class="pa-3 mx-auto"
+                  >
+                    <v-card
+                      flat
+                      class="text-center ma-12 primary v-card--reveal1"
+                    >
+                      <v-avatar size="150" class="lighten-2 mt-n16">
+                        <img class="imgs22" :src="item.src" />
+                      </v-avatar>
+
+                      <v-card-text class="text-center white--text"
+                        ><h3>{{ item.title }}</h3>
+                      </v-card-text>
+                      <v-card-text class="text-center white--text">
+                        <h3>{{ item.name }}</h3></v-card-text
+                      >
+                    </v-card>
+                  </v-flex>
+                </v-layout>
+              </v-card>
+            </v-col>
+
+            <v-col cols="12" xs="12" sm="12" md="12" xl="12">
+              <v-card flat>
+                <v-layout row wrap>
+                  <v-flex
+                    xs12
+                    md12
+                    sm6
+                    lg4
+                    xl4
+                    v-for="(item, index) in Board1.slice(0, 2)"
                     :key="index"
                     class="pa-3 mx-auto"
                   >
@@ -307,10 +341,10 @@
       </v-col>
     </v-row>
 
-    <div class="bg_about" id="Committees"> 
+    <div class="bg_about" id="Committees">
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
                 <v-card-title><h4>COMMITTEES</h4></v-card-title>
@@ -325,7 +359,7 @@
     <div>
       <v-container grid-list-md id="Membership">
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-card-title><h4>Memberships</h4></v-card-title>
@@ -355,7 +389,7 @@
     <div>
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="10">
+          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-card-title><h4>Document</h4></v-card-title>
@@ -422,7 +456,9 @@ export default {
           header: "Committee Objectives",
 
           title:
-            "    The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. " }, ],
+            "    The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. ",
+        },
+      ],
       press1: [
         {
           header: "Establishment of the Lao Dam Association",
@@ -449,6 +485,19 @@ export default {
           name: "Assoc. Prof. Dr. Sengpasong PHRAKHONKHAM",
         },
       ],
+      Board1: [
+        {
+          src: require("../../assets/images/BOARD of LAD/Vice President1.png"),
+          title: "Vice President",
+          name: "Assoc. Prof. Dr. Khampaseuth THEPVONGSA",
+        },
+
+        {
+          src: require("../../assets/images/BOARD of LAD/Vice President.png"),
+          title: "Vice President",
+          name: "Assoc. Prof. Dr. Sengpasong PHRAKHONKHAM",
+        },
+      ],
       Auditor: [
         {
           src: require("../../assets/images/BOARD of LAD/Hatsady SYSOMLATH.png"),
@@ -458,7 +507,7 @@ export default {
         {
           src: require("../../assets/images/BOARD of LAD/Khanthong VORACHITH.png"),
 
-          name: "Khanthong VORACHITH",
+          name: "Khanthone VORACHITH",
         },
         {
           src: require("../../assets/images/BOARD of LAD/Ellipse 3.png"),
@@ -519,9 +568,10 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-  this.navDrawerContent = 
-   this.$refs['myNavDrawer'].$el.querySelector('div.v-navigation-drawer__content');
-}
+    this.navDrawerContent = this.$refs["myNavDrawer"].$el.querySelector(
+      "div.v-navigation-drawer__content"
+    );
+  },
 };
 </script>
 

@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col cols="10">
+      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Newsletters</v-card-title
@@ -522,7 +522,7 @@
                       >
                       <v-divider class="mx-4"></v-divider>
 
-                      <v-layout row wrap>
+                      <!-- <v-layout row wrap>
                         <v-flex
                           xs6
                           md4
@@ -569,7 +569,7 @@
                             </v-card>
                           </v-hover>
                         </v-flex>
-                      </v-layout>
+                      </v-layout> -->
 
                       <v-card-title
                         style="font-size: 1.2em"

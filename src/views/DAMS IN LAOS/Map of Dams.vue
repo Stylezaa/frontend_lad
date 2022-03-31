@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-row justify="center" align="center">
-      <v-col cols="12" xs="12" sm="12" md="10">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"

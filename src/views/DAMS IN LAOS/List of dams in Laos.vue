@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-xl>
     <v-row justify="center" align="center">
-      <v-col cols="12" xs="12" sm="12" md="10">
+      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
@@ -119,7 +119,7 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    axios.get('https://lad-api007.herokuapp.com/api/dam/').then((response) => {
+    axios.get(this.$store.getters.getBaseUrl + "/dam").then((response) => {
       // JSON responses are automatically parsed.
       console.log(response.data);
       this.items = response.data.data;

@@ -1,14 +1,12 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col>
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
-            >Home > Publication > Law and Regulation </v-card-title
-          >
-          <v-card-title class="mt-n7"
-            ><h3>Law and Regulation </h3></v-card-title
-          >
+            >Home > Publication > Law and Regulation
+          </v-card-title>
+          <v-card-title class="mt-n7"><h3>Law and Regulation</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>
@@ -55,7 +53,7 @@
                                     color="primary"
                                     class="ma-6"
                                     :href="item.pdf"
-                                        target="_blank"
+                                    target="_blank"
                                     >Preview</v-btn
                                   >
                                 </h4>
@@ -66,7 +64,6 @@
                         </v-card>
                         <br />
                       </v-flex>
-                   
                     </v-card>
                   </v-col>
                 </v-row>
@@ -87,7 +84,7 @@ export default {
   data() {
     return {
       items: [
-          {
+        {
           title: "Law on Electricity",
           date: "May 09, 2017",
           Type: "Law and Regulation",
@@ -99,14 +96,14 @@ export default {
           date: "March 19, 2020",
           Type: "Law and Regulation",
           src: require("../../assets/images/pdf/2.png"),
-           pdf: "https://drive.google.com/file/d/1WmHRhgnAfea3_Zx58ivvWhDgD3r_GFj5/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1WmHRhgnAfea3_Zx58ivvWhDgD3r_GFj5/view?usp=sharing",
         },
         {
           title: "ໃບຮອງຮັບເອົາກົດໝາຍ ມຟລ 2018 ",
           date: "Jun 06, 2017",
           Type: "Law and Regulation",
           src: require("../../assets/images/pdf/3.png"),
-           pdf: "https://drive.google.com/file/d/1QGsA6unWz87Y_MI_z35QbCaGZ5JoRUtL/view?usp=sharing",
+          pdf: "https://drive.google.com/file/d/1QGsA6unWz87Y_MI_z35QbCaGZ5JoRUtL/view?usp=sharing",
         },
       ],
       datapdf: "",

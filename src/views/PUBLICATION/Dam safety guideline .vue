@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col>
+      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > Publication > Dam Safety Guideline </v-card-title
@@ -104,13 +104,7 @@ export default {
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1SkTS32RlrW4gcloS99-kIRCO7_sPZEKh/view?usp=sharing",
         },
-             {
-          title: "Guideline  on Operating and Managing Lao Electric Power Technical  Standards and  Safety Rules  for Operation and Maintenance 2018",
-          date: "Jun 06, 2017",
-          Type: "Guideline",
-          src: require("../../assets/images/pdf/1.png"),
-          pdf: "https://drive.google.com/file/d/1SkTS32RlrW4gcloS99-kIRCO7_sPZEKh/view?usp=sharing",
-        },  {
+    {
           title: "LEPTS Laos 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",

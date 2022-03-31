@@ -4,8 +4,19 @@
       <v-row justify="center" align="center">
         <v-col cols="12" xs="12" sm="12" md="10">
           <template>
-            <v-col cols="12" xs="12" sm="12" md="12">
-              <v-card flat class="mx-auto my-4 text-center">
+            <v-col class="custom_slider_main" cols="12" xs="12" sm="12" md="12">
+              <v-card flat class="mx-auto my-4 text-center custom_slider">
+                <v-carousel
+                  class="hidden-md-and-up"
+                  height="auto"
+                  show-arrows-on-hover
+                >
+                  <v-carousel-item v-for="(item, i) in items" :key="i">
+                    <v-img :src="item.src" aspect-ratio="1.77"></v-img>
+                  </v-carousel-item>
+                </v-carousel>
+               
+
                 <v-carousel
                   height="350"
                   hide-delimiter-background
@@ -15,6 +26,7 @@
                   delimiter-icon="mdi-minus"
                   show-arrows-on-hover
                   continuous
+                  class="hidden-sm-and-down"
                 >
                   <!-- v-center-item1 -->
                   <v-carousel-item
@@ -24,7 +36,7 @@
                     reverse-transition="fade-transition"
                     transition="fade-transition"
                     show-arrows-on-hover
-                    class="mx-auto"
+                    class=""
                   ></v-carousel-item>
                 </v-carousel>
               </v-card>
@@ -348,6 +360,18 @@ export default {
 
     align-items: center;
     justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .custom_slider_main > .custom_slider {
+    margin: -2px 0 !important;
+  }
+}
+
+@media only screen and (min-width: 1264px) {
+  .slider_content {
+    height: 350px !important;
   }
 }
 @media only screen and (min-width: 1401px) {

@@ -1,7 +1,7 @@
 <template>
   <v-footer dark padless>
-    <v-card flat tile class="primary white--text py-8 px-2" width="100%">
-      <v-row class="footer">
+    <v-card flat tile class="primary white--text py-8 px-2 custom_footer">
+      <v-row class="footer" width="100%">
         <v-col cols="12" xs="12" sm="7" md="3">
           <v-toolbar color="transparent " flat>
             <v-list-item-avatar size="70">
@@ -181,11 +181,23 @@ export default {
 </script>
 
 <style>
+.custom_footer {
+  width: 100% !important;
+  margin: 0 !important;
+}
+@media only screen and (max-width: 576px) {
+  .custom_footer > .footer {
+  margin: 0;
+}
+  
+}
+
 @media only screen and (min-width: 600px) {
   /* For desktop: */
   .footer {
     margin-left: 0px;
   }
+  
 }
 @media only screen and (min-width: 1401px) {
   /* For desktop: */
@@ -193,5 +205,6 @@ export default {
   .footer {
     margin-left: 300px;
   }
+  
 }
 </style>
