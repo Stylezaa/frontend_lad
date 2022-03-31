@@ -151,7 +151,7 @@ const routes = [
     path: "*",
     redirect: "/error"
 
-  },
+  }
 
   
 ];
