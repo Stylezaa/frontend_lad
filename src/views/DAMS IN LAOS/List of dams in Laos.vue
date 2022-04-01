@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-xl>
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
@@ -11,9 +11,6 @@
               ><h3>LIST OF DAMS IN LAOS</h3></v-card-title
             >
             <v-divider class="mx-4"></v-divider>
-
-          
-        
           </v-card>
         </v-col>
       </v-col>

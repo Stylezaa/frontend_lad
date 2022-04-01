@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Archives list</v-card-title
@@ -90,16 +90,16 @@
                     </v-card>
                   </v-col>
                   <v-col cols="12" xs="12" sm="8" md="8" xl="9">
-                      <v-card flat>
-                          <v-card flat height="500">
-                            <div
-                              class="text-center primary--text"
-                              style="font-size: 2em"
-                            >
-                              No information!
-                            </div>
-                          </v-card>
-                        </v-card>
+                    <v-card flat>
+                      <v-card flat height="500">
+                        <div
+                          class="text-center primary--text"
+                          style="font-size: 2em"
+                        >
+                           Comming Soon!
+                        </div>
+                      </v-card>
+                    </v-card>
                   </v-col>
                 </v-row>
               </v-card>

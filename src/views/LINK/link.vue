@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md>
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card class="mx-auto" flat>
             <v-card-title style="font-size: 0.8em">Home > Link</v-card-title>
@@ -11,14 +11,7 @@
             <v-row class="bb"> </v-row>
             <router-view></router-view>
 
-            <div v-for="(item, index) in press" :key="index">
-              <v-card-title style="font-size: 1.2em" class="primary--text">
-                <h4>
-                  {{ item.header }}
-                </h4></v-card-title
-              >
-            </div>
-
+      
             <!-- Table -->
             <div id="link-table" style="overflow-x: auto">
               <table>

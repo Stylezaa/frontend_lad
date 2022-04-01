@@ -1,13 +1,13 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
-            >Home > Publication > Dam Safety Guideline </v-card-title
-          >
+            >Home > Publication > Dam Safety Guideline
+          </v-card-title>
           <v-card-title class="mt-n7"
-            ><h3>DAM SAFETY GUIDELINE </h3></v-card-title
+            ><h3>DAM SAFETY GUIDELINE</h3></v-card-title
           >
           <v-divider class="mx-4"></v-divider>
 
@@ -66,7 +66,6 @@
                         </v-card>
                         <br />
                       </v-flex>
-                    
                     </v-card>
                   </v-col>
                 </v-row>
@@ -86,43 +85,44 @@ export default {
   name: "Dam safety guideline ",
   data() {
     return {
-  
-
       items: [
-      
-         {
+        {
           title: "LEPTS Laos 2004",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1FPfQzvarbCvM1ToozJmtHJKR2z0RqjnS/view?usp=sharing",
         },
-           {
-          title: "Guideline  on Operating and Managing Lao Electric Power Technical  Standards and  Safety Rules  for Operation and Maintenance 2018",
+        {
+          title:
+            "Guideline  on Operating and Managing Lao Electric Power Technical  Standards and  Safety Rules  for Operation and Maintenance 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1SkTS32RlrW4gcloS99-kIRCO7_sPZEKh/view?usp=sharing",
         },
-    {
+        {
           title: "LEPTS Laos 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1KFMVeNItC9GlJUXYD4P9kmk3U01WSMmP/view?usp=sharing",
-        },  {
+        },
+        {
           title: "Preface- December 2018 Dam Safety Guideline",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1xywW4h44ZIBBWTc-994yMLoL_zaWTJSi/view?usp=sharing",
-        },  {
+        },
+        {
           title: "Dam Safety Guidelines- Documentation-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/11OqTS5uj0-S-3OV98iAvCLdRRTBrZR9K/view?usp=sharing",
-        },  {
+        },
+        {
           title: "Dam Safety Guidelines- EAP-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
@@ -143,28 +143,28 @@ export default {
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/10STvHI2uVpybEr__D-qg2ofuNZVIht5W/view?usp=sharing",
         },
-           {
+        {
           title: "Dam Safety Guidelines- Quality-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1m8ZCHGjqgi9y6n4VrGHImt7vip43G-tw/view?usp=sharing",
         },
-           {
+        {
           title: "Dam Safety Guidelines- Reservoir Impoundment-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1FQAWsEhQ6S9jh1p2-eWIuwZhwpIj71tr/view?usp=sharing",
         },
-          {
+        {
           title: "Dam Safety Guidelines- Surveillance-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1KRAvLjdoIvjmMq_eGICGjT7PuT3ORDLr/view?usp=sharing",
         },
-          {
+        {
           title: "Dam Safety Guidelines- Training-December 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",

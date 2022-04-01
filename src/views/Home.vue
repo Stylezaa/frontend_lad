@@ -9,13 +9,23 @@
                 <v-carousel
                   class="hidden-md-and-up"
                   height="auto"
+                  hide-delimiter-background
+                  reverse-transition="fade-transition"
+                  cycle
+                  delimiter-icon="mdi-minus"
                   show-arrows-on-hover
+                  continuous
                 >
-                  <v-carousel-item v-for="(item, i) in items" :key="i">
+                  <v-carousel-item
+                    v-for="(item, i) in items"
+                    :key="i"
+                    reverse-transition="fade-transition"
+                    transition="fade-transition"
+                    show-arrows-on-hover
+                  >
                     <v-img :src="item.src" aspect-ratio="1.77"></v-img>
                   </v-carousel-item>
                 </v-carousel>
-               
 
                 <v-carousel
                   height="350"
@@ -34,7 +44,6 @@
                     :key="i"
                     :src="item.src"
                     reverse-transition="fade-transition"
-                    transition="fade-transition"
                     show-arrows-on-hover
                     class=""
                   ></v-carousel-item>
@@ -65,8 +74,8 @@
                               class="v-card--reveal"
                             >
                               <v-btn
-                                height="30"
-                                width="30"
+                                height="20"
+                                width="10"
                                 color="primary "
                                 class="test"
                               >
@@ -80,7 +89,8 @@
                                 </v-card-text></v-btn
                               >
 
-                              <br /><b>{{ item.title }}</b>
+                              <br />
+                              <h4 style="font-size: 0.7em">{{ item.title }}</h4>
                             </v-overlay>
                             <v-overlay
                               v-if="hover"
@@ -211,7 +221,7 @@ export default {
           title: "NEWS",
         },
         {
-          src: require("../assets/images/s1.png"),
+          src: require("../assets/images/Group 85.png"),
           title: "EVENTS",
         },
         {
@@ -298,7 +308,7 @@ export default {
 .v-card--reveal {
   opacity: 1;
   font-size: 12px;
-  padding-top: 50px;
+  padding-top: 30px;
 
   border-radius: 5px;
   color: #fff;

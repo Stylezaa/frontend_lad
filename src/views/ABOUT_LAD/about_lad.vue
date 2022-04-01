@@ -7,18 +7,15 @@
             <v-card-title style="font-size: 0.8em"
               >Home > About Lad >
             </v-card-title>
-            <v-card-title class="mt-n7"><h3>HISTORY</h3></v-card-title>
+            <v-card-title class="mt-n7">
+              <h3>{{ $t("main.HISTORY") }}</h3></v-card-title
+            >
             <v-divider class="mx-4"></v-divider>
 
             <v-row class="bb">
-              <v-card-title class="textt" style="font-size: 0.8em">
+              <v-card-title class="textt" style="font-size: 1em">
                 <p>
-                  Lao Association Dam (LAD) is a non-profit association under
-                  Laos law. It invites organisations, companies and individuals
-                  involved in the design, construction, operation, maintenance,
-                  monitoring and safety assessment of dams to become members.
-                  Laos applied to join the International Committee on Large Dams
-                  on 30 November 2020 as 104th member country.
+                  {{ $t("main.test") }}
                 </p>
               </v-card-title>
 
@@ -38,48 +35,35 @@
               </v-img>
             </v-row>
             <div v-for="(item, index) in press" :key="index">
-              <v-card-text style="font-size: 0.8em" class="text-center">
+              <v-card-text style="font-size: 1em" class="text-center">
                 LAO ASSOCIATION ON DAMS
               </v-card-text>
               <v-card-title style="font-size: 1.2em" class="primary--text">
-                <h4>
-                  {{ item.header }}
+                <h4 style="font-size: 1.2em">
+                  {{ $t("main." + item.header) }}
                 </h4></v-card-title
               >
 
-              <v-card-title style="font-size: 0.8em">
-                {{ item.title }}</v-card-title
-              >
-              <v-card-title class="mt-n3" style="font-size: 0.8em">
-                {{ item.title1 }}</v-card-title
-              >
-
-              <v-card-title class="mt-n3" style="font-size: 0.8em">
-                {{ item.title2 }}</v-card-title
-              >
+              <v-card-title style="font-size: 1em">
+                {{ $t("main.Committee ObjectivesW") }}
+              </v-card-title>
             </div>
             <div v-for="(item, index) in press1" :key="index">
-              <v-card-title style="font-size: 1.2em" class="primary--text">
-                <h4>
-                  {{ item.header }}
+              <v-card-title class="primary--text">
+                <h4 style="font-size: 1.2em">
+                  {{ $t("main." + item.header) }}
                 </h4></v-card-title
               >
 
-              <v-card-title class="textt" style="font-size: 0.8em">
+              <v-card-title class="textt" style="font-size: 1.2em">
                 <p>
-                  Open LAD inaugural Assembly 13 November 2020 <br />· On
-                  14/01/2021 the first extra ordinary board meeting <br />·
-                  Decision of Minister of Energy and Mines No.0111/MEM, dated 29
-                  January 2021 regrading formation of LAD. <br />· Decision of
-                  Minister of Energy and Mines No.0110/MEM, dated 29 January
-                  2021 approval of LAD’s charter. <br />· Decision of Minister
-                  of Energy and Mines No.0112/MEM, dated 29 January 2021
-                  approval of LAD’s board members. <br />· LAD’s charter was
-                  signed by President on so 30 January 2021. <br />· President
-                  officially appointed Director of LAD as per Decision No.
-                  003/LAD.P, dated February 2021. <br />· LAD has been duly
-                  registered as per registration No.23/DSD, dated 11 February
-                  2021.
+                  <br />· {{ $t("main.Establishment1") }} <br />·
+                  {{ $t("main.Establishment2") }} <br />·
+                  {{ $t("main.Establishment3") }} <br />·
+                  {{ $t("main.Establishment4") }}. <br />·
+                  {{ $t("main.Establishment5") }} <br />·
+                  {{ $t("main.Establishment6") }} <br />·
+                  {{ $t("main.Establishment7") }}
                 </p>
               </v-card-title>
             </div>
@@ -94,7 +78,9 @@
           <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
-                <v-card-title><h4>Organisation of LAD</h4></v-card-title>
+                <v-card-title
+                  ><h4>{{ $t("main.Organisation of LAD") }}</h4></v-card-title
+                >
                 <v-divider class="mx-4 black"></v-divider>
               </v-card>
               <v-row class="bb">
@@ -124,13 +110,17 @@
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-text style="font-size: 1.5em" class="text-center"
-              ><h3 class="primary--text">BOARD of LAD</h3></v-card-text
+              ><h3 class="primary--text">
+                {{ $t("main.BOARD of LAD") }}
+              </h3></v-card-text
             >
 
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">BOARD</h4></v-card-text
+              ><h4 class="textgray--text">
+                {{ $t("main.BOARD") }}
+              </h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -155,10 +145,10 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.title }}</h3>
+                        ><h3>{{ $t("main." + item.title) }}</h3>
                       </v-card-text>
                       <v-card-text class="text-center white--text">
-                        <h3>{{ item.name }}</h3></v-card-text
+                        <h3>{{ $t("main." + item.name) }}</h3></v-card-text
                       >
                     </v-card>
                   </v-flex>
@@ -188,10 +178,10 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.title }}</h3>
+                        ><h3>{{ $t("main." + item.title) }}</h3>
                       </v-card-text>
                       <v-card-text class="text-center white--text">
-                        <h3>{{ item.name }}</h3></v-card-text
+                        <h3>{{ $t("main." + item.name) }}</h3></v-card-text
                       >
                     </v-card>
                   </v-flex>
@@ -202,7 +192,9 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">Auditor</h4></v-card-text
+              ><h4 class="textgray--text">
+                {{ $t("main.Auditor") }}
+              </h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -227,7 +219,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.name }}</h3>
+                        ><h3>{{ $t("main." + item.name) }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -238,7 +230,9 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">Director</h4></v-card-text
+              ><h4 class="textgray--text">
+                {{ $t("main.Director") }}
+              </h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -263,7 +257,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.name }}</h3>
+                        ><h3>{{ $t("main." + item.name) }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -274,7 +268,9 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">Technical Committee</h4></v-card-text
+              ><h4 class="textgray--text">
+                {{ $t("main.Technical Committee") }}
+              </h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -296,7 +292,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.name }}</h3>
+                        ><h3>{{ $t("main." + item.name) }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -307,7 +303,9 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-card-text class="text-center"
-              ><h4 class="textgray--text">Planning Committee</h4></v-card-text
+              ><h4 class="textgray--text">
+                {{ $t("main.Planning Committee") }}
+              </h4></v-card-text
             >
 
             <v-col cols="12" xs="12" sm="12" md="12" xl="12">
@@ -329,7 +327,7 @@
                       </v-avatar>
 
                       <v-card-text class="text-center white--text"
-                        ><h3>{{ item.name }}</h3>
+                        ><h3>{{ $t("main." + item.name) }}</h3>
                       </v-card-text>
                     </v-card>
                   </v-flex>
@@ -347,7 +345,9 @@
           <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
-                <v-card-title><h4>COMMITTEES</h4></v-card-title>
+                <v-card-title
+                  ><h4>{{ $t("main.COMMITTEES") }}</h4></v-card-title
+                >
                 <v-divider class="mx-4 black"></v-divider>
               </v-card>
             </v-col>
@@ -362,22 +362,18 @@
           <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
-                <v-card-title><h4>Memberships</h4></v-card-title>
+                <v-card-title
+                  ><h4>{{ $t("main.Memberships") }}</h4></v-card-title
+                >
                 <v-divider class="mx-4"></v-divider>
 
-                <v-card-title style="font-size: 0.9em" class="mt-n3">
-                  The Lao Association on Dams is composed of individual members
-                  and collective members (organization). Individual members are
-                  mangers, scientists, specialists, businessmen, engineers,
-                  technologists, related students. Collective members are
-                  government organizations, academic organizations, enterprises,
-                  power producers, professional associations, institute of
-                  engineers, consulting companies, construction companies,
-                  suppliers of equipment and materials and other institutions.
-                  <br />The Association members shall have three (3) categories
-                  of members as follows: <br />
-                  - Ordinary members; <br />- Support membersand <br />-
-                  Honorary members
+                <v-card-title style="font-size: 1em" class="mt-n3">
+                  {{ $t("main.Memberships1") }}
+                  <br />
+                  {{ $t("main.Memberships2") }} <br />
+                  - {{ $t("main.Memberships3") }} <br />-
+                  {{ $t("main.Memberships4") }} <br />-
+                  {{ $t("main.Memberships5") }}
                 </v-card-title>
               </v-card>
             </v-col>
@@ -392,7 +388,7 @@
           <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
-                <v-card-title><h4>Document</h4></v-card-title>
+                <v-card-title><h4>{{ $t("main.Document") }}</h4></v-card-title>
                 <v-divider class="mx-4 black"></v-divider>
 
                 <v-flex
@@ -456,7 +452,7 @@ export default {
           header: "Committee Objectives",
 
           title:
-            "    The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. ",
+            "The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. ",
         },
       ],
       press1: [
@@ -473,29 +469,18 @@ export default {
           title: "President",
           name: "Viraphonh VIRAVONG",
         },
-        {
-          src: require("../../assets/images/BOARD of LAD/Vice President1.png"),
-          title: "Vice President",
-          name: "Assoc. Prof. Dr. Khampaseuth THEPVONGSA",
-        },
-
-        {
-          src: require("../../assets/images/BOARD of LAD/Vice President.png"),
-          title: "Vice President",
-          name: "Assoc. Prof. Dr. Sengpasong PHRAKHONKHAM",
-        },
       ],
       Board1: [
         {
           src: require("../../assets/images/BOARD of LAD/Vice President1.png"),
           title: "Vice President",
-          name: "Assoc. Prof. Dr. Khampaseuth THEPVONGSA",
+          name: "Khampaseuth THEPVONGSA",
         },
 
         {
           src: require("../../assets/images/BOARD of LAD/Vice President.png"),
           title: "Vice President",
-          name: "Assoc. Prof. Dr. Sengpasong PHRAKHONKHAM",
+          name: "Sengpasong PHRAKHONKHAM",
         },
       ],
       Auditor: [
@@ -546,12 +531,12 @@ export default {
         {
           src: require("../../assets/images/BOARD of LAD/Dr.Khamhou.png"),
 
-          name: "Dr. Khamhou XAPHOUVONG",
+          name: "Khamhou XAPHOUVONG",
         },
         {
           src: require("../../assets/images/BOARD of LAD/Ellipse 3.png"),
 
-          name: "Dr. Dousith PHOMMACHANH",
+          name: "Dousith PHOMMACHANH",
         },
       ],
 

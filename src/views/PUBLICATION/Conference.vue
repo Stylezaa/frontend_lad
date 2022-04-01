@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > Publication > Conference proceeding</v-card-title
@@ -65,12 +65,12 @@
                         </v-card>
                         <br />
                       </v-flex>
-                                   <v-card flat height="500">
+                      <v-card flat height="500">
                         <div
                           class="text-center primary--text"
                           style="font-size: 2em"
                         >
-                          No information!
+                          Comming Soon!
                         </div>
                       </v-card>
                     </v-card>
@@ -92,11 +92,7 @@ export default {
   name: "Conference",
   data() {
     return {
-  
-
-      items: [
-      
-      ],
+      items: [],
       datapdf: "",
       datapdf1: "../../assets/pdf/test.pdf",
     };

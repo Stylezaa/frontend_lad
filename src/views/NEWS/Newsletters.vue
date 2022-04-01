@@ -1,7 +1,7 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
-      <v-col  cols="12" xs="12" sm="12" md="8" xl="8">
+      <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Newsletters</v-card-title
@@ -663,7 +663,6 @@ export default {
           title: "LAD Inaugural Assembly held on 13 November 2020",
           date: "Nov 09, 2021",
         },
-     
       ],
       icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
       items2: [

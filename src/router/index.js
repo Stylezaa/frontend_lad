@@ -5,31 +5,31 @@ import Home from "../views/Home.vue";
 
 import about from "../views/404.vue";
 
-
 import About from "../views/ABOUT_LAD/about_lad.vue";
-
 
 import Difination from "../views/DAMS IN LAOS/Difination of dams.vue";
 import List from "../views/DAMS IN LAOS/List of dams in Laos.vue";
 import Maps from "../views/DAMS IN LAOS/Map of Dams.vue";
 import safety from "../views/DAMS IN LAOS/Dam safety.vue";
 
-
 import Newsletters from "../views/NEWS/Newsletters.vue";
 import Events from "../views/NEWS/Events.vue";
 import Press from "../views/NEWS/Press Releases.vue";
 import Archives from "../views/NEWS/Archives.vue";
 
-
-
 import Link from "../views/Link/link.vue";
-
-
 
 import Conference from "../views/PUBLICATION/Conference.vue";
 import guideline from "../views/PUBLICATION/Dam safety guideline .vue";
 import Lao from "../views/PUBLICATION/Lao electricity Law .vue";
 
+
+import { Trans } from '../plugins/Translation'
+
+function load(component) {
+  // '@' is aliased to src/components
+  return () => import(`@/views/${component}.vue`)
+}
 
 
 
@@ -37,123 +37,126 @@ Vue.use(VueRouter);
 
 const routes = [
   {
-    path: "/home",
-    name: "home",
-    component: Home
+
+  path: "/:locale/",
+  component: {
+    render(c) { return c('router-view') }
   },
+  beforeEnter: Trans.routeMiddleware,
+  children: [{
 
-
+    path: "/",
+    name: "Home",
+    component: Home,
+  },
 
   /// ABOUT LAD
 
-    {
-    path: "/about",
+  {
+    path: "About",
     name: "About",
-    component: About
+
+    component: About,
   },
-  
-/// DAMS IN LAOS
 
+  /// DAMS IN LAOS
 
-{
-  path: "/dams/Difiniation",
-  name: "Difination of dams",
-  component: Difination
-},
-{
-  path: "/dams/List",
-  name: "List of dams in Laos",
-  component: List
-},
-{
-  path: "/dams/Map",
-  name: "Map of Dams",
-  component: Maps
-},
+  {
+    path: "Difination",
+    name: "Difination",
+    component: Difination,
+  },
+  {
+    path: "List",
+    name: "List",
+    component: List,
+  },
+  {
+    path: "Map",
+    name: "Map",
+    component: Maps,
+  },
 
-{
-  path: "/dams/safety",
-  name: "safety",
-  component: safety
-},
-
-
-
-
-
+  {
+    path: "safety",
+    name: "safety",
+    component: safety,
+  },
 
   /// NEWS
 
-
   {
-    path: "/news/Newsletters",
+    path: "Newsletters",
     name: "Newsletters",
-    component: Newsletters
+    component: Newsletters,
   },
   {
-    path: "/news/Events",
+    path: "Events",
     name: "Events",
-    component: Events
+    component: Events,
   },
   {
-    path: "/news/Releases",
-    name: "Press Releases",
-    component: Press
+    path: "Releases",
+    name: "Releases",
+    component: Press,
   },
   {
-    path: "/news/Archives",
+    path: "Archives",
     name: "Archives",
-    component: Archives
+    component: Archives,
   },
-
-
 
   //PUBLICATION
 
   {
-    path: "/publication/Conference",
+    path: "Conference",
     name: "Conference",
-    component: Conference
+    component: Conference,
   },
   {
-    path: "/publication/guideline",
+    path: "guideline",
     name: "guideline",
-    component: guideline
+    component: guideline,
   },
   {
-    path: "/publication/LaoElectricity",
-    name: "Lao",
-    component: Lao
+    path: "LaoElectricity",
+    name: "LaoElectricity",
+    component: Lao,
   },
 
-
-// LINK
+  // LINK
 
   {
-    path: "/Link/",
+    path: "Link",
     name: "Link",
-    component: Link
+    component: Link,
   },
 
-
   {
-    path: "/",
-    redirect: "/home"
-
+    path: "",
+    redirect: "home",
   },
   {
-    path: "/error",
+    path: "error",
     name: "error",
-    component: about
+    component: about,
   },
 
-  {
-    path: "*",
-    redirect: "/error"
 
-  }
+
+
+  ],
 
   
+},
+
+{
+  path: "*",
+  redirect() {
+    return process.env.VUE_APP_I18N_LOCALE;
+  }
+},
+
 ];
 
 const router = new VueRouter({

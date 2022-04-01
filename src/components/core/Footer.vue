@@ -4,29 +4,24 @@
       <v-row class="footer" width="100%">
         <v-col cols="12" xs="12" sm="7" md="3">
           <v-toolbar color="transparent " flat>
-            <v-list-item-avatar size="70">
-              <v-img
-                :src="require('../../assets/images/lads_logo.png')"
-                contain
-              ></v-img>
-            </v-list-item-avatar>
-
-            <v-card-text class="white--text">
-              <h3 style="font-size: 1em">ສະມາຄົມເຂື່ອນລາວ</h3>
-              <h4 style="font-size: 0.8em">LAO ASSOCIATION ON DAMS</h4>
-            </v-card-text>
+            <v-img
+              :src="require('../../assets/images/LOGO-White.png')"
+              contain
+              max-height="350"
+              max-width="300"
+            ></v-img>
           </v-toolbar>
           <div class="pt-5">
             <v-card-text
               v-for="(item, index) in contact"
               :key="index"
               class="white--text py-2"
-              style="font-size: 0.9em"
+              style="font-size: 1em"
             >
-              {{ item.title }}
+              {{ $t("main." + item.title) }}
             </v-card-text>
           </div>
-          <v-card-text class="white--text"><h4>CONTACT US</h4></v-card-text>
+          <v-card-text  class="white--text"><h4>{{ $t("main.CONTACT US") }}</h4></v-card-text>
 
           <v-card-text class="pt-1">
             <v-btn
@@ -45,75 +40,82 @@
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <v-card-text class="white--text pt-0 py-1">
-            <h4 class="py-6" style="font-size: 0.9em">ABOUT LAD</h4>
+            <h4 class="py-6" style="font-size: 1em">
+              {{ $t("main.ABOUT LAD") }}
+            </h4>
           </v-card-text>
 
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 0.9em"
+            style="font-size: 1em"
             v-for="(item, index) in ABOUT"
             :key="index"
           >
-            <a
+            <router-link
               class="colorfooter--text mt-n4"
               style="text-decoration: none"
-              :href="item.link"
-              >{{ item.title }}</a
+              :to="$i18nRoute({ name: 'About' })"
+              >{{ $t("main." + item.title) }}</router-link
             >
           </v-card-text>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <v-card-text class="white--text pt-0 py-1">
-            <h4 class="py-6" style="font-size: 0.9em">DAMS IN LAOS</h4>
+            <h4 class="py-6" style="font-size: 1em">
+              {{ $t("main.DAMS IN LAOS") }}
+            </h4>
           </v-card-text>
           <v-card-text
             class="colorfooter--text mt-n4"
             v-for="(item, index) in DAM"
-            style="font-size: 0.9em"
+            style="font-size: 1em"
             :key="index"
           >
             <a
               class="colorfooter--text mt-n4"
               style="text-decoration: none"
-              :href="item.link"
-              >{{ item.title }}</a
+              @click="newroutdam($i18nRoute({ name: item.link }))"
+              >{{ $t("main." + item.title) }}</a
             ></v-card-text
           >
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <v-card-text class="white--text pt-0 py-1">
-            <h4 class="py-6" style="font-size: 0.9em">NEWS</h4>
+            <h4 class="py-6" style="font-size: 1em">{{ $t("main.NEWS") }}</h4>
           </v-card-text>
 
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 0.9em"
+            style="font-size: 1em"
             v-for="(item, index) in NEWS"
             :key="index"
           >
             <a
               class="colorfooter--text mt-n4"
               style="text-decoration: none"
-              :href="item.link"
-              >{{ item.title }}</a
+              @click="clicknew($i18nRoute({ name: item.link }))"
+              >{{ $t("main." + item.title) }}</a
             >
           </v-card-text>
         </v-col>
         <v-col cols="12" xs="12" sm="6" md="2">
           <v-card-text class="white--text pt-0 py-1">
-            <h4 class="py-6" style="font-size: 0.9em">PUBLICATION</h4>
+            <h4 class="py-6" style="font-size: 1em">
+              {{ $t("main.PUBLICATION") }}
+            </h4>
           </v-card-text>
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 0.9em"
+            style="font-size: 1em"
             v-for="(item, index) in PUBLICATION"
             :key="index"
           >
             <a
               class="colorfooter--text mt-n4"
               style="text-decoration: none"
-              :href="item.link"
-              >{{ item.title }}</a
+              @click="clickpublic($i18nRoute({ name: item.link }))"
+            >
+              {{ $t("main." + item.title) }}</a
             >
           </v-card-text>
         </v-col>
@@ -123,7 +125,7 @@
       class="primary colorfooter--text text-center"
       style="font-size: 1em"
     >
-      @2022 LAO ASSOCIATION ON DAMS (LAD)
+      {{ $t("main.2022") }}
     </v-card-text>
   </v-footer>
 </template>
@@ -137,8 +139,8 @@ export default {
       contact: [
         { title: "2800 - 14th Ave, Suite 210" },
         { title: "Vientiane, Vientiane" },
-        { title: "LAOS P.D.R" },
-        { title: "Email: laoassociationdams@gmail.com" },
+        { title: "A" },
+        { title: "B" },
         { title: "Tel + (856) 2155-7076" },
       ],
       header: [
@@ -149,34 +151,44 @@ export default {
         { title: "PUBLICATION" },
       ],
       ABOUT: [
-               { title: "History", link: "/about" },
-            { title: "Organization", link: "/about" },
-            { title: "Board", link: "/about" },
-            { title: "Committees", link: "/about" },
-            { title: "Membership", link: "/about" },
+        { title: "History", link: "about" },
+        { title: "Organization", link: "about" },
+        { title: "Board", link: "about" },
+        { title: "Committees", link: "about" },
+        { title: "Membership", link: "about" },
       ],
       DAM: [
-                 { title: "Definition of dams", link: "/dams/Difiniation" },
-            { title: "List of dams in Laos", link: "/dams/List" },
-            { title: "Map of Dams", link: "/dams/Map" },
-                { title: "Dam Safety", link: "/dams/safety" },
+        { title: "Definition of Dams", link: "Difination" },
+        { title: "List of Dams in Laos", link: "List" },
+        { title: "Map of Dams", link: "Map" },
+        { title: "Dam Safety", link: "safety" },
       ],
       NEWS: [
-                { title: "Newsletters", link: "/news/Newsletters" },
-            { title: "Events", link: "/news/Events" },
-            { title: "Press Releases", link: "/news/Releases" },
-            { title: "Archives", link: "/news/Archives" },
+        { title: "Newsletters", link: "Newsletters" },
+        { title: "Events", link: "Events" },
+        { title: "Press Releases", link: "Releases" },
+        { title: "Archives", link: "Archives" },
       ],
       PUBLICATION: [
-        { title: "Lao electricity Law", link: "/publication/Conference" },
-            { title: "Dam safety guideline", link: "/publication/guideline" },
-            { title: "Conference procedding", link: "/publication/LaoElectricity" },
+        { title: "Law and Regulation", link: "LaoElectricity" },
+        { title: "Guideline", link: "guideline" },
+        { title: "Conference Procedding", link: "Conference" },
       ],
     };
   },
 
   mounted() {},
-  methods: {},
+  methods: {
+    newroutdam(item) {
+      this.$router.push(item);
+    },
+    clicknew(item) {
+      this.$router.push(item);
+    },
+    clickpublic(item) {
+      this.$router.push(item);
+    },
+  },
 };
 </script>
 
@@ -187,9 +199,8 @@ export default {
 }
 @media only screen and (max-width: 576px) {
   .custom_footer > .footer {
-  margin: 0;
-}
-  
+    margin: 0;
+  }
 }
 
 @media only screen and (min-width: 600px) {
@@ -197,7 +208,6 @@ export default {
   .footer {
     margin-left: 0px;
   }
-  
 }
 @media only screen and (min-width: 1401px) {
   /* For desktop: */
@@ -205,6 +215,10 @@ export default {
   .footer {
     margin-left: 300px;
   }
-  
+}
+li {
+  text-decoration: underline;
+  color: #459ce7;
+  cursor: pointer;
 }
 </style>
