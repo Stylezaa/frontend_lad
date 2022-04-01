@@ -116,7 +116,7 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    axios.get(this.$store.getters.getBaseUrl + "/dam").then((response) => {
+    axios.get('https://lad-api007.herokuapp.com/api/dam/').then((response) => {
       // JSON responses are automatically parsed.
       console.log(response.data);
       this.items = response.data.data;
