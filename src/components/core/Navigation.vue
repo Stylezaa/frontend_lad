@@ -62,7 +62,7 @@
               xl="8"
               class="hidden-sm-and-down"
             >
-              <v-toolbar color="transparent " flat>
+              <v-toolbar color="transparent " id="logo_section" flat>
                 <router-link
                   class="black--text mt-n4"
                   style="text-decoration: none"
@@ -570,6 +570,7 @@ div#custom_contact_section {
 
 div#custom_row_contact_section {
   position: relative;
+  z-index: 1;
 }
 
 button#btn_contact_section {
