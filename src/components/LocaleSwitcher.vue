@@ -154,7 +154,7 @@ div#sw_lang_section {
   div#sw_lang_section {
       position: relative;
       top: 8px;
-      right: -45px;
+      right: -40px;
   }
 }
 
