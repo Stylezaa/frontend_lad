@@ -146,8 +146,16 @@ span {
 
 div#sw_lang_section {
     position: relative;
-    top: 15px;
+    top: 8px;
     right: -80px;
+}
+
+@media only screen and (max-width: 959px ) { 
+  div#sw_lang_section {
+      position: relative;
+      top: 8px;
+      right: -45px;
+  }
 }
 
 div#sw_lang_section > button > div {

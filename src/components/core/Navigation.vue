@@ -539,6 +539,13 @@ export default {
     padding: 0 !important;
   }
 }
+
+@media only screen and (min-width: 960px) {
+  header#logo_section > div {
+      height: 80px !important;
+  }
+}
+
 @media only screen and (min-width: 1401px) {
   /* For desktop: */
 
@@ -546,6 +553,7 @@ export default {
     height: 160px;
   }
 }
+
 .v-toolbar__content {
   padding: 0 !important;
 }
