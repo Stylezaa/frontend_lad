@@ -150,7 +150,7 @@ div#sw_lang_section {
     right: -80px;
 }
 
-@media only screen and (max-width: 959px ) { 
+@media only screen and (max-width: 400px ) { 
   div#sw_lang_section {
       position: relative;
       top: 8px;
