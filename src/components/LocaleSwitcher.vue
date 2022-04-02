@@ -146,8 +146,8 @@ span {
 
 div#sw_lang_section {
     position: relative;
-    top: 8px;
-    right: -80px;
+    top: 14px;
+    right: -100px;
 }
 
 @media only screen and (max-width: 400px ) { 
