@@ -35,7 +35,11 @@
                     xl="5"
                     id="custom_contact_section"
                   >
-                    <v-row align="center" justify="center"      id="custom_row_contact_section">
+                    <v-row
+                      align="center"
+                      justify="center"
+                      id="custom_row_contact_section"
+                    >
                       <v-btn
                         dark
                         text
@@ -458,35 +462,33 @@ export default {
       window.scrollTo(0, 0);
     },
     newrouter(item) {
-      this.$router.push(item);
-      this.$router.go();
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     newroutdam(item) {
-      this.$router.push(item);
-      this.$router.go();
+    
+      this.$router.go(  this.$router.push(item));
       window.scrollTo(0, 0);
     },
     newroutdams(item) {
-      this.$router.push(item);
-      this.$router.go();
+     
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     clicknew(item) {
-      this.$router.push(item);
-      this.$router.go();
+
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
 
     goToPricing(item) {
-      console.log(item);
-      this.$router.push(item);
-      this.$router.go();
+  
+     this.$router.go(this.$router.push(item));
+ 
       window.scrollTo(0, 0);
     },
     goTocontact(item) {
-      this.$router.push(item);
-      this.$router.go();
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     openabout(item) {
@@ -575,7 +577,7 @@ export default {
 }
 @media only screen and (min-width: 960px) {
   header#logo_section > div {
-    height: 64px !important;
+    height: 80px !important;
   }
 }
 @media only screen and (min-width: 1401px) {

@@ -16,7 +16,6 @@
               v-for="(item, index) in contact"
               :key="index"
               class="white--text py-2"
-    
             >
               {{ $t("main." + item.title) }}
             </v-card-text>
@@ -49,7 +48,7 @@
 
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 1em"
+         
             v-for="(item, index) in ABOUT"
             :key="index"
           >
@@ -180,18 +179,15 @@ export default {
   mounted() {},
   methods: {
     newroutdam(item) {
-      this.$router.push(item);
-      this.$router.go(0);
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     clicknew(item) {
-      this.$router.push(item);
-      this.$router.go(0);
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     clickpublic(item) {
-      this.$router.push(item);
-      this.$router.go(0);
+      this.$router.go(this.$router.push(item));
       window.scrollTo(0, 0);
     },
     scroll(refName) {
@@ -199,8 +195,7 @@ export default {
         const element = document.getElementById(refName.name);
         element.scrollIntoView({ behavior: "smooth" });
       } else {
-        this.$router.push("About");
-        this.$router.go();
+        this.$router.go(this.$router.push("About"));
         window.scrollTo(0, 0);
       }
     },
