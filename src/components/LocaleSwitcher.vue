@@ -148,7 +148,7 @@ div#sw_lang_section {
     position: relative;
     top: 14px;
     right: -100px;
-    z-index: 1;
+    z-index: 10000;
 }
 
 @media only screen and (max-width: 400px ) { 
@@ -156,7 +156,7 @@ div#sw_lang_section {
       position: relative;
       top: 8px;
       right: -40px;
-      z-index: 1;
+      z-index: 10000;
   }
 }
 
@@ -170,7 +170,7 @@ div#sw_lang_section > button > div {
 
 div#sw_lang_section[data-v-6f6ca80b] {
   /* display: none; */
-  z-index: 2;
+  z-index: 10000;
 }
 
 @media only screen and (max-width: 959px ) {
@@ -179,7 +179,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
     position: relative;
     top: 8px;
     right: -100%;
-    z-index: 1;
+    z-index: 10000;
   }
 
   ul#sw_lang_dropdown {
@@ -187,7 +187,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
     position: absolute;
     left: -50px;
     top: 12px;
-    z-index: 1;
+    z-index: 10000;
   }
 
   a {
@@ -206,7 +206,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
     position: relative;
     top: 8px;
     right: -100%;
-    z-index: 3;
+    z-index: 10000;
   }
 } */
 
