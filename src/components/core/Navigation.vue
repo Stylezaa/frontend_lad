@@ -260,7 +260,7 @@
                   @click.stop="drawer = !drawer"
                 />
 
-                <v-card class="mx-auto primary hidden-md-and-up" flat>
+                <v-card class="mx-auto primary hidden-md-and-up" id="fix_iphone_sw_lang" flat>
                   <v-col
                     cols="12"
                     xs="12"
@@ -510,6 +510,10 @@ export default {
     position: absolute;
     left: -40px;
     top: 12px;
+  }
+
+  #fix_iphone_sw_lang {
+    margin: 0px 0px 0 30px !important;
   }
 }
 
