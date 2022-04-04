@@ -155,11 +155,15 @@ div#sw_lang_section {
 
 @media only screen and (max-width: 480px ) { 
   div#sw_lang_section {
-      position: relative;
-      top: 8px;
-      right: -40px;
-      z-index: 10000 !important;
-      visibility: visible !important;
+    position: relative;
+    top: 24px;
+    right: -40px;
+    z-index: 10000!important;
+    visibility: visible!important;
+    height: 100%;
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
   }
 
   div#sw_lang_section > button > div {

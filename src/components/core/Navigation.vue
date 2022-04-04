@@ -501,6 +501,7 @@ export default {
 #mb_ios_fix {
   z-index: 1000 !important;
   visibility: visible !important;
+  height: 100% !important;
 }
 
 @media only screen and (min-width: 100px) {
