@@ -153,7 +153,7 @@ span {
 div#sw_lang_section {
     position: relative;
     top: 14px;
-    right: -135px;
+    right: -90px;
     z-index: 10000 !important;
     visibility: visible !important;
 }
@@ -177,6 +177,13 @@ div#sw_lang_section {
     display: flex;
     align-items: center;
     justify-content: center;
+    align-items: center;
+  }
+}
+
+@media only screen and (max-width: 480px ) { 
+  div#sw_lang_section {
+    right: 0 !important;
   }
 }
 
@@ -185,6 +192,7 @@ div#sw_lang_section > button > div {
     left: 170px;  
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 div#sw_lang_section[data-v-6f6ca80b] {
@@ -195,7 +203,6 @@ div#sw_lang_section[data-v-6f6ca80b] {
 
 @media only screen and (max-width: 959px ) {
   div#sw_lang_section {
-    z-index: 1000 !important;
     position: relative;
     top: 0px;
     right: -135px;
