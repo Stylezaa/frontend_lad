@@ -148,6 +148,7 @@ div#sw_lang_section {
     position: relative;
     top: 14px;
     right: -100px;
+    z-index: 1;
 }
 
 @media only screen and (max-width: 400px ) { 
@@ -155,6 +156,7 @@ div#sw_lang_section {
       position: relative;
       top: 8px;
       right: -40px;
+      z-index: 1;
   }
 }
 
@@ -177,6 +179,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
     position: relative;
     top: 8px;
     right: -100%;
+    z-index: 1;
   }
 
   ul#sw_lang_dropdown {
@@ -184,7 +187,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
     position: absolute;
     left: -50px;
     top: 12px;
-    
+    z-index: 1;
   }
 
   a {
