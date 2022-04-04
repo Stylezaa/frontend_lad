@@ -520,7 +520,8 @@ export default {
   }
 
   #fix_iphone_sw_lang {
-    margin: 0px 0px 0 30px !important;
+    width: 80%;
+    margin-left: 45px !important;
   }
 }
 
