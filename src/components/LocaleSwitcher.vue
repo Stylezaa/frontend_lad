@@ -131,7 +131,7 @@ a {
 }
 
 img {
-	width: 30px;
+	width: 50px;
 }
 
 span {
@@ -153,7 +153,7 @@ div#sw_lang_section {
     visibility: visible !important;
 }
 
-@media only screen and (max-width: 400px ) { 
+@media only screen and (max-width: 480px ) { 
   div#sw_lang_section {
       position: relative;
       top: 8px;
@@ -161,14 +161,18 @@ div#sw_lang_section {
       z-index: 10000 !important;
       visibility: visible !important;
   }
+
+  div#sw_lang_section > button > div {
+    top: 6px;
+    left: 170px;  
+    display: flex;
+    align-items: center;
+  }
 }
 
 div#sw_lang_section > button > div {
-    /* position: absolute; */
     top: 6px;
     left: 170px;  
-    /* display: flex; */
-    /* align-items: center; */
 }
 
 div#sw_lang_section[data-v-6f6ca80b] {
