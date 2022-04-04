@@ -162,7 +162,7 @@ div#sw_lang_section {
   div#sw_lang_section {
     position: relative;
     top: 0px;
-    right: -40px;
+    right: 0px;
     z-index: 10000!important;
     visibility: visible!important;
     height: 100%;
