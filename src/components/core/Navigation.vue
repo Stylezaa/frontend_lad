@@ -291,7 +291,7 @@
                           </template>
                         </v-img>
                         <v-spacer></v-spacer>
-                        <div class="">
+                        <div id="mb_ios_fix">
                           <LocaleSwitcher />
                         </div>
                       </v-toolbar>
@@ -497,6 +497,11 @@ export default {
 </script>
 
 <style>
+
+#mb_ios_fix {
+  z-index: 1000 !important;
+}
+
 @media only screen and (min-width: 100px) {
   /* For desktop: */
   .pandinger {
