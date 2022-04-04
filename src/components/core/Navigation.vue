@@ -290,7 +290,7 @@
                             </v-row>
                           </template>
                         </v-img>
-                        <v-spacer></v-spacer>
+                        <v-spacer class="hidden-sm-and-down"></v-spacer>
                         <div id="mb_ios_fix">
                           <LocaleSwitcher />
                         </div>

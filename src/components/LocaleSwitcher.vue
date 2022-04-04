@@ -201,10 +201,9 @@ div#sw_lang_section[data-v-6f6ca80b] {
   }
 
   ul#sw_lang_dropdown {
-    z-index: 1000 !important;
     position: absolute;
     left: -50px;
-    top: 12px;
+    top: 40px;
     z-index: 10000 !important;
     visibility: visible !important;
   }
