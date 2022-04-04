@@ -1,19 +1,19 @@
 <template>
   <div grid-list-md>
-    <v-row justify="center" align="center" id="History">
+    <v-row justify="center" align="center">
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
               >Home > About Lad >
             </v-card-title>
-            <v-card-title class="mt-n7">
+            <v-card-title class="mt-n7" id="History">
               <h3>{{ $t("main.HISTORY") }}</h3></v-card-title
             >
             <v-divider class="mx-4"></v-divider>
 
             <v-row class="bb">
-              <v-card-title class="textt" style="font-size: 1em">
+              <v-card-title class="Testediter" style="font-size: 1em">
                 <p>
                   {{ $t("main.test") }}
                 </p>
@@ -44,7 +44,7 @@
                 </h4></v-card-title
               >
 
-              <v-card-title style="font-size: 1em">
+              <v-card-title class="textt" style="font-size: 1em">
                 {{ $t("main.Committee ObjectivesW") }}
               </v-card-title>
             </div>
@@ -55,9 +55,9 @@
                 </h4></v-card-title
               >
 
-              <v-card-title class="textt" style="font-size: 1.2em">
-                <p>
-                  <br />· {{ $t("main.Establishment1") }} <br />·
+              <v-card-title class="textt" style="font-size: 1em">
+                <p class="textt">
+                  · {{ $t("main.Establishment1") }} <br />·
                   {{ $t("main.Establishment2") }} <br />·
                   {{ $t("main.Establishment3") }} <br />·
                   {{ $t("main.Establishment4") }}. <br />·
@@ -367,13 +367,15 @@
                 >
                 <v-divider class="mx-4"></v-divider>
 
-                <v-card-title style="font-size: 1em" class="mt-n3">
+                <v-card-title style="font-size: 1em" class="mt-n3 Testediter">
+                  <p>
                   {{ $t("main.Memberships1") }}
                   <br />
                   {{ $t("main.Memberships2") }} <br />
                   - {{ $t("main.Memberships3") }} <br />-
                   {{ $t("main.Memberships4") }} <br />-
                   {{ $t("main.Memberships5") }}
+                  </p>
                 </v-card-title>
               </v-card>
             </v-col>
@@ -388,7 +390,9 @@
           <v-col cols="12" xs="12" sm="12" md="9" xl="9">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
-                <v-card-title><h4>{{ $t("main.Document") }}</h4></v-card-title>
+                <v-card-title
+                  ><h4>{{ $t("main.Document") }}</h4></v-card-title
+                >
                 <v-divider class="mx-4 black"></v-divider>
 
                 <v-flex
@@ -408,15 +412,17 @@
                           </v-img>
                         </v-col>
                         <v-col cols="7" xs="7" sm="9" md="10">
-                          <h4 style="font-size: 1.2em">
-                            {{ item.title }}
-                          </h4>
-                          <h4 class="textgray--text" style="font-size: 1em">
-                            {{ item.date }}
-                          </h4>
-                          <h4 class="textgray--text" style="font-size: 1em">
-                            {{ item.Type }}
-                          </h4>
+                        
+                            <h4 style="font-size: 1.2em">
+                              {{ item.title }}
+                            </h4>
+                            <h4 class="textgray--text" style="font-size: 1em">
+                              {{ item.date }}
+                            </h4>
+                            <h4 class="textgray--text" style="font-size: 1em">
+                              {{ item.Type }}
+                            </h4>
+                       
                           <h4>
                             <v-btn
                               color="primary"
@@ -561,6 +567,9 @@ export default {
 </script>
 
 <style>
+.Testediter {
+  white-space: pre-wrap;
+}
 .bb {
   margin-top: 20px;
 }

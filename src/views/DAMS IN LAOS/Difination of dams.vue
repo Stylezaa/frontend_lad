@@ -8,7 +8,7 @@
               >Home > Dams in Laos > Definition of Dams</v-card-title
             >
             <v-card-title class="mt-n7"
-              ><h3>DEFINITION OF DAMS</h3></v-card-title
+              ><h3>{{ $t("main.DEFINITION OF DAMS") }}</h3></v-card-title
             >
             <v-divider class="mx-4"></v-divider>
 
@@ -16,23 +16,14 @@
             <div v-for="(item, index) in press" :key="index">
               <v-card-title style="font-size: 1.2em" class="primary--text">
                 <h4>
-                  {{ item.header }}
+                      {{ $t("main." + item.header) }}
+               
                 </h4></v-card-title
               >
 
-              <v-card-title style="font-size: 0.8em">
-                <p>
-                  Dam is a barrier that impounds water or underground streams.
-                  Reservoirs creates by dams not only suppress floods but also
-                  provide water for activates such as irrigation, human
-                  consumption, industrial use, aquaculture and navigability.
-                  Hydropower is often used in conjunction with dams to generate
-                  electricity. A dam can also be used to collect water or for
-                  storage of water which can be evenly distributed between
-                  locations. Dams generally serve the primary purpose of
-                  retaining water, while other structures such as floodgates of
-                  levees (also known as dikes) are used to manage or prevent
-                  water flow into specific land region
+              <v-card-title style="font-size: 1em">
+                <p class="Testediter">
+                 {{ $t("main.WHAT IS DAM?s") }}
                 </p></v-card-title
               >
             </div>
@@ -70,5 +61,8 @@ export default {
 <style>
 .bb {
   margin-top: 20px;
+}
+.Testediter{
+   white-space: pre-wrap;
 }
 </style>

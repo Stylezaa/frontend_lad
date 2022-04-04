@@ -7,7 +7,7 @@
             >Home > Publication > Conference proceeding</v-card-title
           >
           <v-card-title class="mt-n7"
-            ><h3>CONFERENCE PROCEEDING</h3></v-card-title
+            ><h3>{{ $t("main.CONFERENCE PROCEEDING") }}</h3></v-card-title
           >
           <v-divider class="mx-4"></v-divider>
 

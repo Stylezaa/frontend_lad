@@ -6,7 +6,9 @@
           <v-card-title style="font-size: 0.8em"
             >Home > News > Newsletters</v-card-title
           >
-          <v-card-title class="mt-n7"><h3>NEWSLETTERS</h3></v-card-title>
+          <v-card-title class="mt-n7"
+            ><h3>{{ $t("main.NEWSLETTERS") }}</h3></v-card-title
+          >
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>
@@ -26,7 +28,7 @@
                       style="font-size: 1.2em"
                       class="textgray--text mt-n8"
                     >
-                      <h4>Latest News</h4></v-card-title
+                      <h4>{{ $t("main.Latest News") }}</h4></v-card-title
                     >
                     <v-card outlined>
                       <v-flex
@@ -41,36 +43,38 @@
                             class="max-w-sm rounded shadow-lg card"
                           >
                             <v-col cols="12" xs="12" sm="12" md="12">
-                              <v-row>
-                                <v-img
-                                  aspect-ratio="1"
-                                  class="grey lighten-2 magin10"
-                                  :src="item.src"
-                                  style="width: 30%"
-                                >
-                                </v-img>
-                                <v-card-text style="width: 60%">
-                                  <h4 style="font-size: 0.9em">
-                                    {{ item.title }}
-                                  </h4>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.8em"
+                              <a>
+                                <v-row>
+                                  <v-img
+                                    aspect-ratio="1"
+                                    class="grey lighten-3 magin10"
+                                    :src="item.src"
+                                    style="width: 30%"
                                   >
-                                    {{ item.date }}
-                                  </h4>
-                                </v-card-text>
+                                  </v-img>
+                                  <v-card-text style="width: 60%">
+                                    <h4 style="font-size: 0.9em">
+                                      {{ item.title }}
+                                    </h4>
+                                    <h4
+                                      class="textgray--text"
+                                      style="font-size: 0.8em"
+                                    >
+                                      {{ item.date }}
+                                    </h4>
+                                  </v-card-text>
 
-                                <v-fade-transition>
-                                  <v-overlay
-                                    v-if="hover"
-                                    absolute
-                                    color="#190033"
-                                    z-index="0"
-                                  >
-                                  </v-overlay>
-                                </v-fade-transition>
-                              </v-row>
+                                  <v-fade-transition>
+                                    <v-overlay
+                                      v-if="hover"
+                                      absolute
+                                      color="#190033"
+                                      z-index="0"
+                                    >
+                                    </v-overlay>
+                                  </v-fade-transition>
+                                </v-row>
+                              </a>
                             </v-col>
                           </v-card>
                         </v-hover>
@@ -185,34 +189,36 @@
                         >
                           <h4>1. Establishment of the Lao Dam</h4></v-card-title
                         >
-                        <v-card-title style="font-size: 0.8em">
-                          • Association:
-                          <br />• Opening LAD Inaugural Assembly 13 November
-                          2020 <br />• On 14/01/2021 the first extra ordinary
-                          board meeting. <br />• Decision of Minister of Energy
-                          and Mines No.0111/MEM, dated 29 January 2021 regarding
-                          formation of LAD. <br />• Decision of Minister of
-                          Energy and Mines No.0110/MEM, dated 29 January 2021
-                          regarding approval of LAD’s charter. <br />• Decision
-                          of Minister of Energy and Mines No.0112/MEM, dated 29
-                          January 2021 regarding approval of LAD’s board
-                          members. <br />• LAD’ charter was signed by President
-                          on 30 January 2021. <br />• President officially
-                          appointed Director of LAD as per Decision No.
-                          003/LAD.P, dated February 2021. <br />• LAD has been
-                          duly registered as per registration No. 23/DSD, dated
-                          11 February 2021</v-card-title
+                        <v-card-title style="font-size: 1em">
+                          <p>
+                            • Association:
+                            <br />• Opening LAD Inaugural Assembly 13 November
+                            2020 <br />• On 14/01/2021 the first extra ordinary
+                            board meeting. <br />• Decision of Minister of
+                            Energy and Mines No.0111/MEM, dated 29 January 2021
+                            regarding formation of LAD. <br />• Decision of
+                            Minister of Energy and Mines No.0110/MEM, dated 29
+                            January 2021 regarding approval of LAD’s charter.
+                            <br />• Decision of Minister of Energy and Mines
+                            No.0112/MEM, dated 29 January 2021 regarding
+                            approval of LAD’s board members. <br />• LAD’
+                            charter was signed by President on 30 January 2021.
+                            <br />• President officially appointed Director of
+                            LAD as per Decision No. 003/LAD.P, dated February
+                            2021. <br />• LAD has been duly registered as per
+                            registration No. 23/DSD, dated 11 February 2021
+                          </p></v-card-title
                         >
                         <v-layout row wrap>
                           <v-flex
-                            xs6
-                            md4
-                            sm4
-                            lg4
-                            xl3
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
                             v-for="(item, index) in items3.slice(0, 3)"
                             :key="index"
-                            class="pa-2"
+                            class="pa-2 mx-auto"
                           >
                             <v-card
                               class="max-w-sm rounded overflow-hidden shadow-lg"
@@ -229,10 +235,12 @@
                           <h4>2. Holding ICOLD membership</h4></v-card-title
                         >
 
-                        <v-card-title style="font-size: 0.8em">
-                          LAD (Lao PDR) has been elected member of ICOLD at the
-                          ICOLD General Assembly on 30 November 2020 as 104th
-                          member country.</v-card-title
+                        <v-card-title style="font-size: 1em">
+                          <p>
+                            LAD (Lao PDR) has been elected member of ICOLD at
+                            the ICOLD General Assembly on 30 November 2020 as
+                            104th member country.
+                          </p></v-card-title
                         >
 
                         <v-layout row wrap>
@@ -242,7 +250,7 @@
                             sm4
                             lg4
                             xl3
-                            v-for="(item, index) in items4.slice(0, 1)"
+                            v-for="(item, index) in items4.slice(0, 3)"
                             :key="index"
                             class="pa-2 mx-auto"
                           >
@@ -285,11 +293,11 @@
                         </v-img>
                         <v-layout row wrap>
                           <v-flex
-                            xs6
-                            md4
-                            sm4
-                            lg4
-                            xl3
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
                             v-for="(item, index) in items5.slice(0, 4)"
                             :key="index"
                             class="pa-2 mx-auto"
@@ -311,14 +319,14 @@
                         >
                         <v-layout row wrap>
                           <v-flex
-                            xs6
-                            md4
-                            sm4
-                            lg4
-                            xl3
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
                             v-for="(item, index) in items6.slice(0, 3)"
                             :key="index"
-                            class="pa-2"
+                            class="pa-2 mx-auto"
                           >
                             <v-card
                               flat
@@ -409,23 +417,6 @@
                           <h4>5. Income / Expenditures :</h4></v-card-title
                         >
 
-                        <v-img
-                          :src="
-                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.28.59.png')
-                          "
-                          max-height="500"
-                          contain
-                        >
-                          <template v-slot:placeholder>
-                            <v-row class="fill-height ma-0" align="center">
-                              <v-progress-circular
-                                indeterminate
-                                color="grey lighten-5"
-                              ></v-progress-circular>
-                            </v-row>
-                          </template>
-                        </v-img>
-
                         <v-card-title
                           style="font-size: 1.2em"
                           class="primary--text"
@@ -458,7 +449,7 @@
                           :src="
                             require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.29.39.png')
                           "
-                          max-height="300"
+                          max-height="400"
                           contain
                         >
                           <template v-slot:placeholder>
@@ -706,7 +697,13 @@ export default {
       ],
       items4: [
         {
-          src: require("../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.26.27.png"),
+          src: require("../../assets/images/Newsletters/Copy of LAD trans....png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Copy of logo-cigb.png"),
+        },
+        {
+          src: require("../../assets/images/Newsletters/Flag_of_Laos.svg.png"),
         },
       ],
       items5: [
@@ -760,5 +757,12 @@ export default {
 }
 .magin10 {
   margin: 10px;
+}
+.imgs1 {
+  width: 100%;
+  height: 50%;
+  margin-top: 13px;
+  display: flex;
+  transition: width 1s, height 1s;
 }
 </style>

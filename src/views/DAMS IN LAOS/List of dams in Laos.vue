@@ -8,7 +8,7 @@
               >Home > Dams in Laos > List of dams in Laos</v-card-title
             >
             <v-card-title class="mt-n7"
-              ><h3>LIST OF DAMS IN LAOS</h3></v-card-title
+              ><h3>{{ $t("main.LIST OF DAMS IN LAOS") }}</h3></v-card-title
             >
             <v-divider class="mx-4"></v-divider>
           </v-card>
@@ -116,7 +116,7 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    axios.get('https://lad-api007.herokuapp.com/api/dam/').then((response) => {
+    axios.get(this.$store.getters.getBaseUrl + "/dam").then((response) => {
       // JSON responses are automatically parsed.
       console.log(response.data);
       this.items = response.data.data;

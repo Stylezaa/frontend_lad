@@ -21,7 +21,9 @@
                     id="custom_official_text"
                   >
                     <span class="white--text"
-                      ><b>{{ $t("main.OFFICIAL WEBSITE") }} </b></span
+                      ><h3>
+                        <b>{{ $t("main.OFFICIAL WEBSITE") }} </b>
+                      </h3></span
                     >
                   </v-col>
 
@@ -33,20 +35,16 @@
                     xl="5"
                     id="custom_contact_section"
                   >
-                    <v-row
-                      align="center"
-                      justify="center"
-                      id="custom_row_contact_section"
-                    >
+                    <v-row align="center" justify="center"      id="custom_row_contact_section">
                       <v-btn
                         dark
                         text
                         style="font-size: 1em"
-                        class="pa-2"
                         id="btn_contact_section"
-                        >{{ $t("main.CONTACT US") }} |</v-btn
+                        @click="goTocontact($i18nRoute({ name: 'contact' }))"
                       >
-
+                        <h4>{{ $t("main.CONTACT") }}</h4>
+                      </v-btn>
                       <LocaleSwitcher />
                     </v-row>
                   </v-col>
@@ -62,7 +60,7 @@
               xl="8"
               class="hidden-sm-and-down"
             >
-              <v-toolbar color="transparent " id="logo_section" flat>
+              <v-toolbar color="transparent py-2  " id="logo_section" flat>
                 <router-link
                   class="black--text mt-n4"
                   style="text-decoration: none"
@@ -72,16 +70,10 @@
                     :src="require('../../assets/images/logo_header.png')"
                     max-height="250"
                     max-width="300"
+                    @click="open()"
                     contain
+                    class=""
                   >
-                    <template v-slot:placeholder>
-                      <v-row class="fill-height ma-0" align="center">
-                        <v-progress-circular
-                          indeterminate
-                          color="grey lighten-5"
-                        ></v-progress-circular>
-                      </v-row>
-                    </template>
                   </v-img>
                 </router-link>
               </v-toolbar>
@@ -93,27 +85,24 @@
                   <v-col cols="12" xs="12" sm="6" md="3">
                     <v-menu open-on-hover bottom offset-y>
                       <template v-slot:activator="{ on, attrs }">
-                        <router-link
-                          class="black--text mt-n4"
-                          style="text-decoration: none"
-                          :to="$i18nRoute({ name: 'About' })"
+                        <v-btn
+                          dark
+                          text
+                          v-bind="attrs"
+                          v-on="on"
+                          style="font-size: 0.9em"
+                          @click="goToPricing($i18nRoute({ name: 'About' }))"
                         >
-                          <v-btn
-                            dark
-                            text
-                            v-bind="attrs"
-                            v-on="on"
-                            style="font-size: 0.9em"
-                          >
-                           {{ $t("main.ABOUT LAD") }}
-                            <!-- <v-icon class="white--text" aria-hidden="true">
-                              mdi-chevron-down
-                            </v-icon> -->
-                          </v-btn>
-                        </router-link>
+                          <h4>
+                            {{ $t("main.ABOUT LAD") }}
+                          </h4>
+                          <v-icon class="white--text" aria-hidden="true">
+                            mdi-chevron-down
+                          </v-icon>
+                        </v-btn>
                       </template>
 
-                      <!-- <v-list>
+                      <v-list>
                         <v-list-item
                           v-for="(item, index) in about"
                           :key="index"
@@ -122,12 +111,22 @@
                             <a
                               class="black--text mt-n4"
                               style="text-decoration: none"
-                              @click="goToPricing(), openabout(item.number)"
-                              >{{ item.title }}
-                            </a></v-list-item-title
-                          >
+                              @click="
+                                openabout(
+                                  $i18nRoute({
+                                    name: item.link,
+                                    ids: item.number,
+                                  })
+                                )
+                              "
+                            >
+                              <h4>
+                                {{ $t("main." + item.title) }}
+                              </h4>
+                            </a>
+                          </v-list-item-title>
                         </v-list-item>
-                      </v-list> -->
+                      </v-list>
                     </v-menu>
                   </v-col>
 
@@ -141,7 +140,9 @@
                           v-on="on"
                           style="font-size: 0.9em"
                         >
-                           {{ $t("main.DAMS IN LAOS") }}
+                          <h4>
+                            {{ $t("main.DAMS IN LAOS") }}
+                          </h4>
                           <v-icon class="white--text" aria-hidden="true">
                             mdi-chevron-down
                           </v-icon>
@@ -157,8 +158,11 @@
                               @click="
                                 newroutdam($i18nRoute({ name: item.link }))
                               "
-                              >{{ $t("main." + item.title) }}</a
                             >
+                              <h4>
+                                {{ $t("main." + item.title) }}
+                              </h4>
+                            </a>
                           </v-list-item-title>
                         </v-list-item>
                       </v-list>
@@ -174,7 +178,7 @@
                           v-on="on"
                           style="font-size: 0.9em"
                         >
-                          {{ $t("main.NEWS") }}
+                          <h4>{{ $t("main.NEWS") }}</h4>
                           <v-icon class="white--text" aria-hidden="true">
                             mdi-chevron-down
                           </v-icon>
@@ -188,7 +192,7 @@
                               class="black--text mt-n4"
                               style="text-decoration: none"
                               @click="clicknew($i18nRoute({ name: item.link }))"
-                              >{{ $t("main." + item.title) }}</a
+                              ><h4>{{ $t("main." + item.title) }}</h4></a
                             ></v-list-item-title
                           >
                         </v-list-item>
@@ -205,7 +209,7 @@
                           v-on="on"
                           style="font-size: 0.9em"
                         >
-                           {{ $t("main.PUBLICATION") }}
+                          <h4>{{ $t("main.PUBLICATION") }}</h4>
                           <v-icon class="white--text" aria-hidden="true">
                             mdi-chevron-down
                           </v-icon>
@@ -224,7 +228,8 @@
                               @click="
                                 clickpublic($i18nRoute({ name: item.link }))
                               "
-                              >{{ $t("main." + item.title) }}</a
+                            >
+                              <h4>{{ $t("main." + item.title) }}</h4></a
                             ></v-list-item-title
                           >
                         </v-list-item>
@@ -235,21 +240,16 @@
                   <v-col cols="12" xs="12" sm="6" md="2">
                     <v-menu open-on-hover bottom offset-y>
                       <template v-slot:activator="{ on, attrs }">
-                        <router-link
-                          class="black--text mt-n4"
-                          style="text-decoration: none"
-                          :to="$i18nRoute({ name: 'Link' })"
+                        <v-btn
+                          dark
+                          text
+                          v-bind="attrs"
+                          v-on="on"
+                          @click="open2()"
+                          style="font-size: 0.9em"
                         >
-                          <v-btn
-                            dark
-                            text
-                            v-bind="attrs"
-                            v-on="on"
-                            style="font-size: 0.9em"
-                          >
-                            LINK
-                          </v-btn>
-                        </router-link>
+                          LINK
+                        </v-btn>
                       </template>
                     </v-menu>
                   </v-col>
@@ -260,7 +260,11 @@
                   @click.stop="drawer = !drawer"
                 />
 
-                <v-card class="mx-auto primary hidden-md-and-up" id="fix_iphone_sw_lang" flat>
+                <v-card
+                  class="mx-auto primary hidden-md-and-up"
+                  id="fix_iphone_sw_lang"
+                  flat
+                >
                   <v-col
                     cols="12"
                     xs="12"
@@ -269,33 +273,26 @@
                     xl="10"
                     id="header_fix_color"
                   >
-                    <router-link
-                      style="text-decoration: none"
-                      :to="$i18nRoute({ name: 'Home' })"
-                    >
-                      <v-toolbar color="transparent" flat>
+                    <v-toolbar color="transparent" flat>
+                      <router-link
+                        style="text-decoration: none"
+                        :to="$i18nRoute({ name: 'Home' })"
+                      >
                         <v-img
                           c
                           :src="require('../../assets/images/LOGO-White.png')"
                           max-height="100"
-                          max-width="170"
+                          max-width="140"
                           contain
                         >
-                          <template v-slot:placeholder>
-                            <v-row class="fill-height ma-0" align="center">
-                              <v-progress-circular
-                                indeterminate
-                                color="grey lighten-5"
-                              ></v-progress-circular>
-                            </v-row>
-                          </template>
                         </v-img>
-                        <v-spacer class="hidden-sm-and-down"></v-spacer>
-                        <div id="mb_ios_fix">
-                          <LocaleSwitcher />
-                        </div>
-                      </v-toolbar>
-                    </router-link>
+                      </router-link>
+
+                      <v-spacer class="hidden-sm-and-down"></v-spacer>
+                      <div id="mb_ios_fix">
+                        <LocaleSwitcher />
+                      </div>
+                    </v-toolbar>
                   </v-col>
                 </v-card>
               </v-toolbar>
@@ -323,15 +320,13 @@
                         <v-list-item-icon>
                           <v-icon v-text="item.icon"></v-icon>
                         </v-list-item-icon>
-                        <v-list-item-content>
+                        <v-list-item-content style="font-size: 0.8em">
                           <a
                             class="black--text"
                             style="text-decoration: none"
                             @click="newroutdam($i18nRoute({ name: item.link }))"
                           >
-                            <v-list-item-title
-                              v-text="item.text"
-                            ></v-list-item-title>
+                            <h4>{{ $t("main." + item.text) }}</h4>
                           </a>
                         </v-list-item-content>
                       </v-list-item>
@@ -339,9 +334,9 @@
 
                     <v-list-group v-else :prepend-icon="item.icon">
                       <template v-slot:activator>
-                        <v-list-item-title
-                          v-text="item.text"
-                        ></v-list-item-title>
+                        <v-list-item-title>
+                          <h4>{{ $t("main." + item.text) }}</h4>
+                        </v-list-item-title>
                       </template>
 
                       <v-list-group
@@ -351,15 +346,12 @@
                       >
                         <template v-slot:activator>
                           <v-list-item-content>
-                            <v-list-item-title v-text="child.title">
-                              <a
-                                class="black--text"
-                                style="text-decoration: none"
-                                :href="
-                                  newroutdams($i18nRoute({ name: child.link }))
-                                "
-                              >
-                              </a>
+                            <v-list-item-title
+                              @click="
+                                clickitem($i18nRoute({ name: child.link }))
+                              "
+                            >
+                              {{ $t("main." + child.title) }}
                             </v-list-item-title>
                           </v-list-item-content>
                         </template>
@@ -410,6 +402,8 @@ export default {
 
       expand: false,
       drawer: false,
+      state: true,
+      value: 0,
 
       selectedItem: 1,
       items: [
@@ -428,15 +422,15 @@ export default {
           ],
         },
         {
-          text: "News ",
+          text: "News",
           icon: "event",
           link: "Link",
           id: "1",
           items: [
-            { title: "Definition of Dams", link: "Difination" },
-            { title: "List of Dams in Laos", link: "List" },
-            { title: "Map of Dams", link: "Map" },
-            { title: "Dam Safety", link: "safety" },
+            { title: "Newsletters", link: "Newsletters" },
+            { title: "Events", link: "Events" },
+            { title: "Press Releases", link: "Releases" },
+            { title: "Archives", link: "Archives" },
           ],
         },
         {
@@ -464,77 +458,107 @@ export default {
       window.scrollTo(0, 0);
     },
     newrouter(item) {
-      console.log(item);
-
       this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
     newroutdam(item) {
       this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
     newroutdams(item) {
       this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
     clicknew(item) {
       this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
 
-    goToPricing() {
-      this.$router.push("About");
+    goToPricing(item) {
+      console.log(item);
+      this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
+    },
+    goTocontact(item) {
+      this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
     openabout(item) {
-      window.location.href = "#" + item;
+      // window.location.href = "#" + item;
+      console.log(item);
+      if (this.$route.name == "About") {
+        const element = document.getElementById(item.ids);
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        this.$router.push(item);
+        this.$router.go();
+        window.scrollTo(0, 0);
+      }
     },
 
     open1() {
       this.$router.push("link");
+      this.$router.go();
+      window.scrollTo(0, 0);
+    },
+    open2() {
+      this.$router.push("Link");
+      this.$router.go();
+      window.scrollTo(0, 0);
     },
 
     clickpublic(item) {
       this.$router.push(item);
+      this.$router.go(0);
+      window.scrollTo(0, 0);
+    },
+    clickitem(item) {
+      this.$router.push(item);
+      this.$router.go(0);
+      window.scrollTo(0, 0);
     },
   },
 };
 </script>
 
 <style>
-
 #mb_ios_fix {
   z-index: 1000 !important;
   visibility: visible !important;
   height: 100% !important;
 }
-
 @media only screen and (min-width: 100px) {
   /* For desktop: */
   .pandinger {
     height: 50px;
   }
 }
-
 @media only screen and (max-width: 425px) {
   ul#sw_lang_dropdown[data-v-6f6ca80b] {
     z-index: 1000 !important;
     position: absolute;
-    left: -40px;
-    top: 12px;
+    left: 18px;
+    top: 40px;
   }
-
   #fix_iphone_sw_lang {
     width: 80%;
     margin-left: 45px !important;
   }
 }
-
 @media only screen and (max-width: 968px) {
   /* .custom_h {
     height: 100% !important;
     padding: 0 20px;
  } */
-
   .custom_h {
     z-index: 1 !important;
   }
-
   .custom_h > .v-toolbar__content {
     height: 100% !important;
     display: flex;
@@ -542,67 +566,48 @@ export default {
     padding: 12px !important;
     z-index: 1 !important;
   }
-
   .custom_h .theme--light.v-card {
     overflow: visible !important;
   }
-
   #header_fix_color {
     padding: 0 !important;
   }
 }
-
 @media only screen and (min-width: 960px) {
   header#logo_section > div {
-      height: 80px !important;
+    height: 80px !important;
   }
 }
-
 @media only screen and (min-width: 1401px) {
   /* For desktop: */
-
   .pandinger {
     height: 160px;
   }
 }
-
 .v-toolbar__content {
   padding: 0 !important;
 }
-
 li {
   text-decoration: underline;
   color: #459ce7;
   cursor: pointer;
 }
-
 div#custom_official_text {
   position: absolute;
   top: 4px;
   left: 0;
 }
-
 div#custom_contact_section {
   position: absolute;
   top: 10px;
   right: 65px;
 }
-
 div#custom_row_contact_section {
   position: relative;
   z-index: 1;
 }
-
 button#btn_contact_section {
   position: absolute;
   top: 0;
 }
-
-/* .custom_h .theme--light.v-card {
-  overflow: visible !important;
-}
-
-#header_fix_color {
-  padding: 0 !important;
-} */
 </style>

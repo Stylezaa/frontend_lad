@@ -8,7 +8,7 @@
               >Home > Dams in Laos > Map of Dams in Laos</v-card-title
             >
             <v-card-title class="mt-n7"
-              ><h3>Map of Dams in Laos</h3></v-card-title
+              ><h3>{{ $t("main.MAP OF DAMS") }}</h3></v-card-title
             >
             <v-divider class="mx-4"></v-divider>
 

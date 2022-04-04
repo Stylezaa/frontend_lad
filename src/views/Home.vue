@@ -20,7 +20,6 @@
                     v-for="(item, i) in items"
                     :key="i"
                     reverse-transition="fade-transition"
-                    transition="fade-transition"
                     show-arrows-on-hover
                   >
                     <v-img :src="item.src" aspect-ratio="1.77"></v-img>
@@ -45,7 +44,6 @@
                     :src="item.src"
                     reverse-transition="fade-transition"
                     show-arrows-on-hover
-                    class=""
                   ></v-carousel-item>
                 </v-carousel>
               </v-card>
@@ -78,6 +76,9 @@
                                 width="10"
                                 color="primary "
                                 class="test"
+                                @click="
+                                  newrout($i18nRoute({ name: item.link }))
+                                "
                               >
                                 <v-card-text>
                                   <v-icon
@@ -98,7 +99,14 @@
                               z-index="0"
                               class="text-center v-card--reveal"
                             >
-                              <v-btn height="30" width="30" color="primary">
+                              <v-btn
+                                height="30"
+                                width="30"
+                                color="primary"
+                                @click="
+                                  newrout($i18nRoute({ name: item.link }))
+                                "
+                              >
                                 <v-card-text>
                                   <v-icon
                                     class="white--text"
@@ -118,6 +126,35 @@
                 </v-row>
               </v-card>
             </v-layout>
+          </v-col>
+        </v-row>
+      </v-container>
+    </div>
+
+    <div>
+      <v-container grid-list-md>
+        <v-row justify="center" align="center">
+          <v-col cols="12" xs="12" sm="12" md="8" xl="8">
+            <v-col cols="12" xs="12" sm="12" md="12">
+              <v-card flat>
+                <v-divider class="mx-4"></v-divider>
+
+                <v-row class="bb"> </v-row>
+                <div v-for="(item, index) in Definition" :key="index">
+                  <v-card-title style="font-size: 1.2em" class="primary--text">
+                    <h4>
+                      {{ $t("main." + item.header) }}
+                    </h4></v-card-title
+                  >
+
+                  <v-card-title>
+                    <p>
+                      {{ $t("main.WHAT IS DAM?s") }}
+                    </p></v-card-title
+                  >
+                </div>
+              </v-card>
+            </v-col>
           </v-col>
         </v-row>
       </v-container>
@@ -179,8 +216,12 @@
                               class="black--text mt-n4"
                               style="text-decoration: none"
                               :href="item.link"
+                              target="_blank"
                             >
-                              <v-img class="imgs1" :src="slider[+index + i]">
+                              <v-img
+                                class="imgs1 ml-auto"
+                                :src="slider[+index + i]"
+                              >
                               </v-img>
                             </a>
                           </v-col>
@@ -217,16 +258,19 @@ export default {
 
       items1: [
         {
-          src: require("../assets/images/s2.png"),
+          src: require("../assets/images/News Cover-01.png"),
           title: "NEWS",
+          link: "Newsletters",
         },
         {
-          src: require("../assets/images/Group 85.png"),
+          src: require("../assets/images/News Cover-02.png"),
           title: "EVENTS",
+          link: "Events",
         },
         {
-          src: require("../assets/images/s3.png"),
+          src: require("../assets/images/News Cover-03.png"),
           title: "PUBLICATIONS",
+          link: "guideline",
         },
       ],
       press: [
@@ -254,8 +298,8 @@ export default {
       ],
       slider: [
         {
-          src: require("../assets/images/Links/CDA-ACB.png"),
           link: "https://cda.ca/international/icold",
+          src: require("../assets/images/Links/CDA-ACB.png"),
         },
         {
           src: require("../assets/images/Links/CHINCOLD-PT.png"),
@@ -272,6 +316,23 @@ export default {
         {
           src: require("../assets/images/Links/logo.png"),
           link: "https://www.swissdams.ch/en",
+        },
+        {
+          link: "https://cda.ca/international/icold",
+          src: require("../assets/images/Links/CDA-ACB.png"),
+        },
+      ],
+      Definition: [
+        {
+          src: require("../assets/images/Mask.png"),
+          header: "WHAT IS DAM?",
+
+          title:
+            "The International Commission On Large Dams (ICOLD) is a non-governmental International Organization which provides a forum for the exchange of knowledge and experience in dam engineering.",
+          title1:
+            "The Organization leads the profession in ensuring that dams are built safely, efficiently, economically, and without detrimental effects on the environment. Its original aim was to encourage advances in the planning, design, construction, operation, and  maintenance of large dams and their associated civil works, by collecting and disseminating relevant information and by studying related technical questions.",
+          title2:
+            "Since the late sixties, focus was put on subjects of current concern such as dam safety, monitoring of performance, reanalysis of  older dams and spillways, effects of ageing and environmental impact. More recently, new subjects include cost studies at the  planning and construction stages, harnessing international rivers, information for the public at large, and financing.",
         },
       ],
     };
@@ -297,11 +358,34 @@ export default {
       return 1;
     },
   },
-  methods: {},
+  methods: {
+    newrout(item) {
+      console.log(item);
+      this.$router.push(item);
+      this.$router.go();
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
 <style>
+.p {
+  display: block;
+  line-height: 35px;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  text-align: justify;
+}
+.Testediter {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
 .test {
   margin-top: 60%;
 }
@@ -330,8 +414,9 @@ export default {
   height: 100%;
 }
 .imgs1 {
-  width: 95%;
-  height: 65%;
+  width: 100%;
+  height: 50%;
+  margin-top: 13px;
   display: flex;
   transition: width 1s, height 1s;
 }

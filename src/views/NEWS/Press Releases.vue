@@ -6,7 +6,7 @@
           <v-card-title style="font-size: 0.8em"
             >Home > News > Press Releases</v-card-title
           >
-          <v-card-title class="mt-n7"><h3>PRESS RELEASES</h3></v-card-title>
+          <v-card-title class="mt-n7"><h3>{{ $t("main.PRESS RELEASES") }}</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>

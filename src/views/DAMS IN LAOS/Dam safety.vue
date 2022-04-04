@@ -6,9 +6,8 @@
           <v-card-title style="font-size: 0.8em"
             >Home > Dams in Laos > Dam safety</v-card-title
           >
-          <v-card-title class="mt-n7"><h3>DAM SAFETY</h3></v-card-title>
+          <v-card-title class="mt-n7"><h3>{{ $t("main.DAM SAFETY") }}</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
-
           <v-layout row wrap>
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
@@ -53,7 +52,8 @@
                                     color="primary"
                                     class="ma-6"
                                     :href="item.pdf"
-                                    >Download</v-btn
+                                    target="_blank"
+                                    >Preview</v-btn
                                   >
                                 </h4>
                               </v-col>
@@ -63,14 +63,6 @@
                         </v-card>
                         <br />
                       </v-flex>
-                      <v-card flat height="500">
-                        <div
-                          class="text-center primary--text"
-                          style="font-size: 2em"
-                        >
-                          Comming Soon!
-                        </div>
-                      </v-card>
                     </v-card>
                   </v-col>
                 </v-row>
@@ -90,7 +82,15 @@ export default {
   name: "Conference",
   data() {
     return {
-      items: [],
+      items: [
+        {
+          title: "Preface- December 2018 Dam Safety Guideline",
+          date: "Jun 06, 2017",
+          Type: "Guideline",
+          src: require("../../assets/images/pdf/1.png"),
+          pdf: "https://drive.google.com/file/d/1xywW4h44ZIBBWTc-994yMLoL_zaWTJSi/view?usp=sharing",
+        },
+      ],
       datapdf: "",
       datapdf1: "../../assets/pdf/test.pdf",
     };

@@ -17,13 +17,15 @@ import Events from "../views/NEWS/Events.vue";
 import Press from "../views/NEWS/Press Releases.vue";
 import Archives from "../views/NEWS/Archives.vue";
 
-import Link from "../views/LINK/link.vue";
+import Link from "../views/Link/link.vue";
 
 import Conference from "../views/PUBLICATION/Conference.vue";
 import guideline from "../views/PUBLICATION/Dam safety guideline .vue";
 import Lao from "../views/PUBLICATION/Lao electricity Law .vue";
 
 
+
+import contact from "../views/contact.vue";
 import { Trans } from '../plugins/Translation'
 
 function load(component) {
@@ -59,6 +61,13 @@ const routes = [
     component: About,
   },
 
+
+  {
+    path: "contact",
+    name: "contact",
+
+    component: contact,
+  },
   /// DAMS IN LAOS
 
   {

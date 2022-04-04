@@ -6,9 +6,10 @@
         <span class="ml-2">{{ $i18n.locale.toUpperCase() }}</span>
       </v-row>
     </button>
+    
     <transition name="dropdown-fade">
       <ul id="sw_lang_dropdown"
-        v-on-clickaway="hideDropdown"
+        v-show="hideDropdown"
         v-if="isVisible"
         ref="dropdown"
         class="absolute normal-case z-30 font-normal xs:left-0 lg:right-0 bg-white shadow overflow-hidden rounded w-48 border mt-2 py-1 lg:z-20"
@@ -83,27 +84,8 @@ export default {
       this.isVisible = false;
       this.focusedIndex = 0;
     },
-    startArrowKeys() {
-      if (this.isVisible) {
-        // this.$refs.account.focus()
-        this.$refs.dropdown.children[0].children[0].focus();
-      }
-    },
-    focusPrevious(isArrowKey) {
-      this.focusedIndex = this.focusedIndex - 1;
-      if (isArrowKey) {
-        this.focusItem();
-      }
-    },
-    focusNext(isArrowKey) {
-      this.focusedIndex = this.focusedIndex + 1;
-      if (isArrowKey) {
-        this.focusItem();
-      }
-    },
-    focusItem() {
-      this.$refs.dropdown.children[this.focusedIndex].children[0].focus();
-    },
+
+   
   },
 };
 </script>

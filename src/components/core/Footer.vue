@@ -16,12 +16,14 @@
               v-for="(item, index) in contact"
               :key="index"
               class="white--text py-2"
-              style="font-size: 1em"
+    
             >
               {{ $t("main." + item.title) }}
             </v-card-text>
           </div>
-          <v-card-text  class="white--text"><h4>{{ $t("main.CONTACT US") }}</h4></v-card-text>
+          <v-card-text class="white--text"
+            ><h4>{{ $t("main.CONTACT US") }}</h4></v-card-text
+          >
 
           <v-card-text class="pt-1">
             <v-btn
@@ -51,11 +53,12 @@
             v-for="(item, index) in ABOUT"
             :key="index"
           >
-            <router-link
+            <a
               class="colorfooter--text mt-n4"
               style="text-decoration: none"
-              :to="$i18nRoute({ name: 'About' })"
-              >{{ $t("main." + item.title) }}</router-link
+              text
+              @click="scroll($i18nRoute({ name: item.title }))"
+              >{{ $t("main." + item.title) }}</a
             >
           </v-card-text>
         </v-col>
@@ -68,7 +71,6 @@
           <v-card-text
             class="colorfooter--text mt-n4"
             v-for="(item, index) in DAM"
-            style="font-size: 1em"
             :key="index"
           >
             <a
@@ -86,7 +88,6 @@
 
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 1em"
             v-for="(item, index) in NEWS"
             :key="index"
           >
@@ -106,7 +107,6 @@
           </v-card-text>
           <v-card-text
             class="colorfooter--text mt-n4"
-            style="font-size: 1em"
             v-for="(item, index) in PUBLICATION"
             :key="index"
           >
@@ -181,12 +181,28 @@ export default {
   methods: {
     newroutdam(item) {
       this.$router.push(item);
+      this.$router.go(0);
+      window.scrollTo(0, 0);
     },
     clicknew(item) {
       this.$router.push(item);
+      this.$router.go(0);
+      window.scrollTo(0, 0);
     },
     clickpublic(item) {
       this.$router.push(item);
+      this.$router.go(0);
+      window.scrollTo(0, 0);
+    },
+    scroll(refName) {
+      if (this.$route.name == "About") {
+        const element = document.getElementById(refName.name);
+        element.scrollIntoView({ behavior: "smooth" });
+      } else {
+        this.$router.push("About");
+        this.$router.go();
+        window.scrollTo(0, 0);
+      }
     },
   },
 };

@@ -22,16 +22,21 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: "Phetsarath OT";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 
+#app {
+  font-family: "Saysettha OT", "Roboto", sans-serif;
+  font-size: 19px;
+  font-weight: normal;
+  font-style: normal;
   color: #2c3e50;
   height: 100vh;
-
   background-repeat: no-repeat;
   background-position: center;
   background-size: 50vh;
+}
+
+p {
+  text-align: justify;
 }
 </style>

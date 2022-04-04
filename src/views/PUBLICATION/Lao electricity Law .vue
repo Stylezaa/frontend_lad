@@ -6,7 +6,7 @@
           <v-card-title style="font-size: 0.8em"
             >Home > Publication > Law and Regulation
           </v-card-title>
-          <v-card-title class="mt-n7"><h3>Law and Regulation</h3></v-card-title>
+          <v-card-title class="mt-n7"><h3>{{ $t("main.Law and Regulation") }}</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>

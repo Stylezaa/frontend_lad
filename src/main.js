@@ -5,13 +5,16 @@ import store from "./store";
 import vuetify from "./plugins/vuetify";
 import * as VueGoogleMaps from "vue2-google-maps";
 import "material-design-icons-iconfont/dist/material-design-icons.css";
-import "./assets/css/styles.css";
+
 import { i18n } from "./i18n";
 import { Trans } from './plugins/Translation'
 
 Vue.prototype.$i18nRoute = Trans.i18nRoute.bind(Trans)
 
 Vue.config.productionTip = false;
+
+import "./assets/fonts/stylesheet.css";
+
 
 Vue.use(VueGoogleMaps, {
   load: {

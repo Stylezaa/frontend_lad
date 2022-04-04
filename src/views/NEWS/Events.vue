@@ -6,7 +6,7 @@
           <v-card-title style="font-size: 0.8em"
             >Home > News > Events</v-card-title
           >
-          <v-card-title class="mt-n7"><h3>EVENTS</h3></v-card-title>
+          <v-card-title class="mt-n7"><h3>{{ $t("main.EVENTS") }}</h3></v-card-title>
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>
@@ -26,7 +26,7 @@
                       style="font-size: 1.2em"
                       class="textgray--text mt-n8"
                     >
-                      <h4>Latest News</h4></v-card-title
+                      <h4> {{ $t("main.Latest News") }}</h4></v-card-title
                     >
                     <v-card outlined>
                       <v-flex

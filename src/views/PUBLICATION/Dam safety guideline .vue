@@ -7,7 +7,7 @@
             >Home > Publication > Dam Safety Guideline
           </v-card-title>
           <v-card-title class="mt-n7"
-            ><h3>DAM SAFETY GUIDELINE</h3></v-card-title
+            ><h3>{{ $t("main.DAM SAFETY GUIDELINE") }}</h3></v-card-title
           >
           <v-divider class="mx-4"></v-divider>
 

@@ -1,8 +1,5 @@
 {
   "main":{
-   
-    
-
     "HISTORY": "HISTORY",
     "Lao" : " Lao",
     "English" : " English",
@@ -10,16 +7,42 @@
     "DAMS IN LAOS" : "DAMS IN LAOS",
     "NEWS" : "NEWS",
     "History" : "History",
+
+    "Dams in Laos" : "Dams in Laos",
+    "News" : "News",
+    "Publication" : "Publication",
+
+    "WHAT IS DAM?s" : "   Dam is a barrier that impounds water or underground streams. Reservoirs creates by dams not only suppress floods but also provide water for activates such as irrigation, human consumption, industrial use, aquaculture and navigability. Hydropower is often used in conjunction with dams to generate electricity. A dam can also be used to collect water or for storage of water which can be evenly distributed between locations. Dams generally serve the primary purpose of retaining water, while other structures such as floodgates of levees (also known as dikes) are used to manage or prevent water flow into specific land region",
+    "LIST OF DAMS IN LAOS" : "LIST OF DAMS IN LAOS",
+    "MAP OF DAMS" : "MAP OF DAMS",
+    "WHAT IS DAM?" : "WHAT IS DAM?",
+    "DAM SAFETY" : "DAM SAFETY",
+    "NEWSLETTERS" : "NEWSLETTERS",
+    "Latest News" : "Latest News",
+    "PUBLICATION" : "PUBLICATION",
     "Organization" : "Organization",
     "Board" : "Board",
     "Committees" : "Committees",
     "Membership" : "Membership",
+    "DEFINITION OF DAMS" : "DEFINITION OF DAMS",
     "Definition of Dams" : "  Definition of Dams",
     "Dam Safety" : "Dam Safety",
     "Newsletters" : "Newsletters",
     "Events" : "Events",
+    "EVENTS" : "EVENTS",
     "Press Releases" : "Press Releases",
+    "PRESS RELEASES" : " PRESS RELEASES",
+    "CONFERENCE PROCEEDING" : "CONFERENCE PROCEEDING",
+  
+    
+    "ARCHIVES LIST" : " ARCHIVES LIST",
     "Archives" : "Archives",
+    "About Lad" : "About Lad",
+    "List of Dams in Laos" : "List of Dams in Laos",
+   
+    "DAM SAFETY GUIDELINE" : "GUIDELINE",
+    "Map of Dams" : "Map of Dams",
+    "Home" : "Home",
     "Law and Regulation" : "Law and Regulation",
     "Guideline" : "Guideline",
     "Conference Procedding" : "Conference Procedding",
@@ -30,7 +53,8 @@
     "Tel + (856) 2155-7076" : "Tel + (856) 2155-7076",
    "2022" : "@2022 LAO ASSOCIATION ON DAMS (LAD)",
    "CONTACT US" : "CONTACT US",
-
+   "CONTACT" : "CONTACT",
+   "Link" : "Link",
    "Establishment1" : "Open LAD inaugural Assembly 13 November 2020",
 
    "Establishment2" : "Decision of Minister of Energy and Mines No.0111/MEM, dated 29 January 2021 regrading formation of LAD.",
