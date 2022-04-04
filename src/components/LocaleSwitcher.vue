@@ -153,7 +153,7 @@ span {
 div#sw_lang_section {
     position: relative;
     top: 14px;
-    right: -100px;
+    right: -135px;
     z-index: 10000 !important;
     visibility: visible !important;
 }
@@ -183,6 +183,8 @@ div#sw_lang_section {
 div#sw_lang_section > button > div {
     top: 6px;
     left: 170px;  
+    display: flex;
+    justify-content: center;
 }
 
 div#sw_lang_section[data-v-6f6ca80b] {
@@ -192,14 +194,16 @@ div#sw_lang_section[data-v-6f6ca80b] {
 }
 
 @media only screen and (max-width: 959px ) {
-  div#sw_lang_section[data-v-6f6ca80b] {
+  div#sw_lang_section {
     z-index: 1000 !important;
     position: relative;
-    top: 8px;
-    right: -100%;
+    top: 0px;
+    right: -135px;
     z-index: 10000 !important;
     visibility: visible !important;
+    height: 100%;
   }
+
 
   ul#sw_lang_dropdown {
     position: absolute;
