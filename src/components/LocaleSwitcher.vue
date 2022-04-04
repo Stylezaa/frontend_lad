@@ -119,7 +119,7 @@ ul#sw_lang_dropdown {
 
 #fix_iphone_hidden {
   height: 100% !important;
-  width: 100% !important;
+  width: 100px !important;
 }
 
 li {
@@ -176,6 +176,7 @@ div#sw_lang_section {
     left: 170px;  
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 }
 
