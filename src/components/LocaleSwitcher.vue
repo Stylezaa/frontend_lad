@@ -1,6 +1,6 @@
 <template>
   <div id="sw_lang_section">
-    <button href="#" class="flex items-center" @click="toggleVisibility">
+    <button href="#" id="fix_iphone_hidden" class="flex items-center" @click="toggleVisibility">
       <v-row>
         <img :src="`/${$i18n.locale}.svg`" alt="flag" />
         <span class="ml-2">{{ $i18n.locale.toUpperCase() }}</span>
@@ -117,6 +117,10 @@ ul#sw_lang_dropdown {
   visibility: visible !important;
 }
 
+#fix_iphone_hidden {
+  height: 100% !important;
+}
+
 li {
 	display: flex;
    	text-decoration: none !important;
@@ -131,7 +135,7 @@ a {
 }
 
 img {
-	width: 50px;
+	width: 30px;
 }
 
 span {
@@ -156,7 +160,7 @@ div#sw_lang_section {
 @media only screen and (max-width: 480px ) { 
   div#sw_lang_section {
     position: relative;
-    top: 24px;
+    top: 0px;
     right: -40px;
     z-index: 10000!important;
     visibility: visible!important;
