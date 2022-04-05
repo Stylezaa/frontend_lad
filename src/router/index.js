@@ -28,11 +28,6 @@ import Lao from "../views/PUBLICATION/Lao electricity Law .vue";
 import contact from "../views/contact.vue";
 import { Trans } from '../plugins/Translation'
 
-function load(component) {
-  // '@' is aliased to src/components
-  return () => import(`@/views/${component}.vue`)
-}
-
 
 
 Vue.use(VueRouter);
@@ -67,6 +62,7 @@ const routes = [
     name: "contact",
 
     component: contact,
+
   },
   /// DAMS IN LAOS
 
@@ -98,21 +94,25 @@ const routes = [
     path: "Newsletters",
     name: "Newsletters",
     component: Newsletters,
+
   },
   {
     path: "Events",
     name: "Events",
     component: Events,
+
   },
   {
     path: "Releases",
     name: "Releases",
     component: Press,
+
   },
   {
     path: "Archives",
     name: "Archives",
     component: Archives,
+  
   },
 
   //PUBLICATION

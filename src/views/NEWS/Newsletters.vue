@@ -112,7 +112,7 @@
                                   <v-icon size="18"> mdi-timer-outline</v-icon>
                                   <h4
                                     class="textgray--text"
-                                    style="font-size: 0.5em"
+                                    style="font-size: 0.4em"
                                   >
                                     {{ item.date }}
                                   </h4>
@@ -120,12 +120,12 @@
                               </v-col>
                               <v-col cols="4" xs="4" sm="4" md="3" xl="2">
                                 <v-card-title>
-                                  <v-icon size="18">
+                                  <v-icon size="16">
                                     mdi-account-outline
                                   </v-icon>
                                   <h4
                                     class="textgray--text"
-                                    style="font-size: 0.5em"
+                                    style="font-size: 0.4em"
                                   >
                                     {{ item.user }}
                                   </h4>
@@ -133,25 +133,25 @@
                               </v-col>
                               <v-col cols="4" xs="4" sm="4" md="3" xl="2">
                                 <v-card-title>
-                                  <v-icon size="18">
+                                  <v-icon size="16">
                                     mdi-file-settings-outline
                                   </v-icon>
                                   <h4
                                     class="textgray--text"
-                                    style="font-size: 0.5em"
+                                    style="font-size: 0.4em"
                                   >
                                     {{ item.file }}
                                   </h4>
                                 </v-card-title>
                               </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="3">
+                              <v-col cols="4" xs="4" sm="4" md="3" xl="4">
                                 <v-card-title>
-                                  <v-icon size="18">
+                                  <v-icon size="15">
                                     mdi-comment-text-multiple-outline
                                   </v-icon>
                                   <h4
                                     class="textgray--text"
-                                    style="font-size: 0.5em"
+                                    style="font-size: 0.4em"
                                   >
                                     {{ item.comment }}
                                   </h4>
@@ -189,7 +189,7 @@
                         >
                           <h4>1. Establishment of the Lao Dam</h4></v-card-title
                         >
-                        <v-card-title style="font-size: 1em">
+                        <v-card-title  style="font-size: 1em">
                           <p>
                             • Association:
                             <br />• Opening LAD Inaugural Assembly 13 November
@@ -635,14 +635,14 @@ export default {
     return {
       press: [
         {
-          comment: "1,000 Comments",
+          comment: " 50 Comment",
           file: "General",
           date: "Nov09,2021",
           user: "Taiy Dueo",
           src: require("../../assets/images/Newsletters/Screenshot.png"),
           header: "LAD Inaugural Assembly held on 13 November 2020",
           start: "Excellencies, Leaders of the Party and the State,",
-          text: "-       Dear Fellow Compatriots, Soldiers, Police and all Lao People,",
+          text: "-Dear Fellow Compatriots, Soldiers, Police and all Lao People,",
 
           title:
             " Today, 8 August 2021, we jointly commemorate and celebrate the 54th anniversary of the founding of the Association of Southeast Asian Nations or ASEAN (8 August 1967 - 8 August 2021) while the world is facing the COVID-19 pandemic as well as natural disasters. Since its inception in 1967, ASEAN has grown into a resilient inter-governmental regional organisation with the aim of maintaining and promoting peace, stability and cooperation for the prosperity of the ASEAN Member States based on the aspiration of the ASEAN Charter that aims to build an ASEAN Community under the ASEAN Motto: “One Vision, One Identity, One Community”.",
@@ -652,7 +652,7 @@ export default {
             "Unfortunately, in 2021, ASEAN as well as other regions across the world continue to face many challenges, particularly the COVID-19 pandemic and other natural disasters, which have severely affected public health, socio-economic development, stability and security. Although the COVID-19 pandemic has disrupted connectivity, ASEAN has remained committed to further strengthen cooperation within ASEAN, and between ASEAN and its Dialogue Partners as well as External Parties, through utilising numerous modalities, including videoconference at all levels. Such cooperation entails the discussion on the prevention of the COVID-19 pandemic, preparedness and response to the impact of the COVID-19 pandemic on the economy and society in the region and the world at large. Importantly, ASEAN agreed to establish the COVID-19 ASEAN Response Fund (CARF) and the ASEAN Regional Reserve of Medical Supplies for Public Health Emergencies (RRMS), as well as to utilise USD 10.5 Million from the ASEAN Response Fund in response to the COVID-19 pandemic, including the procurement of COVID-19 vaccines for the peoples of ASEAN and ASEAN Secretariat staff.",
           title3:
             "  In line with the theme: “We Care, We Prepare, We Prosper” under the ASEAN Chairmanship of Brunei Darussalam in 2021, ASEAN will continue its efforts to build a caring ASEAN Community, strengthen ASEAN’s capability to cope with challenges, and foster ASEAN’s unity towards a sustainable economic development, as well as promote ASEAN’s principles and Centrality in external relations with a view to promoting and maintaining peace, security and stability in the region and the world at large.",
-          text1: "-       Excellencies, Fellow Compatriots,",
+          text1: "-Excellencies, Fellow Compatriots,",
 
           title4:
             "The Lao PDR became a member of ASEAN on 23 July 1997. Over the past 24 years, as a member of ASEAN, the Lao PDR has fully participated in the collective processes of ASEAN with a sense of high responsibility with a view to protecting and ensuring our national interests. This development has significantly contributed to socio-economic development and promoted the role of the Lao PDR in the regional and international arena. The Lao PDR has also continued to garner the trust, support, cooperation and assistance from ASEAN Member States as well as ASEAN’s Dialogue Partners and External Parties through both bilateral and multilateral frameworks. I am therefore of the view that these are tangible achievements resulted from the pursuit of the foreign policy of peace, independence, friendship and cooperation, as well as the New Economic Mechanism of our Party and State.",

@@ -48,7 +48,6 @@
 
           <v-card-text
             class="colorfooter--text mt-n4"
-         
             v-for="(item, index) in ABOUT"
             :key="index"
           >
@@ -122,9 +121,9 @@
     </v-card>
     <v-card-text
       class="primary colorfooter--text text-center"
-      style="font-size: 1em"
+      style="font-size: 0.9em"
     >
-      {{ $t("main.2022") }}
+      <h4>@2022 POWER BY ARCHINEER DIGITAL</h4>
     </v-card-text>
   </v-footer>
 </template>
@@ -179,16 +178,13 @@ export default {
   mounted() {},
   methods: {
     newroutdam(item) {
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     clicknew(item) {
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     clickpublic(item) {
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     scroll(refName) {
       if (this.$route.name == "About") {

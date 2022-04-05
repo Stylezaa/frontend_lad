@@ -26,16 +26,16 @@
                         <v-card flat class="max-w-sm rounded shadow-lg">
                           <div>
                             <v-row>
-                              <v-col cols="5" xs="5" sm="3" md="2">
+                              <v-col cols="5" xs="3" sm="3" md="3" xl="2">
                                 <v-img
                                   aspect-ratio="1"
-                                  class="grey lighten-2 magin10"
+                                  class=" mx-auto grey lighten-2 magin10"
                                   :src="item.src"
                                 >
                                 </v-img>
                               </v-col>
-                              <v-col cols="7" xs="7" sm="9" md="10">
-                                <h4 style="font-size: 1.2em">
+                              <v-col cols="7" xs="9" sm="9" md="9" xl="10">
+                                <h4 style="font-size: 1em">
                                   {{ item.title }}
                                 </h4>
                                 <h4
@@ -82,7 +82,7 @@ import jsPDF from "jspdf";
 import axios from "axios";
 
 export default {
-  name: "Dam safety guideline ",
+  name: "guideline",
   data() {
     return {
       items: [

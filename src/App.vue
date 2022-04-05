@@ -26,7 +26,8 @@ export default {
 
 #app {
   font-family: "Saysettha OT", "Roboto", sans-serif;
-  font-size: 19px;
+  font-size: 1.1em;
+  font-weight: 400;
   font-weight: normal;
   font-style: normal;
   color: #2c3e50;
@@ -38,5 +39,30 @@ export default {
 
 p {
   text-align: justify;
+  text-align: left;
+
+
+  text-indent: 30px;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
 }
+h1 {
+  font-size: clamp(1.5em, 4vw, 2.5em);
+}
+
+h2 {
+  font-size: clamp(1.2em, 4vw, 2.4em);
+}
+h4{
+    font-size: clamp(0.9em, 4vw, 0.8em);
+}
+
+p {
+  font-size: clamp(0.9em, 4vw, 0.8em);
+}
+
+
 </style>

@@ -16,14 +16,13 @@
             <div v-for="(item, index) in press" :key="index">
               <v-card-title style="font-size: 1.2em" class="primary--text">
                 <h4>
-                      {{ $t("main." + item.header) }}
-               
+                  {{ $t("main." + item.header) }}
                 </h4></v-card-title
               >
 
               <v-card-title style="font-size: 1em">
                 <p class="Testediter">
-                 {{ $t("main.WHAT IS DAM?s") }}
+                  {{ $t("main.WHAT IS DAM?s") }}
                 </p></v-card-title
               >
             </div>
@@ -35,7 +34,7 @@
 </template>
 <script>
 export default {
-  name: "Difination of dams",
+  name: "Difination",
   data() {
     return {
       press: [
@@ -62,7 +61,7 @@ export default {
 .bb {
   margin-top: 20px;
 }
-.Testediter{
-   white-space: pre-wrap;
+.Testediter {
+  white-space: pre-wrap;
 }
 </style>

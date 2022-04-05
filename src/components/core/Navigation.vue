@@ -249,7 +249,7 @@
                           text
                           v-bind="attrs"
                           v-on="on"
-                          @click="open2()"
+                          @click="OpenLink($i18nRoute({ name: 'Link' }))"
                           style="font-size: 0.9em"
                         >
                           LINK
@@ -301,19 +301,6 @@
                 </v-card>
               </v-toolbar>
             </v-card>
-            <!-- <v-navigation-drawer app v-model="drawer" absolute clipped>
-      <v-list nav>
-        <v-list-item v-for="item in items" :key="item.title" link>
-          <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon>
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer> -->
             <v-expand-transition>
               <v-card v-show="drawer" height="auto" width="100%" tile>
                 <v-list flat>
@@ -367,6 +354,7 @@
             </v-expand-transition>
           </v-row>
         </v-card>
+        <Loader></Loader>
       </v-app-bar>
     </v-card>
   </div>
@@ -374,6 +362,7 @@
 
 <script>
 import LocaleSwitcher from "@/components/LocaleSwitcher.vue";
+import Loader from "@/components/_loader.vue";
 export default {
   name: "App",
 
@@ -403,10 +392,12 @@ export default {
         { title: "Guideline", link: "guideline" },
         { title: "Conference Procedding", link: "Conference" },
       ],
+      link: [{ title: "Link", link: "Link" }],
 
       expand: false,
       drawer: false,
       state: true,
+      loader: true,
       value: 0,
 
       selectedItem: 1,
@@ -454,6 +445,14 @@ export default {
   },
   components: {
     LocaleSwitcher,
+    Loader,
+  },
+  beforeRouteEnter(to, from, next) {
+    //
+    if (from.name == "Link") {
+      window.location.reload();
+    }
+    next();
   },
 
   mounted() {},
@@ -461,35 +460,33 @@ export default {
     open() {
       window.scrollTo(0, 0);
     },
+    OpenLink(item) {
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
+      // this.$router.go(
+
+      //   this.$router.push(item),
+      //   window.scrollTo(0, 0)
+      // );
+    },
+
     newrouter(item) {
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     newroutdam(item) {
-    
-      this.$router.go(  this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     newroutdams(item) {
-     
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     clicknew(item) {
-
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
 
     goToPricing(item) {
-  
-     this.$router.go(this.$router.push(item));
- 
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     goTocontact(item) {
-      this.$router.go(this.$router.push(item));
-      window.scrollTo(0, 0);
+      this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
     },
     openabout(item) {
       // window.location.href = "#" + item;
@@ -498,9 +495,7 @@ export default {
         const element = document.getElementById(item.ids);
         element.scrollIntoView({ behavior: "smooth" });
       } else {
-        this.$router.push(item);
-        this.$router.go();
-        window.scrollTo(0, 0);
+        this.$router.go(window.scrollTo(0, 0), this.$router.push(item));
       }
     },
 
@@ -509,16 +504,37 @@ export default {
       this.$router.go();
       window.scrollTo(0, 0);
     },
-    open2() {
-      this.$router.push("Link");
-      this.$router.go();
-      window.scrollTo(0, 0);
-    },
 
     clickpublic(item) {
-      this.$router.push(item);
-      this.$router.go(0);
-      window.scrollTo(0, 0);
+      // delay(1).then(() => {
+      //   this.$router.go(this.$router.currentRoute, this.$router.push(item));
+      // });
+
+      // this.$store.commit("LOADER", true);
+      this.$router.go(
+        this.$router.currentRoute,
+        this.$router.push(item),
+        window.scrollTo(0, 0)
+      );
+
+      // setTimeout(check, 1000);
+
+      // window.open(item, '_blank');
+
+      // this.$router.resolve(item);
+      // this.window.open(item);
+      // setTimeout(() => {
+      //   this.$router.go(item);
+      //   this.$router.go();
+      //   window.scrollTo(0, 0);
+      // }, 1);
+
+      // setTimeout(() => {
+      //   this.$router.push(item);
+      // }, 6);
+      // setTimeout(() => {
+
+      // }, 7);
     },
     clickitem(item) {
       this.$router.push(item);

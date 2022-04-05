@@ -19,7 +19,7 @@
       <v-data-table
         :headers="fields"
         :items="items"
-        items-per-page="100"
+        :items-per-page="itemsPerPage"
         hide-default-footer
         class="elevation-1"
       ></v-data-table>
@@ -30,7 +30,7 @@
 import axios from "axios";
 
 export default {
-  name: "Difination of dams",
+  name: "List",
   data() {
     return {
       press: [
@@ -41,6 +41,7 @@ export default {
       ],
       page: 1,
       pageCount: 0,
+      itemsPerPage:100,
 
       fields: [
         {
@@ -116,9 +117,9 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    axios.get('https://lad-api007.herokuapp.com/api/dam').then((response) => {
+    axios.get('https://lad-api007.herokuapp.com/api/dam/').then((response) => {
       // JSON responses are automatically parsed.
-      console.log(response.data);
+    
       this.items = response.data.data;
       //    console.log(  JSON.parse(response.data))
     });

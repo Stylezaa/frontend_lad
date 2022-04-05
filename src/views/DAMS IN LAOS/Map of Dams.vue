@@ -36,7 +36,7 @@
 </template>
 <script>
 export default {
-  name: "Map of Dams",
+  name: "Map",
   data() {
     return {};
   },

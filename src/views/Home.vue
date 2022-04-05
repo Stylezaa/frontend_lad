@@ -147,7 +147,7 @@
                     </h4></v-card-title
                   >
 
-                  <v-card-title>
+                  <v-card-title style="font-size: 1em">
                     <p>
                       {{ $t("main.WHAT IS DAM?s") }}
                     </p></v-card-title
@@ -215,7 +215,7 @@
                               height="350"
                               class="black--text mt-n4"
                               style="text-decoration: none"
-                              :href="item.link"
+                         
                               target="_blank"
                             >
                               <v-img
@@ -370,15 +370,6 @@ export default {
 </script>
 
 <style>
-.p {
-  display: block;
-  line-height: 35px;
-  white-space: pre-wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-
-  text-align: justify;
-}
 .Testediter {
   display: block;
   white-space: nowrap;

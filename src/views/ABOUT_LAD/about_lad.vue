@@ -45,13 +45,15 @@
               >
 
               <v-card-title class="textt" style="font-size: 1em">
-                {{ $t("main.Committee ObjectivesW") }}
+                <p>
+                  {{ $t("main.Committee ObjectivesW") }}
+                </p>
               </v-card-title>
             </div>
-            <div v-for="(item, index) in press1" :key="index">
+            <div>
               <v-card-title class="primary--text">
                 <h4 style="font-size: 1.2em">
-                  {{ $t("main." + item.header) }}
+                  {{ $t("main.Establishment of the Lao Dam Association") }}
                 </h4></v-card-title
               >
 
@@ -369,12 +371,12 @@
 
                 <v-card-title style="font-size: 1em" class="mt-n3 Testediter">
                   <p>
-                  {{ $t("main.Memberships1") }}
-                  <br />
-                  {{ $t("main.Memberships2") }} <br />
-                  - {{ $t("main.Memberships3") }} <br />-
-                  {{ $t("main.Memberships4") }} <br />-
-                  {{ $t("main.Memberships5") }}
+                    {{ $t("main.Memberships1") }}
+                    <br />
+                    {{ $t("main.Memberships2") }} <br />-
+                    {{ $t("main.Memberships3") }} <br />-
+                    {{ $t("main.Memberships4") }} <br />-
+                    {{ $t("main.Memberships5") }}
                   </p>
                 </v-card-title>
               </v-card>
@@ -403,31 +405,56 @@
                   <v-card flat class="max-w-sm rounded shadow-lg">
                     <div>
                       <v-row>
-                        <v-col cols="5" xs="5" sm="3" md="2">
+                        <v-col cols="5" xs="3" sm="3" md="3" xl="2">
                           <v-img
                             aspect-ratio="1"
-                            class="grey lighten-2 magin10"
+                            class="mx-auto grey lighten-2 magin10"
                             :src="item.src"
                           >
                           </v-img>
                         </v-col>
-                        <v-col cols="7" xs="7" sm="9" md="10">
-                        
-                            <h4 style="font-size: 1.2em">
-                              {{ item.title }}
-                            </h4>
-                            <h4 class="textgray--text" style="font-size: 1em">
-                              {{ item.date }}
-                            </h4>
-                            <h4 class="textgray--text" style="font-size: 1em">
-                              {{ item.Type }}
-                            </h4>
-                       
+                        <v-col
+                          cols="7"
+                          xs="9"
+                          sm="9"
+                          md="9"
+                          xl="10"
+                          v-if="$route.params.locale == 'en'"
+                        >
+                          <h4 style="font-size: 1em">
+                            {{ item.title }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.date }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.Type }}
+                          </h4>
                           <h4>
                             <v-btn
                               color="primary"
                               class="ma-6"
-                              href="https://drive.google.com/file/d/1S7OYvDIM6yFgzjKAtWOZfkXKV-l4H_Od/view?usp=sharing"
+                              :href="item.pdf"
+                              target="_blank"
+                              >Preview</v-btn
+                            >
+                          </h4>
+                        </v-col>
+                        <v-col cols="7" xs="9" sm="9" md="9" xl="10" v-else>
+                          <h4 style="font-size: 1em">
+                            {{ item.title_la }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.date }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.Type }}
+                          </h4>
+                          <h4>
+                            <v-btn
+                              color="primary"
+                              class="ma-6"
+                              :href="item.pdf_la"
                               target="_blank"
                               >Preview</v-btn
                             >
@@ -464,8 +491,6 @@ export default {
       press1: [
         {
           header: "Establishment of the Lao Dam Association",
-
-          title: " ",
         },
       ],
 
@@ -550,6 +575,10 @@ export default {
         {
           src: require("../../assets/images/Image 1.png"),
           title: "Charter of the Lao Association on Dams",
+          title_la: "ກົດລະບຽບຂອງສະມາຄົມເຂື່ອນລາວ",
+          pdf: "https://drive.google.com/file/d/1S7OYvDIM6yFgzjKAtWOZfkXKV-l4H_Od/view",
+          pdf_la:
+            "https://drive.google.com/file/d/1QPFSZJ-ULWxjP0c7cMKHwPok2spmRzwl/view",
           date: "Nov 09, 2021",
           Type: ".PDF",
         },
@@ -559,9 +588,7 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    this.navDrawerContent = this.$refs["myNavDrawer"].$el.querySelector(
-      "div.v-navigation-drawer__content"
-    );
+    console.log(this.$route.params.locale);
   },
 };
 </script>
