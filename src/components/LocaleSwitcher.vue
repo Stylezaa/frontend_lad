@@ -158,7 +158,7 @@ div#sw_lang_section {
     left: 170px;  
     display: flex;
     align-items: center;
-    justify-content: end !important ;
+    justify-content: flex-end !important ;
     align-items: center;
   }
 }
