@@ -64,7 +64,7 @@
 
                     <v-row>
                       <v-col cols="6">
-                        <h4>Name <a class="red--text">*</a></h4>
+                        <h4>Name</h4>
                         <v-text-field outlined></v-text-field>
                       </v-col>
                       <v-col cols="6">
@@ -72,9 +72,7 @@
                         <v-text-field outlined></v-text-field>
                       </v-col>
                       <v-col cols="12">
-                        <h4 style="font-size: 0.9em" class="mt-n3">
-                          Website <a class="red--text">*</a>
-                        </h4>
+                        <h4 style="font-size: 0.9em" class="mt-n3">Website</h4>
                         <v-text-field outlined></v-text-field>
                       </v-col>
                       <v-col cols="12">

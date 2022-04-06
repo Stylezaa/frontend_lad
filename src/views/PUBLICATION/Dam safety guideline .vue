@@ -197,7 +197,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Quality-December 2018",
-          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ຄຸນນະພາບ-ເດືອນທັນວາ 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ຄວບຄຸມຄຸນນະພາບ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -273,7 +273,9 @@ export default {
         });
     },
 
-    mounted() {},
+    mounted() {
+      
+    },
   },
 };
 </script>

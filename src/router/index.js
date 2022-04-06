@@ -17,7 +17,7 @@ import Events from "../views/NEWS/Events.vue";
 import Press from "../views/NEWS/Press Releases.vue";
 import Archives from "../views/NEWS/Archives.vue";
 
-import Link from "../views/LINK/link.vue";
+import Link from "../views/Link/link.vue";
 
 import Conference from "../views/PUBLICATION/Conference.vue";
 import guideline from "../views/PUBLICATION/Dam safety guideline .vue";
@@ -30,141 +30,138 @@ import { Trans } from '../plugins/Translation'
 
 
 
+
 Vue.use(VueRouter);
 
 const routes = [
   {
 
-  path: "/:locale/",
-  component: {
-    render(c) { return c('router-view') }
-  },
-  beforeEnter: Trans.routeMiddleware,
-  children: [{
+    path: "/:locale/",
+    component: {
+      render(c) { return c('router-view') }
+    },
+    beforeEnter: Trans.routeMiddleware,
+    children: [{
 
-    path: "/",
-    name: "Home",
-    component: Home,
-  },
+      path: "/",
+      name: "Home",
+      component: Home,
+    },
 
-  /// ABOUT LAD
+    /// ABOUT LAD
+
+    {
+      path: "About",
+      name: "About",
+
+      component: About,
+    },
+
+
+    {
+      path: "contact",
+      name: "contact",
+
+      component: contact,
+
+    },
+    /// DAMS IN LAOS
+
+    {
+      path: "Difination",
+      name: "Difination",
+      component: Difination,
+    },
+    {
+      path: "List",
+      name: "List",
+      component: List,
+    },
+    {
+      path: "Map",
+      name: "Map",
+      component: Maps,
+    },
+
+    {
+      path: "safety",
+      name: "safety",
+      component: safety,
+    },
+
+    /// NEWS
+
+    {
+      path: "Newsletters",
+      name: "Newsletters",
+      component: Newsletters,
+
+    },
+    {
+      path: "Events",
+      name: "Events",
+      component: Events,
+
+    },
+    {
+      path: "Releases",
+      name: "Releases",
+      component: Press,
+
+    },
+    {
+      path: "Archives",
+      name: "Archives",
+      component: Archives,
+
+    },
+
+    //PUBLICATION
+
+    {
+      path: "Conference",
+      name: "Conference",
+      component: Conference,
+    },
+    {
+      path: "guideline",
+      name: "guideline",
+      component: guideline,
+    },
+    {
+      path: "LaoElectricity",
+      name: "LaoElectricity",
+      component: Lao,
+    },
+
+    // LINK
+
+    {
+      path: "Link",
+      name: "Link",
+      component: Link,
+    },
+
+    {
+      path: "",
+      redirect: "home",
+    },
+    {
+      path: "error",
+      name: "error",
+      component: about,
+    },
+    ],
+
+
+  },
 
   {
-    path: "About",
-    name: "About",
-
-    component: About,
+    path: "*",
+    redirect() {
+      return process.env.VUE_APP_I18N_LOCALE;
+    }
   },
-
-
-  {
-    path: "contact",
-    name: "contact",
-
-    component: contact,
-
-  },
-  /// DAMS IN LAOS
-
-  {
-    path: "Difination",
-    name: "Difination",
-    component: Difination,
-  },
-  {
-    path: "List",
-    name: "List",
-    component: List,
-  },
-  {
-    path: "Map",
-    name: "Map",
-    component: Maps,
-  },
-
-  {
-    path: "safety",
-    name: "safety",
-    component: safety,
-  },
-
-  /// NEWS
-
-  {
-    path: "Newsletters",
-    name: "Newsletters",
-    component: Newsletters,
-
-  },
-  {
-    path: "Events",
-    name: "Events",
-    component: Events,
-
-  },
-  {
-    path: "Releases",
-    name: "Releases",
-    component: Press,
-
-  },
-  {
-    path: "Archives",
-    name: "Archives",
-    component: Archives,
-  
-  },
-
-  //PUBLICATION
-
-  {
-    path: "Conference",
-    name: "Conference",
-    component: Conference,
-  },
-  {
-    path: "guideline",
-    name: "guideline",
-    component: guideline,
-  },
-  {
-    path: "LaoElectricity",
-    name: "LaoElectricity",
-    component: Lao,
-  },
-
-  // LINK
-
-  {
-    path: "Link",
-    name: "Link",
-    component: Link,
-  },
-
-  {
-    path: "",
-    redirect: "home",
-  },
-  {
-    path: "error",
-    name: "error",
-    component: about,
-  },
-
-
-
-
-  ],
-
-  
-},
-
-{
-  path: "*",
-  redirect() {
-    return process.env.VUE_APP_I18N_LOCALE;
-  }
-},
 
 ];
 

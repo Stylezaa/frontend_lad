@@ -15,7 +15,7 @@
         </v-col>
       </v-col>
     </v-row>
-    <div  v-if="$route.params.locale == 'en'" >
+    <div v-if="$route.params.locale == 'en'">
       <v-data-table
         :headers="fields"
         :items="items"
@@ -24,7 +24,7 @@
         class="elevation-1"
       ></v-data-table>
     </div>
-       <div  v-else >
+    <div v-else>
       <v-data-table
         :headers="fields_la"
         :items="items"
@@ -195,7 +195,7 @@ export default {
   computed: {},
   methods: {},
   mounted() {
-    axios.get('https://lad-api007.herokuapp.com/api/dam').then((response) => {
+    axios.get("https://lad-api007.herokuapp.com/api/dam").then((response) => {
       // JSON responses are automatically parsed.
 
       this.items = response.data.data;

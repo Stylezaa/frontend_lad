@@ -13,6 +13,7 @@ import Contend from "@/components/core/Contend.vue";
 
 export default {
   name: "App",
+  
   components: {
     Navigation,
     Footer,
