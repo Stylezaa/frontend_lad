@@ -189,7 +189,7 @@
                         >
                           <h4>1. Establishment of the Lao Dam</h4></v-card-title
                         >
-                        <v-card-title  style="font-size: 1em">
+                        <v-card-title style="font-size: 1em">
                           <p>
                             • Association:
                             <br />• Opening LAD Inaugural Assembly 13 November

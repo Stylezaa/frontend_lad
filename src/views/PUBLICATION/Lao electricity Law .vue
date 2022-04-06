@@ -21,47 +21,68 @@
                         :key="index"
                         :src="item.src"
                       >
-                         <v-card flat class="max-w-sm rounded shadow-lg">
-                          <div>
-                            <v-row>
-                              <v-col cols="5" xs="3" sm="3" md="3" xl="2">
-                                <v-img
-                                  aspect-ratio="1"
-                                  class=" mx-auto grey lighten-2 magin10"
-                                  :src="item.src"
-                                >
-                                </v-img>
-                              </v-col>
-                              <v-col cols="7" xs="9" sm="9" md="9" xl="10">
-                                <h4 style="font-size: 1em">
-                                  {{ item.title }}
-                                </h4>
-                                <h4
-                                  class="textgray--text"
-                                  style="font-size: 1em"
-                                >
-                                  {{ item.date }}
-                                </h4>
-                                <h4
-                                  class="textgray--text"
-                                  style="font-size: 1em"
-                                >
-                                  {{ item.Type }}
-                                </h4>
-                                <h4>
-                                  <v-btn
-                                    color="primary"
-                                    class="ma-6"
-                                    :href="item.pdf"
-                                    target="_blank"
-                                    >Preview</v-btn
-                                  >
-                                </h4>
-                              </v-col>
-                            </v-row>
-                          </div>
-                          <v-divider></v-divider>
-                        </v-card>
+                        <v-card flat class="max-w-sm rounded shadow-lg">
+                    <div>
+                      <v-row>
+                        <v-col cols="5" xs="3" sm="3" md="3" xl="2">
+                          <v-img
+                            aspect-ratio="1"
+                            class="mx-auto grey lighten-2 magin10"
+                            :src="item.src"
+                          >
+                          </v-img>
+                        </v-col>
+                        <v-col
+                          cols="7"
+                          xs="9"
+                          sm="9"
+                          md="9"
+                          xl="10"
+                          v-if="$route.params.locale == 'en'"
+                        >
+                          <h4 style="font-size: 1em">
+                            {{ item.title }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.date }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.Type }}
+                          </h4>
+                          <h4>
+                            <v-btn
+                              color="primary"
+                              class="ma-6"
+                              :href="item.pdf"
+                              target="_blank"
+                              >Preview</v-btn
+                            >
+                          </h4>
+                        </v-col>
+                        <v-col cols="7" xs="9" sm="9" md="9" xl="10" v-else>
+                          <h4 style="font-size: 1em">
+                            {{ item.title_la }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.date }}
+                          </h4>
+                          <h4 class="textgray--text" style="font-size: 1em">
+                            {{ item.Type }}
+                          </h4>
+                          <h4>
+                            <v-btn
+                              color="primary"
+                              class="ma-6"
+                              :href="item.pdf"
+                              target="_blank"
+                              >Preview</v-btn
+                            >
+                          </h4>
+                        </v-col>
+                      </v-row>
+                    </div>
+                    <v-divider></v-divider>
+                  </v-card>
                         <br />
                       </v-flex>
                     </v-card>
@@ -86,20 +107,23 @@ export default {
       items: [
         {
           title: "Law on Electricity",
+           title_la: "ກົດໝາຍວ່າດ້ວຍການໄຟຟ້າ",
           date: "May 09, 2017",
           Type: "Law and Regulation",
           src: require("../../assets/images/pdf/1.png"),
           pdf: "https://drive.google.com/file/d/1Mjzh2C20umf8XrmBMELibkb8Bp6AbWZJ/view?usp=sharing",
         },
         {
-          title: "ຂໍ້ຕົກລົງລະບຽບການນຳໃຊ້ ມລຟ 2018 ",
+          title: "Decision on Electrical Technic Standard and Regulation on Dam safety 2018",
+           title_la: "ຂໍ້ຕົກລົງລະບຽບການນຳໃຊ້ ມລຟ 2018 ",
           date: "March 19, 2020",
           Type: "Law and Regulation",
           src: require("../../assets/images/pdf/2.png"),
           pdf: "https://drive.google.com/file/d/1WmHRhgnAfea3_Zx58ivvWhDgD3r_GFj5/view?usp=sharing",
         },
         {
-          title: "ໃບຮອງຮັບເອົາກົດໝາຍ ມຟລ 2018 ",
+          title: "Legal Accreditation on LEPTS 2018",
+           title_la: "ໃບຮອງຮັບເອົາກົດໝາຍ ມຟລ 2018 ",
           date: "Jun 06, 2017",
           Type: "Law and Regulation",
           src: require("../../assets/images/pdf/3.png"),

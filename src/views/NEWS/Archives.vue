@@ -6,7 +6,9 @@
           <v-card-title style="font-size: 0.8em"
             >Home > News > Archives list</v-card-title
           >
-          <v-card-title class="mt-n7"><h3>{{ $t("main.ARCHIVES LIST") }}</h3></v-card-title>
+          <v-card-title class="mt-n7"
+            ><h3>{{ $t("main.ARCHIVES LIST") }}</h3></v-card-title
+          >
           <v-divider class="mx-4"></v-divider>
 
           <v-layout row wrap>
@@ -96,7 +98,7 @@
                           class="text-center primary--text"
                           style="font-size: 2em"
                         >
-                           Comming Soon!
+                          Comming Soon!
                         </div>
                       </v-card>
                     </v-card>

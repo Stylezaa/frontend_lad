@@ -15,7 +15,7 @@
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-row>
-                  <v-col cols="12" xs="12" sm="4" md="4" xl="3">
+                  <v-col cols="12" xs="12" sm="3" md="3" xl="3">
                     <div class="pt-5">
                       <v-card-title
                         style="font-size: 1.2em"

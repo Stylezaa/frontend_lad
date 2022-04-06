@@ -29,14 +29,54 @@
                               <v-col cols="5" xs="3" sm="3" md="3" xl="2">
                                 <v-img
                                   aspect-ratio="1"
-                                  class=" mx-auto grey lighten-2 magin10"
+                                  class="mx-auto grey lighten-2 magin10"
                                   :src="item.src"
                                 >
                                 </v-img>
                               </v-col>
-                              <v-col cols="7" xs="9" sm="9" md="9" xl="10">
+                              <v-col
+                                cols="7"
+                                xs="9"
+                                sm="9"
+                                md="9"
+                                xl="10"
+                                v-if="$route.params.locale == 'en'"
+                              >
                                 <h4 style="font-size: 1em">
                                   {{ item.title }}
+                                </h4>
+                                <h4
+                                  class="textgray--text"
+                                  style="font-size: 1em"
+                                >
+                                  {{ item.date }}
+                                </h4>
+                                <h4
+                                  class="textgray--text"
+                                  style="font-size: 1em"
+                                >
+                                  {{ item.Type }}
+                                </h4>
+                                <h4>
+                                  <v-btn
+                                    color="primary"
+                                    class="ma-6"
+                                    :href="item.pdf"
+                                    target="_blank"
+                                    >Preview</v-btn
+                                  >
+                                </h4>
+                              </v-col>
+                              <v-col
+                                cols="7"
+                                xs="9"
+                                sm="9"
+                                md="9"
+                                xl="10"
+                                v-else
+                              >
+                                <h4 style="font-size: 1em">
+                                  {{ item.title_la }}
                                 </h4>
                                 <h4
                                   class="textgray--text"
@@ -88,6 +128,8 @@ export default {
       items: [
         {
           title: "LEPTS Laos 2004",
+          title_la:
+            "ມາດຕະຖານເຕັກນິກໄຟຟ້າຂອງ ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ 2004",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -96,6 +138,8 @@ export default {
         {
           title:
             "Guideline  on Operating and Managing Lao Electric Power Technical  Standards and  Safety Rules  for Operation and Maintenance 2018",
+          title_la:
+            "ບົດ​ແນະ​ນຳ​ກ່ຽວ​ກັບ​ຜູ້​ບໍ​ລິ​ຫານ ແລະ ການ​ຄຸ້ມ​ຄອງ​ບັນ​ດາ​ມາດ​ຕະ​ຖານ​ດ້ານ​ວິ​ຊາ​ການ​ພະ​ລັງ​ງານ​ໄຟ​ຟ້າ​ລາວ ແລະ ກົດ​ລະ​ບຽບ​ຄວາມ​ປອດ​ໄພ​ໃນ​ການ​ດຳ​ເນີນ​ງານ ແລະ ການ​ບໍາ​ລຸງ​ຮັກ​ສາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -103,6 +147,8 @@ export default {
         },
         {
           title: "LEPTS Laos 2018",
+          title_la:
+            "ມາດຕະຖານເຕັກນິກໄຟຟ້າຂອງ ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -110,6 +156,7 @@ export default {
         },
         {
           title: "Preface- December 2018 Dam Safety Guideline",
+          title_la: "ຄຳນຳຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -117,6 +164,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Documentation-December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ເອກະສານ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -124,6 +172,8 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- EAP-December 2018",
+          title_la:
+            "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ແຜນປະຕິບັດງານສຸກເສີນ-ເດືອນ ທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -131,6 +181,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Geological-December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ທໍລະນີສາດ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -138,6 +189,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Instrumentation -December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ເຄື່ອງມື-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -145,6 +197,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Quality-December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ຄຸນນະພາບ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -152,6 +205,8 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Reservoir Impoundment-December 2018",
+          title_la:
+            "ຂໍ້ແນະນຳຄວາມປອດໄພຂອງເຂື່ອນ-ການກັກຂັງອ່າງເກັບນ້ຳ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -159,6 +214,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Surveillance-December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພເຂື່ອນ-ການເຝົ້າລະວັງ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),
@@ -166,6 +222,7 @@ export default {
         },
         {
           title: "Dam Safety Guidelines- Training-December 2018",
+          title_la: "ຂໍ້ແນະນຳຄວາມປອດໄພຂອງເຂື່ອນ-ການຝຶກອົບຮົມ-ເດືອນທັນວາ 2018",
           date: "Jun 06, 2017",
           Type: "Guideline",
           src: require("../../assets/images/pdf/1.png"),

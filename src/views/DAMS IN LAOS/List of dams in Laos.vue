@@ -15,9 +15,18 @@
         </v-col>
       </v-col>
     </v-row>
-    <div>
+    <div  v-if="$route.params.locale == 'en'" >
       <v-data-table
         :headers="fields"
+        :items="items"
+        :items-per-page="itemsPerPage"
+        hide-default-footer
+        class="elevation-1"
+      ></v-data-table>
+    </div>
+       <div  v-else >
+      <v-data-table
+        :headers="fields_la"
         :items="items"
         :items-per-page="itemsPerPage"
         hide-default-footer
@@ -41,7 +50,7 @@ export default {
       ],
       page: 1,
       pageCount: 0,
-      itemsPerPage:100,
+      itemsPerPage: 100,
 
       fields: [
         {
@@ -111,15 +120,84 @@ export default {
           align: "start",
         },
       ],
+
+      fields_la: [
+        {
+          text: "ລຳດັບ",
+          value: "id",
+          align: "start",
+        },
+
+        {
+          text: "ຊື່ໂຄງການ",
+          value: "name_of_project",
+          align: "start",
+        },
+        {
+          text: "ຜູ້ພັດທະນາໂຄງການ",
+          value: "operator",
+          align: "start",
+        },
+        {
+          text: "ປະເພດຂອງເຂື່ອນ",
+          value: "type_of_dam",
+          align: "start",
+        },
+        {
+          text: "ແມ່ນ້ຳ",
+          value: "impounds",
+          align: "start",
+        },
+        {
+          text: "ເມືອງ",
+          value: "district",
+          align: "start",
+        },
+        {
+          text: "ແຂວງ",
+          value: "province",
+          align: "start",
+        },
+        {
+          text: "ລວງສູງ (ແມັດ)",
+          value: "hight",
+          align: "start",
+        },
+        {
+          text: "ຂະໜາດອ່າງເກັບນ້ຳ (10^6 m3)",
+          value: "storage_capacity",
+          align: "start",
+        },
+        {
+          text: "ພື້ນທີ່ອ່າງເກັບນ້ຳ (km2)",
+          value: "reservoir_area",
+          align: "start",
+        },
+        {
+          text: "ກຳລັງຕິດຕັ້ງໄຟຟ້າ (MW)",
+          value: "installed_power_capacity",
+          align: "start",
+        },
+        {
+          text: "ປີສຳເລັດ",
+          value: "year_completed",
+          align: "start",
+        },
+        {
+          text: "ອື່ນໆ",
+          value: "noted",
+          align: "start",
+        },
+      ],
       items: [],
     };
   },
   computed: {},
   methods: {},
   mounted() {
-    axios.get('https://lad-api007.herokuapp.com/api/dam/').then((response) => {
+    axios.get('https://lad-api007.herokuapp.com/api/dam').then((response) => {
       // JSON responses are automatically parsed.
-    
+
       this.items = response.data.data;
       //    console.log(  JSON.parse(response.data))
     });
