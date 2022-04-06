@@ -192,14 +192,13 @@
       <v-container>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="10">
-            <v-col cols="12" xs="12" sm="12" md="12" xl="12">
+            <v-col cols="12" xs="12" sm="12" md="12" xl="12" id="custom_slider_footer">
               <v-carousel
                 height="140"
                 hide-delimiter-background
                 delimiter-icon="mdi-minus"
                 reverse-transition="fade-transition"
                 transition="fade-transition"
-                cycle
               >
                 <v-card class="white v-center-item" height="100">
                   <template v-for="(item, index) in slider">
@@ -377,6 +376,11 @@ export default {
   text-overflow: ellipsis;
   text-align: left;
 }
+
+#custom_slider_footer .v-window__container {
+  flex-direction: row !important;
+  align-items: center !important;
+}
 .test {
   margin-top: 60%;
 }
@@ -387,6 +391,14 @@ export default {
 
   border-radius: 5px;
   color: #fff;
+}
+
+.custom_slider_main .v-carousel__controls {
+  z-index: 0 !important;
+}
+
+.v-window__prev, .v-window__next {
+  z-index: 0 !important;
 }
 .v-card--reveal:hover {
   opacity: 1;
