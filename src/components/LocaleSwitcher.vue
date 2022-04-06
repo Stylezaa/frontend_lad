@@ -196,7 +196,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
 
   ul#sw_lang_dropdown {
     position: absolute;
-    left: 0px;
+    left: 20px;
     top: 40px;
     z-index: 10000 !important;
     visibility: visible !important;
