@@ -2,6 +2,7 @@
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
+           <v-col cols="12" xs="12" sm="12" md="12">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Press Releases</v-card-title
@@ -81,6 +82,7 @@
             </v-col>
           </v-layout>
         </v-card>
+      </v-col>
       </v-col>
     </v-row>
   </v-container>

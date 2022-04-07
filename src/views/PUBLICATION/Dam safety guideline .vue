@@ -2,9 +2,10 @@
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
+         <v-col cols="12" xs="12" sm="12" md="12">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
-            >Home > Publication > Dam Safety Guideline
+            >Home > Publication > Guideline
           </v-card-title>
           <v-card-title class="mt-n7"
             ><h3>{{ $t("main.DAM SAFETY GUIDELINE") }}</h3></v-card-title
@@ -113,6 +114,7 @@
             </v-col>
           </v-layout>
         </v-card>
+      </v-col>
       </v-col>
     </v-row>
   </v-container>

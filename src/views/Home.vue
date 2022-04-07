@@ -60,7 +60,7 @@
             <v-layout row wrap>
               <v-card flat class="mx-auto nor">
                 <v-row>
-                  <v-flex sm4 md3 lg4 xl4 v-for="(item, i) in items1" :key="i">
+                  <v-flex sm4 md4 lg4 xl4 v-for="(item, i) in items1" :key="i">
                     <v-hover v-slot="{ hover }">
                       <v-card flat class="mx-auto" color="grey lighten-4">
                         <v-img class="imgs" :src="item.src" max-width="500px">
@@ -147,10 +147,10 @@
                     </h4></v-card-title
                   >
 
-                  <v-card-title style="font-size: 1em">
+                  <v-card-text style="font-size: 1em" class="black--text">
                     <p>
                       {{ $t("main.WHAT IS DAM?s") }}
-                    </p></v-card-title
+                    </p></v-card-text
                   >
                 </div>
               </v-card>
@@ -192,7 +192,14 @@
       <v-container>
         <v-row justify="center" align="center">
           <v-col cols="12" xs="12" sm="12" md="10">
-            <v-col cols="12" xs="12" sm="12" md="12" xl="12" id="custom_slider_footer">
+            <v-col
+              cols="12"
+              xs="12"
+              sm="12"
+              md="12"
+              xl="12"
+              id="custom_slider_footer"
+            >
               <v-carousel
                 height="140"
                 hide-delimiter-background
@@ -214,7 +221,6 @@
                               height="350"
                               class="black--text mt-n4"
                               style="text-decoration: none"
-                         
                               target="_blank"
                             >
                               <v-img
@@ -397,7 +403,8 @@ export default {
   z-index: 0 !important;
 }
 
-.v-window__prev, .v-window__next {
+.v-window__prev,
+.v-window__next {
   z-index: 0 !important;
 }
 .v-card--reveal:hover {

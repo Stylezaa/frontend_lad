@@ -13,7 +13,7 @@ import Contend from "@/components/core/Contend.vue";
 
 export default {
   name: "App",
-  
+
   components: {
     Navigation,
     Footer,
@@ -41,8 +41,7 @@ export default {
 p {
   text-align: justify;
   text-align: left;
-
-
+  line-height: 35px;
   text-indent: 30px;
   display: block;
   margin-top: 1em;
@@ -57,13 +56,13 @@ h1 {
 h2 {
   font-size: clamp(1.2em, 4vw, 2.4em);
 }
-h4{
-    font-size: clamp(0.9em, 4vw, 0.8em);
+h4 {
+  font-size: 0.9em;
+
+ line-height: 1.4em;
 }
 
 p {
   font-size: clamp(0.9em, 4vw, 0.8em);
 }
-
-
 </style>

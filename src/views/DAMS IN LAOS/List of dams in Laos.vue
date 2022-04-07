@@ -15,24 +15,54 @@
         </v-col>
       </v-col>
     </v-row>
-    <div v-if="$route.params.locale == 'en'">
-      <v-data-table
-        :headers="fields"
-        :items="items"
-        :items-per-page="itemsPerPage"
-        hide-default-footer
-        class="elevation-1"
-      ></v-data-table>
-    </div>
-    <div v-else>
-      <v-data-table
-        :headers="fields_la"
-        :items="items"
-        :items-per-page="itemsPerPage"
-        hide-default-footer
-        class="elevation-1"
-      ></v-data-table>
-    </div>
+    <v-card>
+      <v-card-title>
+        <v-text-field
+          v-model="search"
+          append-icon="mdi-magnify"
+          label="Search"
+          single-line
+          hide-details
+        ></v-text-field>
+      </v-card-title>
+
+      <div v-if="$route.params.locale == 'en'">
+        <v-data-table
+          :headers="fields"
+          :items="items"
+          :items-per-page="itemsPerPage"
+          hide-default-footer
+          :search="search"
+          class="elevation-1"
+        >
+          <template v-slot:item.installed_power_capacity="{ item }">
+            {{
+              item.installed_power_capacity
+                .toString()
+                .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+            }}
+          </template></v-data-table
+        >
+      </div>
+      <div v-else>
+        <v-data-table
+          :headers="fields_la"
+          :items="items"
+          :items-per-page="itemsPerPage"
+          hide-default-footer
+          :search="search"
+          class="elevation-1"
+        >
+          <template v-slot:item.installed_power_capacity="{ item }">
+            {{
+              item.installed_power_capacity
+                .toString()
+                .replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+            }}
+          </template>
+        </v-data-table>
+      </div>
+    </v-card>
   </v-container>
 </template>
 <script>
@@ -49,6 +79,7 @@ export default {
         },
       ],
       page: 1,
+      search: "",
       pageCount: 0,
       itemsPerPage: 100,
 
@@ -193,12 +224,25 @@ export default {
     };
   },
   computed: {},
-  methods: {},
+  methods: {
+    getColor(installed_power_capacity) {
+      if (installed_power_capacity > 400) return "red";
+      else if (installed_power_capacity > 200) return "orange";
+      else return "green";
+    },
+  },
   mounted() {
     axios.get("https://lad-api007.herokuapp.com/api/dam").then((response) => {
       // JSON responses are automatically parsed.
-// this.$store.getters.getBaseUrl + "/dam
+      // https://lad-api007.herokuapp.com/api/dam
+      // this.$store.getters.getBaseUrl + "/dam
       this.items = response.data.data;
+      // console.log(this.items);
+      // console.log(
+      //   "122222".toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+      // );
+      //console.log(response.data.data.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+      // this.items.installed_power_capacity.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
       //    console.log(  JSON.parse(response.data))
     });
   },

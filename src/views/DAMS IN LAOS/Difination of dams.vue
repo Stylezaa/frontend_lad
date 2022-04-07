@@ -20,10 +20,10 @@
                 </h4></v-card-title
               >
 
-              <v-card-title style="font-size: 1em">
+              <v-card-text style="font-size: 1em">
                 <p class="Testediter">
                   {{ $t("main.WHAT IS DAM?s") }}
-                </p></v-card-title
+                </p></v-card-text
               >
             </div>
           </v-card>

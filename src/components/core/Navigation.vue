@@ -17,6 +17,7 @@
                     xs="12"
                     sm="12"
                     md="6"
+                    lg="6"
                     xl="5"
                     id="custom_official_text"
                   >
@@ -61,6 +62,7 @@
               xs="12"
               sm="12"
               md="8"
+              lg="7"
               xl="8"
               class="hidden-sm-and-down"
             >

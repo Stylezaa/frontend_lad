@@ -1,11 +1,14 @@
 <template>
   <div grid-list-md>
+
+    <v-container  grid-list-md>
     <v-row justify="center" align="center">
+      
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
             <v-card-title style="font-size: 0.8em"
-              >Home > About Lad >
+              >Home > About LAD
             </v-card-title>
             <v-card-title class="mt-n7" id="History">
               <h3>{{ $t("main.HISTORY") }}</h3></v-card-title
@@ -13,11 +16,11 @@
             <v-divider class="mx-4"></v-divider>
 
             <v-row class="bb">
-              <v-card-title class="Testediter" style="font-size: 1em">
+              <v-card-text style="font-size: 1em">
                 <p>
                   {{ $t("main.test") }}
                 </p>
-              </v-card-title>
+              </v-card-text>
 
               <v-img
                 :src="require('../../assets/images/Mask.png')"
@@ -44,11 +47,11 @@
                 </h4></v-card-title
               >
 
-              <v-card-title class="textt" style="font-size: 1em">
+              <v-card-text class="textt" style="font-size: 1em">
                 <p>
                   {{ $t("main.Committee ObjectivesW") }}
                 </p>
-              </v-card-title>
+              </v-card-text>
             </div>
             <div>
               <v-card-title class="primary--text">
@@ -57,27 +60,31 @@
                 </h4></v-card-title
               >
 
-              <v-card-title class="textt" style="font-size: 1em">
+              <v-card-text class="textt" style="font-size: 1em">
                 <p class="textt">
-                  · {{ $t("main.Establishment1") }} <br />·
-                  {{ $t("main.Establishment2") }} <br />·
-                  {{ $t("main.Establishment3") }} <br />·
-                  {{ $t("main.Establishment4") }}. <br />·
-                  {{ $t("main.Establishment5") }} <br />·
-                  {{ $t("main.Establishment6") }} <br />·
-                  {{ $t("main.Establishment7") }}
+
+                  <ul style="list-style-type:disc">
+                  <br />
+                  <li> {{ $t("main.Establishment1") }}. </li><li>
+                  {{ $t("main.Establishment2") }} </li><li>
+                  {{ $t("main.Establishment3") }} </li><li>
+                  {{ $t("main.Establishment4") }}. </li><li>
+                  {{ $t("main.Establishment5") }} </li><li>
+                  {{ $t("main.Establishment6") }} </li><li>
+                  {{ $t("main.Establishment7") }}</li>
+                  </ul>
                 </p>
-              </v-card-title>
+              </v-card-text>
             </div>
           </v-card>
         </v-col>
       </v-col>
-    </v-row>
+    </v-row></v-container>
 
     <div class="bg_about" id="Organization">
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
+          <v-col cols="12" xs="12" sm="12" md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
                 <v-card-title
@@ -109,7 +116,7 @@
 
     <v-row justify="center" align="center" id="Board">
       <v-col cols="12" xs="12" sm="12" md="12">
-        <v-col cols="12" xs="12" sm="12" md="12">
+        <v-col cols="12" xs="12" sm="12" md="12" >
           <v-card flat>
             <v-card-text style="font-size: 1.5em" class="text-center"
               ><h3 class="primary--text">
@@ -130,8 +137,9 @@
                 <v-layout row wrap>
                   <v-flex
                     xs12
-                    md12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Board.slice(0, 1)"
@@ -162,9 +170,10 @@
               <v-card flat>
                 <v-layout row wrap>
                   <v-flex
-                    xs12
-                    md12
+                     xs12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Board1.slice(0, 2)"
@@ -203,9 +212,10 @@
               <v-card flat>
                 <v-layout row wrap>
                   <v-flex
-                    xs12
-                    md12
+                     xs12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Auditor"
@@ -241,9 +251,10 @@
               <v-card flat>
                 <v-layout row wrap>
                   <v-flex
-                    xs12
-                    md12
+                     xs12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Director.slice(0, 1)"
@@ -279,9 +290,10 @@
               <v-card flat>
                 <v-layout row wrap>
                   <v-flex
-                    xs12
-                    md12
+                      xs12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Technical.slice(0, 3)"
@@ -314,9 +326,10 @@
               <v-card flat>
                 <v-layout row wrap>
                   <v-flex
-                    xs12
-                    md12
+                     xs12
+                   
                     sm6
+                     md4
                     lg4
                     xl4
                     v-for="(item, index) in Planning.slice(0, 2)"
@@ -344,7 +357,7 @@
     <div class="bg_about" id="Committees">
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
+          <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
                 <v-card-title
@@ -361,7 +374,7 @@
     <div>
       <v-container grid-list-md id="Membership">
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
+          <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-card-title
@@ -369,16 +382,19 @@
                 >
                 <v-divider class="mx-4"></v-divider>
 
-                <v-card-title style="font-size: 1em" class="mt-n3 Testediter">
+                <v-card-text class="black--text" style="font-size: 1em">
                   <p>
                     {{ $t("main.Memberships1") }}
-                    <br />
-                    {{ $t("main.Memberships2") }} <br />-
-                    {{ $t("main.Memberships3") }} <br />-
-                    {{ $t("main.Memberships4") }} <br />-
-                    {{ $t("main.Memberships5") }}
+                    
+                   
+                    {{ $t("main.Memberships2") }}  
+                    <ul style="list-style-type:'-   '">
+                    <li>{{ $t("main.Memberships3") }} </li>
+                    <li>{{ $t("main.Memberships4") }} </li>
+                    <li>{{ $t("main.Memberships5") }}</li>
+                    </ul>
                   </p>
-                </v-card-title>
+                </v-card-text>
               </v-card>
             </v-col>
           </v-col>
@@ -389,7 +405,7 @@
     <div>
       <v-container grid-list-md>
         <v-row justify="center" align="center">
-          <v-col cols="12" xs="12" sm="12" md="9" xl="9">
+          <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
                 <v-card-title
@@ -596,6 +612,15 @@ export default {
 <style>
 .Testediter {
   white-space: pre-wrap;
+  text-align: justify;
+  text-align: left;
+
+  text-indent: 30px;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: 0;
+  margin-right: 0;
 }
 .bb {
   margin-top: 20px;
@@ -626,5 +651,11 @@ export default {
   padding-bottom: 20px;
   padding-top: 20px;
   transition: padding-top, cubic-bezier(0, 0.52, 1, 1) 1s;
+}
+li {
+  text-decoration: none;
+  color: #000;
+  cursor: none;
+  text-indent: 0;
 }
 </style>

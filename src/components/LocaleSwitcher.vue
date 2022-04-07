@@ -1,14 +1,20 @@
 <template>
   <div id="sw_lang_section">
-    <button href="#" id="fix_iphone_hidden" class="flex items-center" @click="toggleVisibility">
+    <button
+      href="#"
+      id="fix_iphone_hidden"
+      class="flex items-center"
+      @click="toggleVisibility"
+    >
       <v-row>
         <img :src="`/${$i18n.locale}.svg`" alt="flag" />
         <span class="ml-2">{{ $i18n.locale.toUpperCase() }}</span>
       </v-row>
     </button>
-    
+
     <transition name="dropdown-fade">
-      <ul id="sw_lang_dropdown"
+      <ul
+        id="sw_lang_dropdown"
         v-show="hideDropdown"
         v-if="isVisible"
         ref="dropdown"
@@ -22,7 +28,7 @@
             class="flex items-center px-3 py-3 hover:bg-gray-200"
           >
             <img src="/en.svg" alt="english laos" class="h-8 w-8" />
-            <span id="sw_lang_font_dropdown">   {{ $t("main.English") }}</span>
+            <span id="sw_lang_font_dropdown"> {{ $t("main.English") }}</span>
           </a>
         </li>
         <li>
@@ -84,14 +90,12 @@ export default {
       this.isVisible = false;
       this.focusedIndex = 0;
     },
-
-   
   },
 };
 </script>
 <style scoped>
 ul#sw_lang_dropdown {
-	background: #fff;
+  background: #fff;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
   padding: 10px 5px;
   /* margin-left: 90px; */
@@ -105,24 +109,24 @@ ul#sw_lang_dropdown {
 }
 
 li {
-	display: flex;
-   	text-decoration: none !important;
+  display: flex;
+  text-decoration: none !important;
 }
 
 a {
-	display: flex;
-    	width: 85px;
-    	padding: 0 !important;
-    	margin: 10px 0 0 0 !important;
-    	text-decoration: none !important;
+  display: flex;
+  width: 85px;
+  padding: 0 !important;
+  margin: 10px 0 0 0 !important;
+  text-decoration: none !important;
 }
 
 img {
-	width: 30px;
+  width: 30px;
 }
 
 span {
-	text-decoration: none !important;
+  text-decoration: none !important;
   color: #fff !important;
   font-size: 12px;
   font-weight: 100;
@@ -133,20 +137,20 @@ span {
 }
 
 div#sw_lang_section {
-    position: relative;
-    top: 14px;
-    right: -90px;
-    z-index: 10000 !important;
-    visibility: visible !important;
+  position: relative;
+  top: 14px;
+  right: -90px;
+  z-index: 10000 !important;
+  visibility: visible !important;
 }
 
-@media only screen and (max-width: 480px ) { 
+@media only screen and (max-width: 480px) {
   div#sw_lang_section {
     position: relative;
     top: 0px;
     right: 0px;
-    z-index: 10000!important;
-    visibility: visible!important;
+    z-index: 10000 !important;
+    visibility: visible !important;
     height: 100%;
     width: 100%;
     margin: 0 !important;
@@ -155,26 +159,26 @@ div#sw_lang_section {
 
   div#sw_lang_section > button > div {
     top: 6px;
-    left: 170px;  
+    left: 170px;
     display: flex;
     align-items: center;
-    justify-content: end !important ;
+    justify-content: center;
     align-items: center;
   }
 }
 
-@media only screen and (max-width: 480px ) { 
+@media only screen and (max-width: 480px) {
   div#sw_lang_section {
     right: 0 !important;
   }
 }
 
 div#sw_lang_section > button > div {
-    top: 6px;
-    left: 170px;  
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  top: 6px;
+  left: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 div#sw_lang_section[data-v-6f6ca80b] {
@@ -183,7 +187,7 @@ div#sw_lang_section[data-v-6f6ca80b] {
   visibility: visible !important;
 }
 
-@media only screen and (max-width: 959px ) {
+@media only screen and (max-width: 959px) {
   div#sw_lang_section {
     position: relative;
     top: 0px;
@@ -193,17 +197,16 @@ div#sw_lang_section[data-v-6f6ca80b] {
     height: 100%;
   }
 
-
   ul#sw_lang_dropdown {
     position: absolute;
-    left: 20px;
+    left: 0px;
     top: 40px;
     z-index: 10000 !important;
     visibility: visible !important;
   }
 
   a {
-	  display: flex;
+    display: flex;
     width: 85px;
     /* padding: 0 !important; */
     margin: 0 !important;
@@ -211,7 +214,6 @@ div#sw_lang_section[data-v-6f6ca80b] {
     z-index: 10000 !important;
     visibility: visible !important;
   }
-
 }
 
 /* @media only screen and (max-width: 959px ) {
@@ -223,5 +225,4 @@ div#sw_lang_section[data-v-6f6ca80b] {
     visibility: visible !important;
   }
 } */
-
 </style>

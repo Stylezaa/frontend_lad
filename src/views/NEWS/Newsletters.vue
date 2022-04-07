@@ -1,7 +1,9 @@
 <template>
   <v-container grid-list-md class="lighten-6">
     <v-row justify="center" align="center">
+      
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
+           <v-col cols="12" xs="12" sm="12" md="12">
         <v-card flat>
           <v-card-title style="font-size: 0.8em"
             >Home > News > Newsletters</v-card-title
@@ -189,25 +191,22 @@
                         >
                           <h4>1. Establishment of the Lao Dam</h4></v-card-title
                         >
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em" class="black--text">
                           <p>
-                            • Association:
-                            <br />• Opening LAD Inaugural Assembly 13 November
-                            2020 <br />• On 14/01/2021 the first extra ordinary
-                            board meeting. <br />• Decision of Minister of
-                            Energy and Mines No.0111/MEM, dated 29 January 2021
-                            regarding formation of LAD. <br />• Decision of
-                            Minister of Energy and Mines No.0110/MEM, dated 29
-                            January 2021 regarding approval of LAD’s charter.
-                            <br />• Decision of Minister of Energy and Mines
-                            No.0112/MEM, dated 29 January 2021 regarding
-                            approval of LAD’s board members. <br />• LAD’
-                            charter was signed by President on 30 January 2021.
-                            <br />• President officially appointed Director of
-                            LAD as per Decision No. 003/LAD.P, dated February
-                            2021. <br />• LAD has been duly registered as per
-                            registration No. 23/DSD, dated 11 February 2021
-                          </p></v-card-title
+                            Association:
+                              <ul style="list-style-type:disc">
+                         
+                            <li> Opening LAD Inaugural Assembly 13 November 2020 </li>
+                            <li> On 14/01/2021 the first extra ordinary board meeting.</li>
+                            <li> Decision of Minister of Energy and Mines No.0111/MEM, dated 29 January 2021regarding formation of LAD. </li>
+                            <li> Decision of Minister of Energy and Mines No.0110/MEM, dated 29 January 2021 regarding approval of LAD’s charter.</li>
+                            <li> Decision of Minister of Energy and Mines No.0112/MEM, dated 29 January 2021 regarding approval of LAD’s board members. </li>
+                            <li> LAD’charter was signed by President on 30 January 2021.</li>
+                            <li> President officially appointed Director of LAD as per Decision No. 003/LAD.P, dated February 2021. </li>
+                            <li> LAD has been duly registered as per 
+                            registration No. 23/DSD, dated 11 February 2021</li>
+                            </ul>
+                          </p></v-card-text
                         >
                         <v-layout row wrap>
                           <v-flex
@@ -235,12 +234,12 @@
                           <h4>2. Holding ICOLD membership</h4></v-card-title
                         >
 
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em">
                           <p>
                             LAD (Lao PDR) has been elected member of ICOLD at
                             the ICOLD General Assembly on 30 November 2020 as
                             104th member country.
-                          </p></v-card-title
+                          </p></v-card-text
                         >
 
                         <v-layout row wrap>
@@ -270,12 +269,12 @@
                           <h4>3. LAD Members</h4></v-card-title
                         >
 
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em">
                           <p>
                             LAD (Lao PDR) has been elected member of ICOLD at
                             the ICOLD General Assembly on 30 November 2020 as
                             104th member country.
-                          </p></v-card-title
+                          </p></v-card-text
                         >
                         <v-img
                           :src="
@@ -338,41 +337,45 @@
                             </v-card>
                           </v-flex>
                         </v-layout>
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em" class="black--text">
                           <p>
-                            - Notice No.7/LAD.P, dated 4 March 2021 regarding
+                            <br>
+                            <ul style="list-style-type:'-   '">
+                              <li>
+                             Notice No.7/LAD.P, dated 4 March 2021 regarding
                             invitation to all IPPs, Contractors, Consultants and
                             Material Suppliers to apply for LAD membership.
-                            <br />- Request for support 1) Donsahong Power Co.
+                            </li><li> Request for support 1) Donsahong Power Co.
                             Ltd., 2) Sino Hydro Construction, 3) Vientiane
                             Automation and Resolution Engineering Co.Ltd. 4)
                             Chaleun Sekong Group Co. Ltd., 5) Bothong Inter Sole
-                            Co. Ltd, 6) Xayabouri Power Co. Ltd. <br />- First
+                            Co. Ltd, 6) Xayabouri Power Co. Ltd. </li><li> First
                             ordinary board meeting 2021 held on 26 July 2021.
-                            <br />- Request for approval of LAD Logo by relevant
-                            government sector. <br />- Countercry visit to
+                            </li><li> Request for approval of LAD Logo by relevant
+                            government sector. </li><li> Countercry visit to
                             Minster of Energy and Mines held on 12 August 2021.
                             •Soft opening of LAD Office held on 9 Sept. 2021
-                            <br />- Request Minister of Energy and Mines to
+                            </li><li> Request Minister of Energy and Mines to
                             consider issuing legislation related to “LAD
                             membership for senior / executive officers of any
-                            dam owners is required” <br />- LAD held second
-                            ordinary board meeting on 11/11/2021. <br />- The
+                            dam owners is required” </li><li> LAD held second
+                            ordinary board meeting on 11/11/2021. </li><li> The
                             President of Lao Association on Dams issued a
                             decision to appoint Mr. Manoloth Soukhanouvong as
                             the Deputy Director of the LAD, No. 25/25/ສຂລ.ປທ,
-                            dated 27/12/2021. <br />- On 16 February 2022 LAD
+                            dated 27/12/2021. </li><li> On 16 February 2022 LAD
                             board member attended a meeting organized by
                             Ministry of Energy and Mines for dialog between
                             Helvetas and development partners concerning the dam
-                            safety program in Lao PDR. <br />- On 17 February
+                            safety program in Lao PDR. </li><li> On 17 February
                             2022 LAD board member attended a consultation
                             meeting on draft dam safety Law held at National
-                            Convention Hall. <br />- LAD plans to hold an annual
+                            Convention Hall. </li><li> LAD plans to hold an annual
                             meeting 2021 and the first ordinary board meeting
-                            for 2022 on 27 April 2022.
+                            for 2022 on 27 April 2022.</li>
+                            </ul>
                           </p>
-                        </v-card-title>
+                        </v-card-text>
 
                         <v-card-title
                           style="font-size: 1.2em"
@@ -381,30 +384,31 @@
                           <h4>• International relations:</h4></v-card-title
                         >
 
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em" class="black--text">
                           <p>
-                            <br />- Replied letter from VNCOLD wrote to
+                              <ul style="list-style-type:'-   '">
+                            <br /><li>Replied letter from VNCOLD wrote to
                             congratulate on the occasion the formation of LAD.
-                            <br />- Having a good relation with CHINCOLD.
-                            <br />- First seminar held on 7 October 2021. Each
-                            party presented one theme on each seminar. <br />-
+                            </li> <li>  Having a good relation with CHINCOLD.
+                            </li> <li> First seminar held on 7 October 2021. Each
+                            party presented one theme on each seminar.</li> <li> 
                             LAD held second ordinary board meeting for 2021 on
-                            11 November 2021. <br />- Participated in a joint
+                            11 November 2021. </li> <li>  Participated in a joint
                             seminar with SWISSCOD on 11/11/2021 Error! Filename
-                            not specified. <br />- Join the Webinar with World
-                            Bank on 26/11/2021 <br />- Co-operation with ICOLD:
-                            <br /><br />
+                            not specified. </li> <li>  Join the Webinar with World
+                            Bank on 26/11/2021</li> <li>  Co-operation with ICOLD:
+                            </li> <br />
 
                             <br />COLD has provided password for all LAD member
-                            to be able to access to ICOLD documents. <br />-
+                            to be able to access to ICOLD documents.  <li> 
                             Medeiros. Sent a condolences letter to ICOLD of the
-                            death of late vice president Medeiros. <br />- ICOLD
-                            fees 2021 was fully paid on 31 August 2021. <br />-
+                            death of late vice president Medeiros.</li> <li>  ICOLD
+                            fees 2021 was fully paid on 31 August 2021. </li> <li> 
                             As being member of ICOLD, LAD has c0mmunicated with
                             ICOLD regularly as ICOLD has sent circular
                             letters/notices regarding Bulletins, Meetings,
-                            Seminars etc. <br />- Joined online seminar with
-                            IRCOLD on 19 October 2021. <br />- Virtual ICOLD
+                            Seminars etc. </li> <li>  Joined online seminar with
+                            IRCOLD on 19 October 2021. </li> <li>  Virtual ICOLD
                             General Assembly 2021 held on 19 October 2021. ✓in
                             the afternoon of 17 and 20 January 2022 joined
                             meetings with HELVETAS, who will operate the DSTIA
@@ -414,9 +418,9 @@
                             LAD in giving advice on the LAD strategy, support
                             LAD to attend ICOLD General Assemblies and Technical
                             Meetings and translation of important technical
-                            document into Lao to disseminate to all LAD members.
+                            document into Lao to disseminate to all LAD members.</li> </ul>
                           </p>
-                        </v-card-title>
+                        </v-card-text>
 
                         <v-card-title
                           style="font-size: 1.2em"
@@ -432,28 +436,34 @@
                           <h4>6. Sponsors:</h4></v-card-title
                         >
 
-                        <v-card-title style="font-size: 1em">
+                        <v-card-text style="font-size: 1em" class="black--text">
                           <p>
                             <br />
-                            • Xayabouri Power Company Limited donated 100 mil
-                            kips. <br />• Donsahong Power Company Limited
-                            donated 60 mil kips. <br />• Vientiane Automation
+                            <ul style="list-style-type:disc">
+                              <li >
+                            Xayabouri Power Company Limited donated 100 mil
+                            kips.</li>
+                             <li>Donsahong Power Company Limited
+                            donated 60 mil kips. </li><li> Vientiane Automation
                             and Resolution Engineering Co. Limited donated 50
-                            million kips. <br />• Chaleun Sekong Group Co Ltd.
-                            donated 50 million Kips. <br />• Bothong Inter Sole
-                            Co. Ltd. donated 30 million kips. <br />• Mr.
+                            million kips. </li><li> Chaleun Sekong Group Co Ltd.
+                            donated 50 million Kips. </li><li>Bothong Inter Sole
+                            Co. Ltd. donated 30 million kips. </li><li>Mr.
                             Viraphanh Nandavong, Board member contribute working
                             place/office for LAD and the necessary facilities.
-                            <br />• Mr. Sychath Boutsakitirath, Director of LAD
+                           </li><li> Mr. Sychath Boutsakitirath, Director of LAD
                             contributed to the formation of LAD in form of labor
                             force and expenditures in relation to the formation
                             of LAD, while running LAD he volunteers not to
                             receive salaries for his position as Director.
-                            <br />• Associate Prof. Dr. Khampaseuth Thepvongsa,
+                            </li><li> Associate Prof. Dr. Khampaseuth Thepvongsa,
                             Vice President of LAD wishes to contribute to the
                             development of LAD concerning Website and IT.
+                            </li>
+                            </ul>
                           </p>
-                        </v-card-title>
+
+                        </v-card-text>
 
                         <v-img
                           :src="
@@ -624,6 +634,7 @@
             </v-col>
           </v-layout>
         </v-card>
+        </v-col>
       </v-col>
     </v-row>
   </v-container>
@@ -763,6 +774,12 @@ export default {
 </script>
 
 <style>
+li{
+    text-decoration: none;
+    color: #000;
+    cursor: none;
+    text-indent: 0;
+}
 .bb {
   margin-top: 20px;
 }
@@ -776,4 +793,8 @@ export default {
   display: flex;
   transition: width 1s, height 1s;
 }
+
+
+
+
 </style>
