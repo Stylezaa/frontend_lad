@@ -145,6 +145,8 @@
                           v-bind="attrs"
                           v-on="on"
                           style="font-size: 0.9em"
+                          :ripple="false"
+                          id="no-background-hover"
                         >
                           <h4>
                             {{ $t("main.DAMS IN LAOS") }}
@@ -183,6 +185,8 @@
                           v-bind="attrs"
                           v-on="on"
                           style="font-size: 0.9em"
+                          :ripple="false"
+                          id="no-background-hover"
                         >
                           <h4>{{ $t("main.NEWS") }}</h4>
                           <v-icon class="white--text" aria-hidden="true">
@@ -214,6 +218,8 @@
                           v-bind="attrs"
                           v-on="on"
                           style="font-size: 0.9em"
+                          :ripple="false"
+                          id="no-background-hover"
                         >
                           <h4>{{ $t("main.PUBLICATION") }}</h4>
                           <v-icon class="white--text" aria-hidden="true">
@@ -553,6 +559,7 @@ export default {
   visibility: visible !important;
   height: 100% !important;
 }
+
 @media only screen and (min-width: 100px) {
   /* For desktop: */
   .pandinger {
@@ -629,5 +636,8 @@ div#custom_row_contact_section {
 button#btn_contact_section {
   position: absolute;
   top: 0;
+}
+#no-background-hover::before {
+  background-color: transparent !important;
 }
 </style>

@@ -31,7 +31,9 @@
                                   <v-img
                                     aspect-ratio="1"
                                     class="mx-auto grey lighten-2 magin10"
-                                    :src="item.src"
+                                    :src="
+                                      require('../../assets/images/pdf/1.png')
+                                    "
                                   >
                                   </v-img>
                                 </v-col>
@@ -43,6 +45,7 @@
                                   xl="10"
                                   v-if="$route.params.locale == 'en'"
                                 >
+                                  <!-- v-if="$route.params.locale == 'en'" -->
                                   <h4 style="font-size: 1em">
                                     {{ item.title }}
                                   </h4>
@@ -66,6 +69,9 @@
                                       target="_blank"
                                       >Preview</v-btn
                                     >
+                                    <!-- showpdf(
+                                           item.eng_Content
+                                        ) -->
                                   </h4>
                                 </v-col>
                                 <v-col
@@ -154,8 +160,12 @@ export default {
           pdf: "https://drive.google.com/file/d/1QGsA6unWz87Y_MI_z35QbCaGZ5JoRUtL/view?usp=sharing",
         },
       ],
+
+      items_api: "",
       datapdf: "",
       datapdf1: "../../assets/pdf/test.pdf",
+
+      pdf_show: "",
     };
   },
   components: {},
@@ -198,7 +208,36 @@ export default {
         });
     },
 
-    mounted() {},
+    showpdf(item) {
+      // console.log(this.pdf_show + item);
+      // window.open( this.$store.getters.getBaseUrl + this.pdf_show + item , '_blank');
+
+      console.log(this.$store.getters.getBaseUrl + this.pdf_show + item);
+      // "/web/viewer.html?link=" +
+    },
+  },
+  mounted() {
+    axios
+      .get(this.$store.getters.getBaseUrl + "/api/LaoElectricityLaw/en")
+      .then((response) => {
+        // JSON responses are automatically parsed.
+        // https://lad-api007.herokuapp.com/api/dam
+        // this.$store.getters.getBaseUrl + "/dam
+        // this.items_api = response.data;
+
+        this.items_api = response.data.data;
+
+        this.pdf_show = response.data.path_;
+        console.log(this.pdf_show);
+
+        // console.log(this.items);
+        // console.log(
+        //   "122222".toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,")
+        // );
+        //console.log(response.data.data.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,'));
+        // this.items.installed_power_capacity.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,');
+        //    console.log(  JSON.parse(response.data))
+      });
   },
 };
 </script>
