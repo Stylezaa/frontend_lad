@@ -558,7 +558,7 @@ export default {
 
       Technical: [
         {
-          src: require("../../assets/images/BOARD of LAD/Ellipse 3.png"),
+          src: require("../../assets/images/BOARD of LAD/Voradeth.png"),
 
           name: "Voradeth PHONEKEO",
         },
@@ -581,7 +581,7 @@ export default {
           name: "Khamhou XAPHOUVONG",
         },
         {
-          src: require("../../assets/images/BOARD of LAD/Ellipse 3.png"),
+          src: require("../../assets/images/BOARD of LAD/Dousith.jpg"),
 
           name: "Dousith PHOMMACHANH",
         },
