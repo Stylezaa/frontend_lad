@@ -97,7 +97,7 @@
                                       class="ma-6"
                                       :href="item.pdf"
                                       target="_blank"
-                                      >Preview</v-btn
+                                      >ກົດເບິ່ງ</v-btn
                                     >
                                   </h4>
                                 </v-col>

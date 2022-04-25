@@ -251,13 +251,13 @@ export default {
     return {
       items: [
         {
-          src: require("../assets/images/image9.png"),
+          src: require("../assets/images/Home/slide.jpg"),
         },
         {
-          src: require("../assets/images/Laos-to-Inspect-Hydropower-Dams.jpg"),
+          src: require("../assets/images/Home/slide2.jpeg"),
         },
         {
-          src: require("../assets/images/Laos dam failure.jpg"),
+          src: require("../assets/images/Home/slide3.jpeg"),
         },
       ],
 

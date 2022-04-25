@@ -15,7 +15,7 @@
 
           <v-layout row wrap>
             <v-col cols="12" xs="12" sm="12" md="12">
-              <v-card flat>
+              <v-card flat v-if="$route.params.locale == 'en'">
                 <v-row>
                   <v-col cols="12" xs="12" sm="4" md="4" xl="3">
                     <v-text-field
@@ -354,7 +354,7 @@
                             </li><li> Request for approval of LAD Logo by relevant
                             government sector. </li><li> Countercry visit to
                             Minster of Energy and Mines held on 12 August 2021.
-                            •Soft opening of LAD Office held on 9 Sept. 2021
+                            </li><li>Soft opening of LAD Office held on 9 Sept. 2021
                             </li><li> Request Minister of Energy and Mines to
                             consider issuing legislation related to “LAD
                             membership for senior / executive officers of any
@@ -631,6 +631,572 @@
                   </v-col>
                 </v-row>
               </v-card>
+                <v-card flat v-else>
+                <v-row>
+                  <v-col cols="12" xs="12" sm="4" md="4" xl="3">
+                    <v-text-field
+                      single-line
+                      outlined
+                      placeholder="Search"
+                      :append-icon="'mdi-magnify'"
+                      style="width: 100%"
+                    >
+                    </v-text-field>
+                    <v-card-title
+                      style="font-size: 1.2em"
+                      class="textgray--text mt-n8"
+                    >
+                      <h4>{{ $t("main.Latest News") }}</h4></v-card-title
+                    >
+                    <v-card outlined>
+                      <v-flex
+                        v-for="(item, index) in items.slice(0, 5)"
+                        :key="index"
+                        :src="item.src"
+                      >
+                        <v-hover>
+                          <v-card
+                            flat
+                            slot-scope="{ hover }"
+                            class="max-w-sm rounded shadow-lg card"
+                          >
+                            <v-col cols="12" xs="12" sm="12" md="12">
+                              <a>
+                                <v-row>
+                                  <v-img
+                                    aspect-ratio="1"
+                                    class="grey lighten-3 magin10"
+                                    :src="item.src"
+                                    style="width: 30%"
+                                  >
+                                  </v-img>
+                                  <v-card-text style="width: 60%">
+                                    <h4 style="font-size: 0.9em">
+                                      {{ item.title }}
+                                    </h4>
+                                    <h4
+                                      class="textgray--text"
+                                      style="font-size: 0.8em"
+                                    >
+                                      {{ item.date }}
+                                    </h4>
+                                  </v-card-text>
+
+                                  <v-fade-transition>
+                                    <v-overlay
+                                      v-if="hover"
+                                      absolute
+                                      color="#190033"
+                                      z-index="0"
+                                    >
+                                    </v-overlay>
+                                  </v-fade-transition>
+                                </v-row>
+                              </a>
+                            </v-col>
+                          </v-card>
+                        </v-hover>
+                        <v-divider></v-divider>
+                      </v-flex>
+                      <v-card flat class="mx-auto">
+                        <div class="text-center">
+                          <v-btn
+                            text
+                            style="font-size: 0.8em"
+                            class="textgray--text"
+                          >
+                            <div>See more ></div>
+                          </v-btn>
+                        </div>
+                      </v-card>
+                    </v-card>
+                  </v-col>
+                  <v-col cols="12" xs="12" sm="8" md="8" xl="9">
+                    <v-card flat v-for="(item, index) in press" :key="index">
+                      <v-row>
+                        <v-card flat>
+                          <div>
+                            <v-card-title
+                              style="font-size: 1.2em"
+                              class="black--text"
+                            >
+                              <h4>
+                                {{ item.header_la }}
+                              </h4></v-card-title
+                            >
+                            <v-row>
+                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
+                                <v-card-title>
+                                  <v-icon size="18"> mdi-timer-outline</v-icon>
+                                  <h4
+                                    class="textgray--text"
+                                    style="font-size: 0.4em"
+                                  >
+                                    {{ item.date }}
+                                  </h4>
+                                </v-card-title>
+                              </v-col>
+                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
+                                <v-card-title>
+                                  <v-icon size="16">
+                                    mdi-account-outline
+                                  </v-icon>
+                                  <h4
+                                    class="textgray--text"
+                                    style="font-size: 0.4em"
+                                  >
+                                    {{ item.user }}
+                                  </h4>
+                                </v-card-title>
+                              </v-col>
+                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
+                                <v-card-title>
+                                  <v-icon size="16">
+                                    mdi-file-settings-outline
+                                  </v-icon>
+                                  <h4
+                                    class="textgray--text"
+                                    style="font-size: 0.4em"
+                                  >
+                                    {{ item.file }}
+                                  </h4>
+                                </v-card-title>
+                              </v-col>
+                              <v-col cols="4" xs="4" sm="4" md="3" xl="4">
+                                <v-card-title>
+                                  <v-icon size="15">
+                                    mdi-comment-text-multiple-outline
+                                  </v-icon>
+                                  <h4
+                                    class="textgray--text"
+                                    style="font-size: 0.4em"
+                                  >
+                                    {{ item.comment }}
+                                  </h4>
+                                </v-card-title>
+                              </v-col>
+                            </v-row>
+                          </div>
+
+                          <v-img :src="item.src">
+                            <template v-slot:placeholder>
+                              <v-row class="fill-height ma-0" align="center">
+                                <v-progress-circular
+                                  indeterminate
+                                  color="grey lighten-5"
+                                ></v-progress-circular>
+                              </v-row>
+                            </template>
+                          </v-img>
+                        </v-card>
+                      </v-row>
+
+                      <div>
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="black--text"
+                        >
+                          <h4>
+                            ການເຄື່ອນໄຫວຂອງ ສຂລ ຮອດວັນທິ 28/02/2022
+                          </h4></v-card-title
+                        >
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>1. ການສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວ </h4></v-card-title
+                        >
+                        <v-card-text style="font-size: 1em" class="black--text">
+                          <p>
+                   
+                              <ul style="list-style-type:disc">
+                         
+                            <li> ເປິດກອງປະຊຸມ ສ້າງຕັ້ງສະມາຄົມ 13/11/2020 </li>
+                            <li> ກອງປະຊຸມຄະນະບໍລິຫານ ສຂລ ສະໄໝ ວິສາມັນຄັ້ງທີ່ 01 ຈັດຂຶ້ນໃນວັນທິ່ 14/01/2021.</li>
+                            <li> ຂໍ້ຕົກລົງຂອງລັດຖະມົນຕີກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່, ວ່າດ້ວຍການອະນຸມັດສ້າງຕັ້ງ ສຂລ ສະບັບ ເລກທີ່ 0111/ພບ, ລົງວັນທີ່ 29/01/2021. </li>
+                            <li> ຂໍ້ຕົກລົງຂອງລັດຖະມົນຕີກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່, ວ່າດ້ວຍການ ຮັບຮອງກົດລະບຽບຂອງ ສຂລ ສະບັບເລກທີ່ 0110/ພບ, ລົງວັນທີ 29/01/2021.</li>
+        
+                            <li> ຂໍ້ຕົງລົງຂອງລັດຖະມົນຕະກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່, ວ່າດ້ວຍການຮັບຮອງ ເອົາຄະນະບໍລິຫານຂອງ ສຂລ ສະບັບ ເລກທີ່ 29/01/2021.</li>
+                            <li> ປະທານສະມາຄົມໄດ້ລົງນາມຢ່າງເປັນທາງການກົດລະບຽບ ສຂລ ໃນວັນທິ່ 30/01/2021 ແລະ ກົດລະບຽບດັ່ງກ່າວມີຜົດສັກສິດນັບຈາກມື້ລົງລາຍເຊັນ. </li>
+                                 <li> ປະທານອອກຂໍ້ຕົງລົງແຕ່ງຕັ້ງຜູ້ອຳນວຍການ ສຂລ ເລກທີ່ 003/ສຂລ ປທ, ລົງວັນທີ່ 03/02/2021. </li>
+                            <li> ສຂລ ໄດ້ຈົດທະບຽນສະມາຄົມຢ່າງຖືກຕ້ອງຕາມກົດໝາຍ ຕາມໃບທະບຽນສະມາຄົມ ເລກທີ່ 23/ກພລ, ລົງວັນທີ່ 11/02/2021</li>
+                            </ul>
+                          </p></v-card-text
+                        >
+                        <v-layout row wrap>
+                          <v-flex
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
+                            v-for="(item, index) in items3.slice(0, 3)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              class="max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>2. ການເຂົ້າເປັນສະມາຊິກຂອງ ICOLD</h4></v-card-title
+                        >
+
+                        <v-card-text style="font-size: 1em">
+                          <p>
+                           ສຂລ (ສ.ປ.ປ. ລາວ) ຖືກຮັບຮອງເຂົ້າເປັນສະມາຊິກຂອງ ICOLD ດ້ວຍຄະແນນສຽງເປັນເອກະສັນ ໃນວັນທີ່ 30/11/2021 ຢູ່ກອງປະຊຸມໃຫຍ່ຂອງ ICOLD ເປັນປະເທດທີ່ 104.
+                          </p></v-card-text
+                        >
+
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items4.slice(0, 3)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>3. ສະມາຊິກຂອງສະມາຄົມ</h4></v-card-title
+                        >
+
+                        <v-card-text style="font-size: 1em">
+                          <p>
+                            ມີຜູ້ສະມັກເຂົ້າເປັນສະມາຊິກທັງໝົດ 142 ໃນນັ້ນ ສະມາຊິກໃນນາມນິຕິບຸກຄົນ 27 ທ່ານໃນນາມນິຕິບຸກຄົນ ແລະ 62 ທ່ານໃນນາມບຸກຄົນ.
+                          </p></v-card-text
+                        >
+                        <v-img
+                          :src="
+                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.26.35.png')
+                          "
+                          max-height="300"
+                          contain
+                        >
+                          <template v-slot:placeholder>
+                            <v-row class="fill-height ma-0" align="center">
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+                        <v-layout row wrap>
+                          <v-flex
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
+                            v-for="(item, index) in items5.slice(0, 4)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+
+                        <v-card-title
+                          style="font-size: 1em"
+                          class="primary--text"
+                        >
+                          <h4>4. ການເຄື່ອນໄຫວວຽກງານ</h4></v-card-title
+                        >
+                        <v-layout row wrap>
+                          <v-flex
+                            xs10
+                            md10
+                            sm10
+                            lg10
+                            xl7
+                            v-for="(item, index) in items6.slice(0, 3)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                        <v-card-text style="font-size: 1em" class="black--text">
+                          <p>
+                            <br>
+                            <ul style="list-style-type:'-   '">
+                              <li>ແຈ້ງການເລກທີ່ 07/ສຂລ. ປທ, ລົງວັນທີ່ 04/03/2021 ໄດ້ມີການເຊື້ອເຊິນ ບັນດາໂຄງການ/ບໍລິສັດ IPPs , ຜູ້ຮັບເໝົາກໍ່ສ້າງ, ບໍລິສັດ ທີ່ປຶກສາ ແລະ ຜູ້ສະໝອງວັດຖຸ-ອຸປະກອບ ເຂົ້າສະໝັກເປັນ ສະມາຊິກຂອງສະມາຄົມເຂື່ອນລາວ.</li>
+                            <li> ຂໍອຸປະຖຳຈາກ 1) ບໍລິສັດ ດອນສະໂຮງ ພາວເວີຈຳກັດ, 2) ບໍລິສັດຊີໂນໂຮໂດຼ, 3) ບໍລິສັດ ໂອໂຕເມເຊີນ ແອນ ເອັນຈີເນັຽຮິງ ຈຳກັດ, 5) ບໍລິສັດ ບໍ່ທອງ ອິນເຕີ ຈຳກັດ ຜູ້ດຽວ ແລະ 6) ບໍລິສັດ ໄຊຍະບູລີ ພາວເວີ ຈຳກັດ. </li>
+                            <li> ຈັດກອງປະຊຸມຄະນະບໍລິຫານ ສະໄໝສາມັນ ຄັ້ງທີ່ 01 ປີ 2021 ໃນວັນທີ່ 26/07/2021.</li>
+                            <li> ຮັບຮອງໂລໂກຂອງສະມາຄົມ ນຳຂະແໜງການກ່ຽວຂ້ອງ ຕາມໜັງສື ເລກທີ່ 15/ສຂບ.ປທ, ລົງ ວັນທິ່ 02/08/2021. </li>
+                            <li> ຢ້ຽມຄຳນັບ ທ່ານລັດຖະມົນຕີ ກະຊວງພະລັງງານ ແລະ ບໍແຮ່ ໃນວັນທີ່ 12/08/2021 </li>
+                             <li> ເປີດຫ້ອງການສະມາຄົມເຂື່ອນລາວ 09/09/2021</li>
+                            <li> ສະເໜີ ທ່ານລັດຖະມົນຕີ ກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່ພິຈາລະນາອອກຂໍ້ຕົກລົງ ໃຫ້ວິສະວະກອນ ອະວຸໂສຂອງເຂື່ອນເປັນສະມາຊິກ ສຂລ ຕາມໜັງສື ເລກທີ່ 23/ສຂລ. ປທລ, ລົງວັນທີ່ 12/10/2021 </li>
+                            <li> ວັນທີ່ 11/11/2021 ໄດ້ຈັດກອງປະຊຸມຄະນະບໍລິຫານ ສຂລ ສະໄໝສາມັນຄັ້ງທີ່ 2. </li>
+                            <li> ປະທານສະມາຄົມເຂື່ອນລາວ ອອກຂໍ້ຕົງລົງແຕ່ງຕັ້ງ ທ່ານ ມະໂນລົດ ສຸຂະນຸວົງ ເປັນຮອງຜູ້ອຳນວຍການ ສະມາຄົມເຂື່ອນລາວ, ສະບັບເລກທີ 25/ສຂລ.ປທ, ລົງວັນທີ່ 27/12/2021. </li>
+                            <li>ໃນວັນ 16/02/2022 ຄະນະບໍລິຫານ ສຂລ ໄດ້ ເຂົ້າຮ່ວມກອງປະຊຸມ ທີ່ຈັດຂື້ນໂດຍກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ່, ເພື່ອປຶກສາຫາລືລະຫວ່າງ Helvetas ແລະ ຄູ່ຮ່ວມພັດທະນາ ກ່ຽວກັບວຽກງານຄວາມປອດໄພຂອງເຂື່ອນໃນ ສ ປ ປ ລາວ. </li>
+                            <li> ໃນວັນທີ 17/02/2022 ຄະນະບໍລິຫານ ສຂລ ໄດ້ເຂົ້າຮ່ວມ ກອງປະຊຸມ ທາບທາມຮ່າງກົດໝາຍ ຄວາມປອດໄພຂອງເຂື່ອນ ທີ່ ຫໍປະຊຸມແຫ່ງຊາດ. </li>
+                            <li> ສຂລ ມີແຜນຈັດກອງປະຊຸມ ປະຈຳປີ 2021 ແລະ ກອງປະຊຸມຄະນະບໍລິຫານສະໄໝສາມັນ ຄັ້ງທີ 1 ສຳລັບ ປີ 2020 ຂຶ້ນໃນວັນທີ 27/04/2022.</li>
+                            </ul>
+                          </p>
+                        </v-card-text>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>•	ການຜົວພັນກັບສາກົນ:</h4></v-card-title
+                        >
+
+                        <v-card-text style="font-size: 1em" class="black--text">
+                          <p>
+                              <ul style="list-style-type:'-   '">
+                            <br /><li>ຕອບຈົດໝາຍ ຂອງປະທານຄະນະກໍາມະການ ເຂື່ອນໃຫຍ່ຂອງ ສສ ຫວຽດນາມ ທີ່ເພີ່ນໄດ້ສົ່ງ ຈົດໝາຍສະແດງຄວາມຍິນດີໃນເວລາ ສຂລ ໄດ້ ສ້າງຕັ້ງຂື້ນ.
+                            </li> <li> ໄດ້ມີການພົວພັນກັບຄະນະກຳມະການເຂື່ອນໃຫຍ່ຂອງຈີນ CHINCOLD ແຕ່ລະໄລຍະ.
+                            </li> <li> ຈັດສຳມະນາຮ່ວມ ລະຫວ່າງ ສຂລ ແລະ ຄະນະກຳມະການເຂື່ອນ ສະວິດ SWISSCOD ຄັ້ງທີ1 ໃນວັນທີ 07/10/2021 ສະເໜີຝ່າຍລະ 1 ຫົວຂໍ້.</li> <li> 
+                            ໄດ້ຈັດກອງປະຊຸມຄະນະບໍລິຫານສະໄໝສາມັນ ຄັ້ງທີ 02 ປີ 2021 ໃນວັນທີ 11/11/2021 . </li> 
+                            <li>  ໄດ້ເຂົ້າຮ່ວມ ກອງປະຊຸມ ສຳມະນາຮ່ວມກັບ SWISSCOD ໃນວັນທີ 11/11/2021. </li> <li>ເຂົ້າຮ່ວມສຳມະນາ Webinar ກັບ World Bank ໃນວັນທີ 26/11/2021.</li>
+                             <li>ຮ່ວມມືກັບຄະນະກຳມະການເຂື່ອນໃຫຍ່ສາກົນ ICOLD:
+                            </li> <br />
+
+                            <br />  <li> 
+                           ICOLD ໄດ້ສົ່ງລະຫັດໃນການເຂົ້າເຖິງເອກກະສານໃຫ້.</li> 
+                           <li>	ໄດ້ສົ່ງຈົດໝາຍສະແດງຄວາມເສຍໃຈເຖິງ ICOLD ໃນການມໍລະນະກໍາຂອງ ທ່ານຮອງປະທານ. </li> 
+                           <li> 
+                          	ຈ່າຍຄ່າທຳນຽມສະມາຊິກ ICOLD ໃນວັນທີ 31/08/2021. </li> 
+                            <li>	ໃນຖານະທີ່ເປັນສະມາຊິກ ສຂລ ໄດ້ມີການ ພົວພັນກັບ ICOLD ຢ່າງເປັນປົກກະຕິ. ທາງ ICOLD ໄດ້ແຈ້ງການກ່ຽວກັບຂ່າວສານດ້ານ ເຕັກນິກ Bulletins, ແຜນການສຳມະນາຂອງ ICOLD ແລະ ເຄື່ອຂ່າຍ, ແຜນການຈັດກອງປະຊຸມຕ່າງໆຂອງ ICOLD ເປັນຕົ້ນກອງປະຊຸມປະຈຳປີ ແລະ ອື່ນຯ. </li>
+                            <li> 
+                          	ໃນວັນທີ 19/10/21 ຜ່ານມາມີການສໍາມະນາກ່ຽວກັບ Dam Materials ຈັດໂດຍ ຄະນະກຳມະການເຂື່ອນໃຫຍ່ ອີຣານ. </li> 
+                            
+                            
+                             <li>ກອງປພຊຸມໃຫຍ່ຂອງ ICOLD ປີ 2021 ຈະຈັດຂຶ້ນໃນວັນທີ 19/11/2021 ໃນຕອນບ່າຍວັນທີ 17 ແລະ 20 /01/2022 ໄດ້ ມີການປະຊຸມກັບ HELVETAS ຜູ້ຈັດຕັ້ງ ປະຕິບັດໂຄງການຊ່ວຍເຫຼືອດ້ານເຕັກນິກ ແລະ ສະຖາບັນໃນດ້ານຄວາມປອດໄພຂອງເຂື່ອນໃນ ສ ປ ປ ລາວ ຈາກປະເທດ ສະວິດເຊີແລນ (DSTIA) ເຖິງຄວາມເປັນໄປໄດ້ ໃນການຊ່ວຍເຫລືອໃນການໃຫ້ຄໍາປຶກສາ ດ້ານຍຸດທະສາດແກ່ ສຂລ, ການສະໜັບສະໜູນ ແກ່ ສຂລ ໃນການ ເຂົ້າຮ່ວມກອງປະຊຸມໃຫຍ່ ແລະ ກອງປະຊຸມ ຄະນະກຳມະການເຕັກນິກຂອງ ICOLD, ການຈັດກອງປະຊຸມສຳມະນາດ້ານເຕັກນິກວີຊາການ ແລະ ການແປເອກະສານເອກະສານເຕັກນິກທີ່ ສຳຄັນເພື່ອເຜີຍແຜ່ໃຫ້ແກ່ສະມາຊິກ ສຂລ.</li> </ul>
+                          </p>
+                        </v-card-text>
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>5. ລາຍຮັບລາຍຈ່າຍ:</h4></v-card-title
+                        >
+
+                        <v-card-title
+                          style="font-size: 1.2em"
+                          class="primary--text"
+                        >
+                          <h4>6. ຜູ້ອຸປະຖຳ : </h4></v-card-title
+                        >
+
+                        <v-card-text style="font-size: 1em" class="black--text">
+                          <p>
+                            <br />
+                            <ul style="list-style-type:disc">
+                              <li >
+                            ບໍລິສັດ ໄຊຍະບູລິ ພາວເວີ ຈຳກັດ ອຸປະຖຳ 100 ລ້ານກີບ.</li>
+                             <li>ບໍລິສັດ ດອນສະໂຮງ ພາວເວີ ຈຳກັດ ອຸປະຖຳ 60 ລ້ານກີບ. </li><li> ບໍລິສັດ ວຽງຈັນ ໂອໂຕເມເຊີນ ໂຊລຸຍເຊິນ ແອນ ເອັນຈິເນັຽຣິງ ຈຳກັດ ອຸປະຖຳ. </li><li> ບໍລິສັດ ຈະເລິນເຊກອງ ກຼຸບ ຈຳກັດ ອຸປະຖຳ 50 ລ້ານກີບ. </li>
+                             <li>ບໍລິສັດ ບໍ່ທອງ ອິນເຕີ ຈຳກັດ ຜູ້ດຽວ ອຸປະຖຳ 30 ລ້ານກີບ. </li><li>ທ່ານ ວິລະພັນ ນັນດາວົງ, ຄະນະບໍລິຫານ ສຂລ ປະກອບສ່ວນສະຖານທີ່ (ຫ້ອງການ) ແລະ ສິ່ງອຳນວຍຄວາມສະດວກ
+                           </li><li> ທ່ານ ສິຈາດ ບຸດຊາກິດຕິລາດ, ຜູ້ອຳນວຍການສະມາຄົມ ໄດ້ປະກອບສ່ວນແຮງງານ ແລະ ຄ່າສີ້ນເປືອງຕ່າງໆໃນການສ້າງຕັ້ງສະມາຄົມ ແລະ ໃນໄລະຍະການເຄື່ອນໄຫວວຽກງານຂອງສະມາຄົມ ຈະບໍ່ເອົາເງິນເດືອນ ໃນການປະຕິບັດໜ້າທີ ເປັນອຳນວຍການ ຂອງສະມາຄົມ.
+                            </li><li>	ທ່ານ ຮສ ປອ ຄຳປະເສີດ ເທບວົງສາ, ຮອງປະທານສະມາຄົມ ຈະປະກອບສ່ວນໃນການພັດທະນາເວບໄຊ ແລະ ໄອທີ ຂອງສະມາຄົມ.
+                            </li>
+                            </ul>
+                          </p>
+
+                        </v-card-text>
+
+                        <v-img
+                          :src="
+                            require('../../assets/images/Newsletters/Screenshot 2022-03-22 at 16.29.39.png')
+                          "
+                          max-height="400"
+                          contain
+                        >
+                          <template v-slot:placeholder>
+                            <v-row class="fill-height ma-0" align="center">
+                              <v-progress-circular
+                                indeterminate
+                                color="grey lighten-5"
+                              ></v-progress-circular>
+                            </v-row>
+                          </template>
+                        </v-img>
+
+                        <v-layout row wrap>
+                          <v-flex
+                            xs6
+                            md4
+                            sm4
+                            lg4
+                            xl3
+                            v-for="(item, index) in items7.slice(0, 4)"
+                            :key="index"
+                            class="pa-2 mx-auto"
+                          >
+                            <v-card
+                              flat
+                              class="mx-auto max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                            </v-card>
+                          </v-flex>
+                        </v-layout>
+                      </div>
+                      <v-card-title
+                        style="font-size: 1.2em"
+                        class="black--text"
+                      >
+                        <h4>SHARE THIS</h4></v-card-title
+                      >
+                      <v-divider class="mx-4"></v-divider>
+
+                      <v-card-text class="pt-1">
+                        <v-btn
+                          v-for="icon in icons"
+                          :key="icon"
+                          class="mx-1 primary--text"
+                          icon
+                          fab
+                          small
+                        >
+                          <v-icon size="20px">
+                            {{ icon }}
+                          </v-icon>
+                        </v-btn>
+                      </v-card-text>
+
+                      <v-card-title
+                        style="font-size: 1.2em"
+                        class="black--text"
+                      >
+                        <h4>RELATED POSTS</h4></v-card-title
+                      >
+                      <v-divider class="mx-4"></v-divider>
+
+                      <!-- <v-layout row wrap>
+                        <v-flex
+                          xs6
+                          md4
+                          sm4
+                          lg4
+                          xl3
+                          v-for="(item, index) in items2.slice(0, 3)"
+                          :key="index"
+                          class="pa-2"
+                        >
+                          <v-hover>
+                            <v-card
+                              slot-scope="{ hover }"
+                              class="max-w-sm rounded overflow-hidden shadow-lg"
+                            >
+                              <v-img :src="item.src"> </v-img>
+                              <v-card-text>
+                                <table style="width: 100%">
+                                  <tr>
+                                    <td colspan="2">
+                                      <h4 class="text-sm-center">
+                                        {{ item.title }}
+                                      </h4>
+                                    </td>
+                                    <br />
+                                  </tr>
+
+                                  <v-divider></v-divider>
+
+                                  {{
+                                    item.title2
+                                  }}
+                                </table>
+                              </v-card-text>
+
+                              <v-fade-transition>
+                                <v-overlay
+                                  v-if="hover"
+                                  absolute
+                                  color="#190033"
+                                >
+                                </v-overlay>
+                              </v-fade-transition>
+                            </v-card>
+                          </v-hover>
+                        </v-flex>
+                      </v-layout> -->
+
+                      <v-card-title
+                        style="font-size: 1.2em"
+                        class="black--text"
+                      >
+                        <h4>This Post Has 1,000 Comments</h4></v-card-title
+                      >
+                      <v-divider class="mx-4"></v-divider>
+                      <v-card-title
+                        style="font-size: 1.2em"
+                        class="black--text"
+                      >
+                        <h4>Leave Reply</h4></v-card-title
+                      >
+                      <v-card-title style="font-size: 0.9em" class="mt-n3">
+                        Your email address will not be published. Required
+                        fields are marked.
+                      </v-card-title>
+
+                      <v-row>
+                        <v-col cols="6">
+                          <h4>ຊື່ <a class="red--text">*</a></h4>
+                          <v-text-field outlined></v-text-field>
+                        </v-col>
+                        <v-col cols="6">
+                          <h4>ອີເມວ <a class="red--text">*</a></h4>
+                          <v-text-field outlined></v-text-field>
+                        </v-col>
+                        <v-col cols="12">
+                          <h4 style="font-size: 0.9em" class="mt-n3">
+                            ເວັບໄຊ <a class="red--text">*</a>
+                          </h4>
+                          <v-text-field outlined></v-text-field>
+                        </v-col>
+                        <v-col cols="12">
+                          <h4 style="font-size: 0.9em" class="mt-n3">
+                            ຄວາມຄິດເຫັນ <a class="red--text">*</a>
+                          </h4>
+                          <v-textarea name="input-7-1" outlined></v-textarea>
+                        </v-col>
+                      </v-row>
+                      <div>
+                        <v-btn class="ma-2" outlined color="primary">
+                          ຕົງລົງ
+                        </v-btn>
+                      </div>
+                    </v-card>
+                  </v-col>
+                </v-row>
+              </v-card>
             </v-col>
           </v-layout>
         </v-card>
@@ -652,6 +1218,7 @@ export default {
           user: "Taiy Dueo",
           src: require("../../assets/images/Newsletters/Screenshot.png"),
           header: "LAD Inaugural Assembly held on 13 November 2020",
+            header_la: "ກອງປະຊຸມ ສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວໃນວັນທິ່ 13/11/2022",
           start: "Excellencies, Leaders of the Party and the State,",
           text: "-Dear Fellow Compatriots, Soldiers, Police and all Lao People,",
 

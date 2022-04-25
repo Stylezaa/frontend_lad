@@ -37,11 +37,9 @@
                 </template>
               </v-img>
             </v-row>
-            <div v-for="(item, index) in press" :key="index">
-              <v-card-text style="font-size: 1em" class="text-center">
-                LAO ASSOCIATION ON DAMS
-              </v-card-text>
-              <v-card-title style="font-size: 1.2em" class="primary--text">
+            <div v-for="(item, index) in press" :key="index" >
+       
+              <v-card-title style="font-size: 1.2em" class="primary--text py-12">
                 <h4 style="font-size: 1.2em">
                   {{ $t("main." + item.header) }}
                 </h4></v-card-title
@@ -97,6 +95,22 @@
                   :src="require('../../assets/images/Organisation of LAD.png')"
                   max-height="500"
                   contain
+                  v-if="$route.params.locale == 'en'"
+                >
+                  <template v-slot:placeholder>
+                    <v-row class="fill-height ma-0" align="center">
+                      <v-progress-circular
+                        indeterminate
+                        color="grey lighten-5"
+                      ></v-progress-circular>
+                    </v-row>
+                  </template>
+                </v-img>
+                   <v-img
+                  :src="require('../../assets/images/Organisation of LAD_la.png')"
+                  max-height="500"
+                  contain
+                  v-else
                 >
                   <template v-slot:placeholder>
                     <v-row class="fill-height ma-0" align="center">
@@ -224,7 +238,7 @@
                   >
                     <v-card
                       flat
-                      class="text-center ma-12 textgray v-card--reveal1"
+                      class="text-center ma-12 primary v-card--reveal1"
                     >
                       <v-avatar size="150" class="lighten-2 mt-n16">
                         <img class="imgs22" :src="item.src" />
@@ -263,7 +277,7 @@
                   >
                     <v-card
                       flat
-                      class="text-center ma-12 brownler v-card--reveal1"
+                      class="text-center ma-12 primary v-card--reveal1"
                     >
                       <v-avatar size="150" class="lighten-2 mt-n16">
                         <img class="imgs22" :src="item.src" />
@@ -300,7 +314,7 @@
                     :key="index"
                     class="pa-3 mx-auto"
                   >
-                    <v-card flat class="text-center ma-12 red v-card--reveal1">
+                    <v-card flat class="text-center ma-12 primary v-card--reveal1">
                       <v-avatar size="150" class="lighten-2 mt-n16">
                         <img class="imgs22" :src="item.src" />
                       </v-avatar>
@@ -336,7 +350,7 @@
                     :key="index"
                     class="pa-3 mx-auto"
                   >
-                    <v-card flat class="text-center ma-12 red v-card--reveal1">
+                    <v-card flat class="text-center ma-12 primary v-card--reveal1">
                       <v-avatar size="150" class="lighten-2 mt-n16">
                         <img class="imgs22" :src="item.src" />
                       </v-avatar>
@@ -472,7 +486,7 @@
                               class="ma-6"
                               :href="item.pdf_la"
                               target="_blank"
-                              >Preview</v-btn
+                              >ກົດເບິ່ງ</v-btn
                             >
                           </h4>
                         </v-col>
