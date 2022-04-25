@@ -333,7 +333,7 @@
 
                     <v-list-group v-else :prepend-icon="item.icon">
                       <template v-slot:activator>
-                        <v-list-item-title>
+                        <v-list-item-title >
                           <h4>{{ $t("main." + item.text) }}</h4>
                         </v-list-item-title>
                       </template>
@@ -342,15 +342,17 @@
                         v-for="child in item.items"
                         :key="child.title"
                         :prepend-icon="item.icon"
+                        
                       >
                         <template v-slot:activator>
                           <v-list-item-content>
-                            <v-list-item-title
+                            <v-list-item-title 
                               @click="
                                 clickitem($i18nRoute({ name: child.link }))
                               "
                             >
-                              {{ $t("main." + child.title) }}
+                            <h4>
+                              {{ $t("main." + child.title) }}</h4>
                             </v-list-item-title>
                           </v-list-item-content>
                         </template>
@@ -362,7 +364,6 @@
             </v-expand-transition>
           </v-row>
         </v-card>
-        <Loader></Loader>
       </v-app-bar>
     </v-card>
   </div>

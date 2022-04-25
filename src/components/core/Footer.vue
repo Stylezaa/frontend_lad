@@ -137,9 +137,9 @@ export default {
       contact: [
         { title: "2800 - 14th Ave, Suite 210" },
         { title: "Vientiane, Vientiane" },
-        { title: "A" },
         { title: "B" },
-        { title: "Tel + (856) 2155-7076" },
+      
+        { title: "Tel +(856) 21-557-076" },
       ],
       header: [
         { title: "ABOUT LAD" },

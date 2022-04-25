@@ -26,7 +26,7 @@
                       </td>
 
                       <td>
-                        <a href="https://www.icold-cigb.org/" target="_blank"
+                        <a style="text-decoration: none" href="https://www.icold-cigb.org/" target="_blank"
                           >International Commission on Large Dams (ICOLD)</a
                         >
                       </td>
@@ -41,7 +41,7 @@
                         />
                       </td>
                       <td>
-                        <a href="https://www.swissdams.ch/en" target="_blank"
+                        <a style="text-decoration: none" href="https://www.swissdams.ch/en" target="_blank"
                           >Schweizerisches Talsperrenkomitee</a
                         >
                       </td>
@@ -56,7 +56,7 @@
                         />
                       </td>
                       <td>
-                        <a href="http://jcold.or.jp/e/" target="_blank"
+                        <a style="text-decoration: none" href="http://jcold.or.jp/e/" target="_blank"
                           >Japan Commission on Large Dams (JCOLD)</a
                         >
                       </td>
@@ -71,7 +71,7 @@
                         />
                       </td>
                       <td>
-                        <a
+                        <a style="text-decoration: none"
                           href="http://www.chincold-smart.com/en/index"
                           target="_blank"
                           >CHINESE NATIONAL COMMITTEE ON LARGE DAMS</a
@@ -88,7 +88,7 @@
                         />
                       </td>
                       <td>
-                        <a
+                        <a style="text-decoration: none"
                           href="https://cda.ca/international/icold"
                           target="_blank"
                           >Canadian Dam Association (CDA)</a
@@ -103,7 +103,7 @@
               <v-col cols="12" xs="12" sm="12" md="12" xl="6">
                 <!-- Table -->
                 <v-card-title style="font-size: 1.2em" class="primary--text">
-                  <h4>LAO PDR</h4></v-card-title
+                  <h4>{{ $t("main.A") }}</h4></v-card-title
                 >
                 <div style="overflow-x: auto">
                   <table>
@@ -117,8 +117,8 @@
                         />
                       </td>
                       <td>
-                        <a href="https://na.gov.la/?lang=en" target="_blank"
-                          >The National Assembly of The Lao PDR</a
+                        <a style="text-decoration: none" href="https://na.gov.la/?lang=en" target="_blank"
+                          >{{ $t("main.The National Assembly of The Lao PDR") }}</a
                         >
                       </td>
                     </tr>
@@ -132,10 +132,10 @@
                         />
                       </td>
                       <td>
-                        <a
+                        <a style="text-decoration: none"
                           href="https://www.mem.gov.la/?page_id=629&lang=en"
                           target="_blank"
-                          >Ministry of Energy And Mines</a
+                          >{{ $t("main.Ministry of Energy And Mines") }}</a
                         >
                       </td>
                     </tr>
@@ -149,10 +149,10 @@
                         />
                       </td>
                       <td>
-                        <a
+                        <a style="text-decoration: none"
                           href="https://nuol.edu.la/index.php/lo/"
                           target="_blank"
-                          >National University of Laos (NUOL)</a
+                          >{{ $t("main.National University of Laos (NUOL)") }}</a
                         >
                       </td>
                     </tr>
@@ -167,8 +167,8 @@
                         />
                       </td>
                       <td>
-                        <a href="https://edlgen.com.la/" target="_blank"
-                          >Electricite Du Laos (MRC)</a
+                        <a style="text-decoration: none" href="https://edlgen.com.la/" target="_blank"
+                          >{{ $t("main.Electricite Du Laos (MRC)") }}</a
                         >
                       </td>
                     </tr>
@@ -181,8 +181,8 @@
                       />
 
                       <td>
-                        <a href="https://www.mrcmekong.org/" target="_blank"
-                          >Mekong River Commission (MRC)</a
+                        <a    style="text-decoration: none" href="https://www.mrcmekong.org/" target="_blank"
+                          >{{ $t("main.Mekong River Commission (MRC)") }}</a
                         >
                       </td>
                     </tr>

@@ -98,7 +98,7 @@
                         class="text-center primary--text"
                         style="font-size: 2em"
                       >
-                        Comming Soon!
+                        Coming Soon!
                       </div>
                     </v-card>
                   </v-col>

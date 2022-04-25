@@ -35,8 +35,8 @@
     "CONFERENCE PROCEEDING" : "CONFERENCE PROCEEDING",
   
     
-    "ARCHIVES LIST" : " ARCHIVES LIST",
-    "Archives" : "Archives",
+    "ARCHIVES LIST" : "ACHIEVEMENT",
+    "Archives" : "Achievement",
     "About Lad" : "About Lad",
     "List of Dams in Laos" : "List of Dams in Laos",
    
@@ -45,12 +45,12 @@
     "Home" : "Home",
     "Law and Regulation" : "Law and Regulation",
     "Guideline" : "Guideline",
-    "Conference Procedding" : "Conference Procedding",
+    "Conference Procedding" : "Conference Proceeding",
     "2800 - 14th Ave, Suite 210" : "2800 - 14th Ave, Suite 210",
-    "Vientiane, Vientiane" : "Vientiane, Vientiane",
-    "B" : "LAOS P.D.R",
-    "A" : "Email: laoassociationdams@gmail.com",
-    "Tel + (856) 2155-7076" : "Tel + (856) 2155-7076",
+    "Vientiane, Vientiane" : "Vientiane, LAO P.D.R",
+    "B" : "Email: laoassociationdams@gmail.com",
+    "A" : "LAO P.D.R",
+    "Tel +(856) 21-557-076" : "Tel + (856) 2155-7076",
    "2022" : "@2022 LAO ASSOCIATION ON DAMS (LAD)",
    "CONTACT US" : "CONTACT US",
    "CONTACT" : "CONTACT",
@@ -108,7 +108,13 @@
    "Establishment of the Lao Dam Association" : "Establishment of the Lao Dam Association",
    "Committee ObjectivesW" : "The objective of the committee is to promote the progress in the establishment of projects, the construction, maintenance, monitoring and operation of hydraulic structures and the environment. To achieve this objective, it gathers and discusses the experiences and the proceedings which are related to its cause and when necessary caters for their publication. ",
    "test" : "Lao Association Dam (LAD) is a non-profit association under Laos law. It invites organisations, companies and individuals involved in the design, construction, operation, maintenance, monitoring and safety assessment of dams to become members. Laos applied to join the International Committee on Large Dams on 30 November 2020 as 104th member country." ,
-   "Committee Objectives" : "Committee Objectives"
+   "Committee Objectives" : "Committee Objectives",
+
+   "The National Assembly of The Lao PDR" : "The National Assembly of The Lao PDR",
+   "Ministry of Energy And Mines" : "Ministry of Energy And Mines",
+   "National University of Laos (NUOL)" : "National University of Laos (NUOL)",
+   "Electricite Du Laos (MRC)" : "Electricite Du Laos (MRC)",
+   "Mekong River Commission (MRC)" : "Mekong River Commission (MRC)"
   
   }
 
