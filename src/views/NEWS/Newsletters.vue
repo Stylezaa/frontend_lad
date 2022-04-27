@@ -108,58 +108,7 @@
                                 {{ item.header }}
                               </h4></v-card-title
                             >
-                            <v-row>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="18"> mdi-timer-outline</v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.date }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="16">
-                                    mdi-account-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.user }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="16">
-                                    mdi-file-settings-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.file }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="4">
-                                <v-card-title>
-                                  <v-icon size="15">
-                                    mdi-comment-text-multiple-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.comment }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                            </v-row>
+                        
                           </div>
 
                           <v-img :src="item.src">
@@ -724,58 +673,7 @@
                                 {{ item.header_la }}
                               </h4></v-card-title
                             >
-                            <v-row>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="18"> mdi-timer-outline</v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.date }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="16">
-                                    mdi-account-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.user }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="2">
-                                <v-card-title>
-                                  <v-icon size="16">
-                                    mdi-file-settings-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.file }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                              <v-col cols="4" xs="4" sm="4" md="3" xl="4">
-                                <v-card-title>
-                                  <v-icon size="15">
-                                    mdi-comment-text-multiple-outline
-                                  </v-icon>
-                                  <h4
-                                    class="textgray--text"
-                                    style="font-size: 0.4em"
-                                  >
-                                    {{ item.comment }}
-                                  </h4>
-                                </v-card-title>
-                              </v-col>
-                            </v-row>
+                           
                           </div>
 
                           <v-img :src="item.src">
@@ -1218,7 +1116,7 @@ export default {
           user: "Taiy Dueo",
           src: require("../../assets/images/Newsletters/Screenshot.png"),
           header: "LAD Inaugural Assembly held on 13 November 2020",
-            header_la: "ກອງປະຊຸມ ສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວໃນວັນທິ່ 13/11/2022",
+          header_la: "ກອງປະຊຸມ ສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວໃນວັນທິ່ 13/11/2022",
           start: "Excellencies, Leaders of the Party and the State,",
           text: "-Dear Fellow Compatriots, Soldiers, Police and all Lao People,",
 
@@ -1341,11 +1239,11 @@ export default {
 </script>
 
 <style>
-li{
-    text-decoration: none;
-    color: #000;
-    cursor: none;
-    text-indent: 0;
+li {
+  text-decoration: none;
+  color: #000;
+  cursor: none;
+  text-indent: 0;
 }
 .bb {
   margin-top: 20px;
@@ -1360,8 +1258,4 @@ li{
   display: flex;
   transition: width 1s, height 1s;
 }
-
-
-
-
 </style>
