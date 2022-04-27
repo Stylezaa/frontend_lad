@@ -13,7 +13,9 @@ import Maps from "../views/DAMS IN LAOS/Map of Dams.vue";
 import safety from "../views/DAMS IN LAOS/Dam safety.vue";
 
 import Newsletters from "../views/NEWS/Newsletters.vue";
+import Newsletters_item from "../views/NEWS/Newsletters_item.vue";
 import Events from "../views/NEWS/Events.vue";
+import Events_item from "../views/NEWS/Events_item.vue";
 import Press from "../views/NEWS/Press Releases.vue";
 import Archives from "../views/NEWS/Archives.vue";
 
@@ -98,9 +100,23 @@ const routes = [
 
     },
     {
+      path: "Newsletters_item/:id",
+      name: "Newsletters_item",
+      component: Newsletters_item,
+
+    },
+
+    {
       path: "Events",
       name: "Events",
       component: Events,
+
+    },
+
+    {
+      path: "Events_item/:id",
+      name: "Events_item",
+      component: Events_item,
 
     },
     {
