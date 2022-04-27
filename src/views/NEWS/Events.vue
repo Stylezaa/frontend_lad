@@ -4,8 +4,8 @@
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
-            <v-card-title style="font-size: 0.8em"
-              >Home > News > Events</v-card-title
+            <v-card-text style="font-size: 0.8em"
+              >Home > News > Events</v-card-text
             >
             <v-card-title class="mt-n7"
               ><h3>{{ $t("main.EVENTS") }}</h3></v-card-title
@@ -20,31 +20,37 @@
                       <v-card flat v-for="(item, index) in press" :key="index">
                         <v-row>
                           <div>
-                            <v-card-title
+                            <v-card-text
                               style="font-size: 1.4em"
                               class="black--text"
                             >
                               <h4>
                                 {{ item.header }}
-                              </h4></v-card-title
+                              </h4></v-card-text
                             >
                           </div>
-                          <v-card flat class="mx-auto">
-                            <v-img :src="item.src">
-                              <template v-slot:placeholder>
-                                <v-row class="fill-height ma-0" align="center">
-                                  <v-progress-circular
-                                    indeterminate
-                                    color="grey lighten-5"
-                                  ></v-progress-circular>
-                                </v-row>
-                              </template>
-                            </v-img>
-                          </v-card>
+                               <v-img
+                           
+                           
+                            :src="item.src2"
+                            class=""
+                          >
+                            <template v-slot:placeholder>
+                              <v-row class="fill-height ma-0" align="center">
+                                <v-progress-circular
+                                  indeterminate
+                                  color="grey lighten-5"
+                                ></v-progress-circular>
+                              </v-row>
+                            </template>
+                          </v-img>
+
+
+                          
                         </v-row>
 
                         <div>
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="black--text"
                           >
@@ -55,12 +61,28 @@
                                 <li>ສະຖານທີ່: ໂຮງແຮມ Lao Plaza</li>
                               </ul>
                             </h4>
-                            <h3 class="py-6">
+                            <h3 class="pt-6">
                               ວາລະການດຳເນີນກອງປະຊຸມ
-                            </h3></v-card-title
+                            </h3></v-card-text
                           >
 
-                          <ul style="list-style-type: '-   '">
+                          <v-img
+                            max-height="800"
+                            max-width="800"
+                            :src="item.src"
+                            class=""
+                          >
+                            <template v-slot:placeholder>
+                              <v-row class="fill-height ma-0" align="center">
+                                <v-progress-circular
+                                  indeterminate
+                                  color="grey lighten-5"
+                                ></v-progress-circular>
+                              </v-row>
+                            </template>
+                          </v-img>
+
+                          <ul style="list-style-type: '-   '" class="pt-6">
                             <li>
                               Facilitator: ທ່ານ ປອ. ຄຳຮູ້ ຊາພູວົງ, ກຳມະການ
                               ຄະນະບໍລິຫານ ສະມາຄົມເຂື່ອນລາວ .
@@ -72,7 +94,7 @@
                             </li>
                             <li>
                               Panelists
-                              <ul style="list-style-type: decimal;">
+                              <ul style="list-style-type: decimal">
                                 <li>
                                   ທ່ານ ຮສ. ປອ. ຄຳປະເສີດ ເທບວົງສາ, ຮອງປະທານ ສຂລ
                                 </li>
@@ -100,19 +122,19 @@
                               ຜູ້ອຳນວຍການ ສຂລ.
                             </li>
                           </ul>
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
                             <h3 class="py-6">
                               ປະຫວັດຫຍໍ້ບັນດາຜູ້ເຂົ້າຮ່ວມກອງປະຊຸມ
                             </h3>
-                          </v-card-title>
-                          <v-card-title
+                          </v-card-text>
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>1. ທ່ານ ວໍຣະເດດ ພອນແກ້ວ</h4></v-card-title
+                            <h4>1. ທ່ານ ວໍຣະເດດ ພອນແກ້ວ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -142,11 +164,11 @@
                             </p></v-card-text
                           >
 
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>2. ທ່ານ ປອ. ຄຳຮູ້ ຊາພູວົງ</h4></v-card-title
+                            <h4>2. ທ່ານ ປອ. ຄຳຮູ້ ຊາພູວົງ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -185,13 +207,13 @@
                             </p></v-card-text
                           >
 
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
                             <h4>
                               3. ທ່ານ ຮສ. ປອ. ຄຳປະເສີດ ເທບວົງສາ
-                            </h4></v-card-title
+                            </h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -222,11 +244,11 @@
                               Malaysia-China Chamber of Commerce.
                             </p></v-card-text
                           >
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>4. ທ່ານ ບົວເທບ ມາໄລຄຳ</h4></v-card-title
+                            <h4>4. ທ່ານ ບົວເທບ ມາໄລຄຳ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -256,11 +278,11 @@
                               1993-2000 ເປັນວິຊາການ.
                             </p></v-card-text
                           >
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>5. ທ່ານ ປອ. ຈັນສະແຫວງ ບຸນຍົງ</h4></v-card-title
+                            <h4>5. ທ່ານ ປອ. ຈັນສະແຫວງ ບຸນຍົງ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -291,11 +313,11 @@
                               ແຜນພະລັງງານ, ກະຊວງພະລັງງານ ແລະ ບໍ່ແຮ.
                             </p></v-card-text
                           >
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>6. ທ່ານ ປອ. ດຸສິດ ພົມມະຈັນ</h4></v-card-title
+                            <h4>6. ທ່ານ ປອ. ດຸສິດ ພົມມະຈັນ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -341,11 +363,11 @@
                               ການຈັດການທີ່ມຸ້ງໝັ້ນ.
                             </p></v-card-text
                           >
-                          <v-card-title
+                          <v-card-text
                             style="font-size: 1.2em"
                             class="primary--text"
                           >
-                            <h4>7. ທ່ານ ວົງສະກຸນ ຍິ່ງຍົງ</h4></v-card-title
+                            <h4>7. ທ່ານ ວົງສະກຸນ ຍິ່ງຍົງ</h4></v-card-text
                           >
                           <v-card-text
                             style="font-size: 1em"
@@ -377,11 +399,11 @@
                             </p></v-card-text
                           >
                         </div>
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
-                          <h4>SHARE THIS</h4></v-card-title
+                          <h4>SHARE THIS</h4></v-card-text
                         >
                         <v-divider class="mx-4"></v-divider>
 
@@ -400,11 +422,11 @@
                           </v-btn>
                         </v-card-text>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
-                          <h4>RELATED POSTS</h4></v-card-title
+                          <h4>RELATED POSTS</h4></v-card-text
                         >
                         <v-divider class="mx-4"></v-divider>
 
@@ -457,23 +479,23 @@
                         </v-flex>
                       </v-layout> -->
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
-                          <h4>This Post Has 1,000 Comments</h4></v-card-title
+                          <h4>This Post Has 1,000 Comments</h4></v-card-text
                         >
                         <v-divider class="mx-4"></v-divider>
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
-                          <h4>Leave Reply</h4></v-card-title
+                          <h4>Leave Reply</h4></v-card-text
                         >
-                        <v-card-title style="font-size: 0.9em" class="mt-n3">
+                        <v-card-text style="font-size: 0.9em" class="mt-n3">
                           Your email address will not be published. Required
                           fields are marked.
-                        </v-card-title>
+                        </v-card-text>
 
                         <v-row>
                           <v-col cols="6">
@@ -526,7 +548,9 @@ export default {
           date: "Nov09,2021",
           user: "Taiy Dueo",
           src: require("../../assets/images/Newsletters/pic_item2.png"),
-          header: "ຜົນການກວດກາສຸກເສີນຄວາມປອດໄພຂອງເຂື່ອນຢູ່ ສປປ. ລາວ",
+
+          src2: require("../../assets/images/Newsletters/LAD Technic Seminar on Dams 01-01.png"),
+          header: "ຫົວຂໍ້: “ຜົນການກວດກາສຸກເສີນຄວາມປອດໄພຂອງເຂື່ອນຢູ່ ສປປ. ລາວ”",
           header_la: "ກອງປະຊຸມ ສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວໃນວັນທິ່ 13/11/2022",
           start: "Excellencies, Leaders of the Party and the State,",
           text: "-Dear Fellow Compatriots, Soldiers, Police and all Lao People,",

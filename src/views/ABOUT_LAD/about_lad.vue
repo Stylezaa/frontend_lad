@@ -7,9 +7,9 @@
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
-            <v-card-title style="font-size: 0.8em"
+            <v-card-text style="font-size: 0.8em"
               >Home > About LAD
-            </v-card-title>
+            </v-card-text>
             <v-card-title class="mt-n7" id="History">
               <h3>{{ $t("main.HISTORY") }}</h3></v-card-title
             >
@@ -39,10 +39,10 @@
             </v-row>
             <div v-for="(item, index) in press" :key="index" >
        
-              <v-card-title style="font-size: 1.2em" class="primary--text py-12">
+              <v-card-text style="font-size: 1.2em" class="primary--text py-12">
                 <h4 style="font-size: 1.2em">
                   {{ $t("main." + item.header) }}
-                </h4></v-card-title
+                </h4></v-card-text
               >
 
               <v-card-text class="textt" style="font-size: 1em">
@@ -52,10 +52,10 @@
               </v-card-text>
             </div>
             <div>
-              <v-card-title class="primary--text">
+              <v-card-text class="primary--text">
                 <h4 style="font-size: 1.2em">
                   {{ $t("main.Establishment of the Lao Dam Association") }}
-                </h4></v-card-title
+                </h4></v-card-text
               >
 
               <v-card-text class="textt" style="font-size: 1em">
@@ -85,8 +85,8 @@
           <v-col cols="12" xs="12" sm="12" md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
-                <v-card-title
-                  ><h4>{{ $t("main.Organisation of LAD") }}</h4></v-card-title
+                <v-card-text
+                  ><h4>{{ $t("main.Organisation of LAD") }}</h4></v-card-text
                 >
                 <v-divider class="mx-4 black"></v-divider>
               </v-card>
@@ -374,8 +374,8 @@
           <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat class="bg_about">
-                <v-card-title
-                  ><h4>{{ $t("main.COMMITTEES") }}</h4></v-card-title
+                <v-card-text
+                  ><h4>{{ $t("main.COMMITTEES") }}</h4></v-card-text
                 >
                 <v-divider class="mx-4 black"></v-divider>
               </v-card>
@@ -391,8 +391,8 @@
           <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
-                <v-card-title
-                  ><h4>{{ $t("main.Memberships") }}</h4></v-card-title
+                <v-card-text
+                  ><h4>{{ $t("main.Memberships") }}</h4></v-card-text
                 >
                 <v-divider class="mx-4"></v-divider>
 
@@ -422,8 +422,8 @@
           <v-col cols="12" xs="12" sm="12"  md="8" xl="8">
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat>
-                <v-card-title
-                  ><h4>{{ $t("main.Document") }}</h4></v-card-title
+                <v-card-text
+                  ><h4>{{ $t("main.Document") }}</h4></v-card-text
                 >
                 <v-divider class="mx-4 black"></v-divider>
 

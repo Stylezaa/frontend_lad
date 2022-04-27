@@ -5,8 +5,8 @@
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
            <v-col cols="12" xs="12" sm="12" md="12">
         <v-card flat>
-          <v-card-title style="font-size: 0.8em"
-            >Home > News > Newsletters</v-card-title
+          <v-card-text style="font-size: 0.8em"
+            >Home > News > Newsletters</v-card-text
           >
           <v-card-title class="mt-n7"
             ><h3>{{ $t("main.NEWSLETTERS") }}</h3></v-card-title
@@ -17,100 +17,23 @@
             <v-col cols="12" xs="12" sm="12" md="12">
               <v-card flat v-if="$route.params.locale == 'en'">
                 <v-row>
-                  <v-col cols="12" xs="12" sm="4" md="4" xl="3">
-                    <v-text-field
-                      single-line
-                      outlined
-                      placeholder="Search"
-                      :append-icon="'mdi-magnify'"
-                      style="width: 100%"
-                    >
-                    </v-text-field>
-                    <v-card-title
-                      style="font-size: 1.2em"
-                      class="textgray--text mt-n8"
-                    >
-                      <h4>{{ $t("main.Latest News") }}</h4></v-card-title
-                    >
-                    <v-card outlined>
-                      <v-flex
-                        v-for="(item, index) in items.slice(0, 5)"
-                        :key="index"
-                        :src="item.src"
-                      >
-                        <v-hover>
-                          <v-card
-                            flat
-                            slot-scope="{ hover }"
-                            class="max-w-sm rounded shadow-lg card"
-                          >
-                            <v-col cols="12" xs="12" sm="12" md="12">
-                              <a>
-                                <v-row>
-                                  <v-img
-                                    aspect-ratio="1"
-                                    class="grey lighten-3 magin10"
-                                    :src="item.src"
-                                    style="width: 30%"
-                                  >
-                                  </v-img>
-                                  <v-card-text style="width: 60%">
-                                    <h4 style="font-size: 0.9em">
-                                      {{ item.title }}
-                                    </h4>
-                                    <h4
-                                      class="textgray--text"
-                                      style="font-size: 0.8em"
-                                    >
-                                      {{ item.date }}
-                                    </h4>
-                                  </v-card-text>
-
-                                  <v-fade-transition>
-                                    <v-overlay
-                                      v-if="hover"
-                                      absolute
-                                      color="#190033"
-                                      z-index="0"
-                                    >
-                                    </v-overlay>
-                                  </v-fade-transition>
-                                </v-row>
-                              </a>
-                            </v-col>
-                          </v-card>
-                        </v-hover>
-                        <v-divider></v-divider>
-                      </v-flex>
-                      <v-card flat class="mx-auto">
-                        <div class="text-center">
-                          <v-btn
-                            text
-                            style="font-size: 0.8em"
-                            class="textgray--text"
-                          >
-                            <div>See more ></div>
-                          </v-btn>
-                        </div>
-                      </v-card>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" xs="12" sm="8" md="8" xl="9">
+        
+                  <v-col cols="12" xs="12" sm="12" md="12" xl="12">
                     <v-card flat v-for="(item, index) in press" :key="index">
                       <v-row>
-                        <v-card flat>
+                   
                           <div>
-                            <v-card-title
-                              style="font-size: 1.2em"
+                            <v-card-text
+                              style="font-size: 1.4em"
                               class="black--text"
                             >
                               <h4>
                                 {{ item.header }}
-                              </h4></v-card-title
+                              </h4></v-card-text
                             >
                         
                           </div>
-
+     <v-card flat class="mx-auto">
                           <v-img :src="item.src">
                             <template v-slot:placeholder>
                               <v-row class="fill-height ma-0" align="center">
@@ -125,20 +48,20 @@
                       </v-row>
 
                       <div>
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
                           <h4>
                             Update LAD Activities as of 28 February 2022
-                          </h4></v-card-title
+                          </h4></v-card-text
                         >
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>1. Establishment of the Lao Dam</h4></v-card-title
+                          <h4>1. Establishment of the Lao Dam</h4></v-card-text
                         >
                         <v-card-text style="font-size: 1em" class="black--text">
                           <p>
@@ -176,11 +99,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>2. Holding ICOLD membership</h4></v-card-title
+                          <h4>2. Holding ICOLD membership</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em">
@@ -211,11 +134,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>3. LAD Members</h4></v-card-title
+                          <h4>3. LAD Members</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em">
@@ -261,11 +184,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1em"
                           class="primary--text"
                         >
-                          <h4>4. Activities</h4></v-card-title
+                          <h4>4. Activities</h4></v-card-text
                         >
                         <v-layout row wrap>
                           <v-flex
@@ -326,11 +249,11 @@
                           </p>
                         </v-card-text>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>• International relations:</h4></v-card-title
+                          <h4>• International relations:</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em" class="black--text">
@@ -371,18 +294,18 @@
                           </p>
                         </v-card-text>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>5. Income / Expenditures :</h4></v-card-title
+                          <h4>5. Income / Expenditures :</h4></v-card-text
                         >
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>6. Sponsors:</h4></v-card-title
+                          <h4>6. Sponsors:</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em" class="black--text">
@@ -451,11 +374,11 @@
                           </v-flex>
                         </v-layout>
                       </div>
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>SHARE THIS</h4></v-card-title
+                        <h4>SHARE THIS</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
 
@@ -474,11 +397,11 @@
                         </v-btn>
                       </v-card-text>
 
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>RELATED POSTS</h4></v-card-title
+                        <h4>RELATED POSTS</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
 
@@ -531,23 +454,23 @@
                         </v-flex>
                       </v-layout> -->
 
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>This Post Has 1,000 Comments</h4></v-card-title
+                        <h4>This Post Has 1,000 Comments</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>Leave Reply</h4></v-card-title
+                        <h4>Leave Reply</h4></v-card-text
                       >
-                      <v-card-title style="font-size: 0.9em" class="mt-n3">
+                      <v-card-text style="font-size: 0.9em" class="mt-n3">
                         Your email address will not be published. Required
                         fields are marked.
-                      </v-card-title>
+                      </v-card-text>
 
                       <v-row>
                         <v-col cols="6">
@@ -582,96 +505,19 @@
               </v-card>
                 <v-card flat v-else>
                 <v-row>
-                  <v-col cols="12" xs="12" sm="4" md="4" xl="3">
-                    <v-text-field
-                      single-line
-                      outlined
-                      placeholder="Search"
-                      :append-icon="'mdi-magnify'"
-                      style="width: 100%"
-                    >
-                    </v-text-field>
-                    <v-card-title
-                      style="font-size: 1.2em"
-                      class="textgray--text mt-n8"
-                    >
-                      <h4>{{ $t("main.Latest News") }}</h4></v-card-title
-                    >
-                    <v-card outlined>
-                      <v-flex
-                        v-for="(item, index) in items.slice(0, 5)"
-                        :key="index"
-                        :src="item.src"
-                      >
-                        <v-hover>
-                          <v-card
-                            flat
-                            slot-scope="{ hover }"
-                            class="max-w-sm rounded shadow-lg card"
-                          >
-                            <v-col cols="12" xs="12" sm="12" md="12">
-                              <a>
-                                <v-row>
-                                  <v-img
-                                    aspect-ratio="1"
-                                    class="grey lighten-3 magin10"
-                                    :src="item.src"
-                                    style="width: 30%"
-                                  >
-                                  </v-img>
-                                  <v-card-text style="width: 60%">
-                                    <h4 style="font-size: 0.9em">
-                                      {{ item.title }}
-                                    </h4>
-                                    <h4
-                                      class="textgray--text"
-                                      style="font-size: 0.8em"
-                                    >
-                                      {{ item.date }}
-                                    </h4>
-                                  </v-card-text>
-
-                                  <v-fade-transition>
-                                    <v-overlay
-                                      v-if="hover"
-                                      absolute
-                                      color="#190033"
-                                      z-index="0"
-                                    >
-                                    </v-overlay>
-                                  </v-fade-transition>
-                                </v-row>
-                              </a>
-                            </v-col>
-                          </v-card>
-                        </v-hover>
-                        <v-divider></v-divider>
-                      </v-flex>
-                      <v-card flat class="mx-auto">
-                        <div class="text-center">
-                          <v-btn
-                            text
-                            style="font-size: 0.8em"
-                            class="textgray--text"
-                          >
-                            <div>See more ></div>
-                          </v-btn>
-                        </div>
-                      </v-card>
-                    </v-card>
-                  </v-col>
-                  <v-col cols="12" xs="12" sm="8" md="8" xl="9">
+               
+                  <v-col cols="12" xs="12" sm="12" md="12" xl="12">
                     <v-card flat v-for="(item, index) in press" :key="index">
                       <v-row>
                         <v-card flat>
                           <div>
-                            <v-card-title
-                              style="font-size: 1.2em"
+                            <v-card-text
+                            style="font-size: 1.4em"
                               class="black--text"
                             >
                               <h4>
                                 {{ item.header_la }}
-                              </h4></v-card-title
+                              </h4></v-card-text
                             >
                            
                           </div>
@@ -690,20 +536,20 @@
                       </v-row>
 
                       <div>
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="black--text"
                         >
                           <h4>
                             ການເຄື່ອນໄຫວຂອງ ສຂລ ຮອດວັນທິ 28/02/2022
-                          </h4></v-card-title
+                          </h4></v-card-text
                         >
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>1. ການສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວ </h4></v-card-title
+                          <h4>1. ການສ້າງຕັ້ງສະມາຄົມເຂື່ອນລາວ </h4></v-card-text
                         >
                         <v-card-text style="font-size: 1em" class="black--text">
                           <p>
@@ -741,11 +587,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>2. ການເຂົ້າເປັນສະມາຊິກຂອງ ICOLD</h4></v-card-title
+                          <h4>2. ການເຂົ້າເປັນສະມາຊິກຂອງ ICOLD</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em">
@@ -774,11 +620,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>3. ສະມາຊິກຂອງສະມາຄົມ</h4></v-card-title
+                          <h4>3. ສະມາຊິກຂອງສະມາຄົມ</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em">
@@ -822,11 +668,11 @@
                           </v-flex>
                         </v-layout>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1em"
                           class="primary--text"
                         >
-                          <h4>4. ການເຄື່ອນໄຫວວຽກງານ</h4></v-card-title
+                          <h4>4. ການເຄື່ອນໄຫວວຽກງານ</h4></v-card-text
                         >
                         <v-layout row wrap>
                           <v-flex
@@ -867,11 +713,11 @@
                           </p>
                         </v-card-text>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>•	ການຜົວພັນກັບສາກົນ:</h4></v-card-title
+                          <h4>•	ການຜົວພັນກັບສາກົນ:</h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em" class="black--text">
@@ -899,18 +745,18 @@
                           </p>
                         </v-card-text>
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>5. ລາຍຮັບລາຍຈ່າຍ:</h4></v-card-title
+                          <h4>5. ລາຍຮັບລາຍຈ່າຍ:</h4></v-card-text
                         >
 
-                        <v-card-title
+                        <v-card-text
                           style="font-size: 1.2em"
                           class="primary--text"
                         >
-                          <h4>6. ຜູ້ອຸປະຖຳ : </h4></v-card-title
+                          <h4>6. ຜູ້ອຸປະຖຳ : </h4></v-card-text
                         >
 
                         <v-card-text style="font-size: 1em" class="black--text">
@@ -966,11 +812,11 @@
                           </v-flex>
                         </v-layout>
                       </div>
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>SHARE THIS</h4></v-card-title
+                        <h4>SHARE THIS</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
 
@@ -989,11 +835,11 @@
                         </v-btn>
                       </v-card-text>
 
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>RELATED POSTS</h4></v-card-title
+                        <h4>RELATED POSTS</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
 
@@ -1046,23 +892,23 @@
                         </v-flex>
                       </v-layout> -->
 
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>This Post Has 1,000 Comments</h4></v-card-title
+                        <h4>This Post Has 1,000 Comments</h4></v-card-text
                       >
                       <v-divider class="mx-4"></v-divider>
-                      <v-card-title
+                      <v-card-text
                         style="font-size: 1.2em"
                         class="black--text"
                       >
-                        <h4>Leave Reply</h4></v-card-title
+                        <h4>Leave Reply</h4></v-card-text
                       >
-                      <v-card-title style="font-size: 0.9em" class="mt-n3">
+                      <v-card-text style="font-size: 0.9em" class="mt-n3">
                         Your email address will not be published. Required
                         fields are marked.
-                      </v-card-title>
+                      </v-card-text>
 
                       <v-row>
                         <v-col cols="6">

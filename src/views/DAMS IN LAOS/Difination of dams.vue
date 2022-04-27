@@ -4,8 +4,8 @@
       <v-col cols="12" xs="12" sm="12" md="8" xl="8">
         <v-col cols="12" xs="12" sm="12" md="12">
           <v-card flat>
-            <v-card-title style="font-size: 0.8em"
-              >Home > Dams in Laos > Definition of Dams</v-card-title
+            <v-card-text style="font-size: 0.8em"
+              >Home > Dams in Laos > Definition of Dams</v-card-text
             >
             <v-card-title class="mt-n7"
               ><h3>{{ $t("main.DEFINITION OF DAMS") }}</h3></v-card-title
@@ -14,10 +14,10 @@
 
             <v-row class="bb"> </v-row>
             <div v-for="(item, index) in press" :key="index">
-              <v-card-title style="font-size: 1.2em" class="primary--text">
+              <v-card-text style="font-size: 1.2em" class="primary--text">
                 <h4>
                   {{ $t("main." + item.header) }}
-                </h4></v-card-title
+                </h4></v-card-text
               >
 
               <v-card-text style="font-size: 1em">
